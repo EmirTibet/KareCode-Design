@@ -1,0 +1,1 @@
+Wireframe sitenin bir krokisi gibidir. Yazıların, görsellerin, butonların, boxların konumunu belirlemeye yarar. Renkler olmaz ve gerçek yazılar yazılmaz. Sadece ön hazırlık ve sitenin taslağı yapılır.
