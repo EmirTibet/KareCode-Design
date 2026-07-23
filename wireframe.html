@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KareCode — Index Wireframe</title>
+    <style>
+      :root {
+        --wf-line: #9aa0a6;
+        --wf-line-dark: #5c6270;
+        --wf-fill: #e9eaed;
+        --wf-fill-dark: #d3d5da;
+        --wf-bg: #f5f6f8;
+        --wf-text: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--wf-bg);
+        color: var(--wf-text);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .wf-box {
+        border: 1.5px dashed var(--wf-line);
+        background: var(--wf-fill);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--wf-text);
+        font-size: 13px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .wf-box--solid {
+        border-style: solid;
+        border-color: var(--wf-line-dark);
+        background: var(--wf-fill-dark);
+      }
+
+      .placeholder-line {
+        height: 10px;
+        background: var(--wf-fill-dark);
+        border-radius: 3px;
+        margin: 8px auto;
+      }
+
+      header {
+        background: #fff;
+        border-bottom: 1px solid var(--wf-line);
+      }
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 20px;
+      }
+      .logo-box {
+        width: 110px;
+        height: 36px;
+        flex-shrink: 0;
+      }
+      .nav-links {
+        display: flex;
+        gap: 14px;
+        flex: 1;
+        justify-content: center;
+      }
+      .nav-links .wf-box {
+        flex: 0 0 auto;
+        width: 130px;
+        height: 32px;
+      }
+      .cta-box {
+        width: 140px;
+        height: 38px;
+        flex-shrink: 0;
+      }
+
+      .hero {
+        position: relative;
+        padding: 0;
+      }
+      .hero-visual {
+        height: 460px;
+        margin: 0;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+        padding: 20px;
+      }
+      .hero-overlay .placeholder-line {
+        background: rgba(92, 98, 112, 0.55);
+      }
+      .hero-title-line {
+        height: 24px;
+        width: 60%;
+      }
+      .hero-sub-line {
+        height: 11px;
+        width: 40%;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 14px;
+        margin-top: 10px;
+      }
+      .hero-buttons .wf-box {
+        width: 160px;
+        height: 46px;
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      /* ---- Section heading ---- */
+      .section {
+        padding: 50px 0;
+        border-top: 1px dashed var(--wf-line);
+      }
+      .section-heading {
+        text-align: center;
+        margin-bottom: 34px;
+      }
+      .section-kicker {
+        width: 130px;
+        height: 14px;
+        margin: 0 auto 12px;
+      }
+      .section-title {
+        width: 340px;
+        height: 22px;
+        margin: 0 auto;
+      }
+
+      .feature-blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .feature-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        align-items: center;
+      }
+      .feature-block.reverse .feature-visual {
+        order: 2;
+      }
+      .feature-block.reverse .feature-text {
+        order: 1;
+      }
+      .feature-visual {
+        height: 200px;
+      }
+      .feature-title {
+        width: 70%;
+        height: 18px;
+      }
+      .feature-line {
+        width: 100%;
+        height: 10px;
+      }
+      .feature-line:last-of-type {
+        width: 75%;
+      }
+
+      /* ---- KcLogger usage section (title + image combined) ---- */
+      .usage-section {
+        background: #edeef1;
+      }
+      .usage-inner {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .usage-title {
+        width: 85%;
+        height: 26px;
+      }
+      .usage-line {
+        width: 100%;
+        height: 10px;
+      }
+      .usage-line:last-of-type {
+        width: 60%;
+      }
+      .usage-list-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .usage-list-item .wf-box {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .usage-list-item .placeholder-line {
+        flex: 1;
+        margin: 0;
+        height: 10px;
+      }
+      .usage-visual {
+        height: 320px;
+      }
+
+      /* ---- Contact / message form ---- */
+      .contact-inner {
+        max-width: 560px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .form-field-label {
+        width: 120px;
+        height: 11px;
+      }
+      .form-field-box {
+        height: 44px;
+      }
+      .form-field-box--textarea {
+        height: 110px;
+      }
+      .contact-submit {
+        width: 160px;
+        height: 44px;
+        align-self: center;
+        margin-top: 8px;
+      }
+
+      /* ---- Footer (ince / tek satır) ---- */
+      footer {
+        background: #2a2e36;
+        color: #b7bbc3;
+        padding: 16px 0;
+      }
+      footer .wf-box {
+        border-color: #565a63;
+        background: #383c45;
+        color: #b7bbc3;
+      }
+      footer .placeholder-line {
+        background: #454955;
+      }
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .footer-logo {
+        width: 90px;
+        height: 22px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-links-inline {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .footer-link-inline {
+        width: 70px;
+        height: 9px;
+        margin: 0;
+      }
+      .footer-copy {
+        width: 200px;
+        height: 9px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-social {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .footer-social .wf-box {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 800px) {
+        .feature-block,
+        .usage-inner {
+          grid-template-columns: 1fr;
+        }
+        .feature-block.reverse .feature-visual,
+        .feature-block.reverse .feature-text {
+          order: initial;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero-visual {
+          height: 340px;
+        }
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  
+
+    <header>
+      <div class="wrap nav-row">
+        <div class="wf-box logo-box">LOGO</div>
+        <div class="nav-links">
+          <div class="wf-box">Hakkımızda</div>
+          <div class="wf-box">Özellikler</div>
+          <div class="wf-box">KcLogger</div>
+        </div>
+        <div class="wf-box wf-box--solid cta-box">CTA Buton</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wf-box hero-visual">Büyük Hero Görseli</div>
+      <div class="hero-overlay">
+        <div class="placeholder-line hero-title-line"></div>
+        <div class="placeholder-line hero-sub-line"></div>
+        <div class="hero-buttons">
+          <div class="wf-box">Birincil CTA</div>
+          <div class="wf-box">İkincil CTA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+      <div class="feature-blocks">
+        <div class="feature-block">
+          <div class="feature-text">
+            <div class="placeholder-line feature-title"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+          </div>
+          <div class="wf-box feature-visual">Özellik Görseli 1</div>
+        </div>
+        <div class="feature-block reverse">
+          <div class="feature-text">
+            <div class="placeholder-line feature-title"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+          </div>
+          <div class="wf-box feature-visual">Özellik Görseli 2</div>
+        </div>
+        <div class="feature-block">
+          <div class="feature-text">
+            <div class="placeholder-line feature-title"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+            <div class="placeholder-line feature-line"></div>
+          </div>
+          <div class="wf-box feature-visual">Özellik Görseli 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="usage-section">
+      <div class="wrap section">
+        <div class="usage-inner">
+          <div>
+            <div class="placeholder-line usage-title"></div>
+            <div class="placeholder-line usage-line"></div>
+            <div class="placeholder-line usage-line"></div>
+            <div class="usage-list-item">
+              <div class="wf-box"></div>
+              <div class="placeholder-line"></div>
+            </div>
+            <div class="usage-list-item">
+              <div class="wf-box"></div>
+              <div class="placeholder-line"></div>
+            </div>
+            <div class="usage-list-item">
+              <div class="wf-box"></div>
+              <div class="placeholder-line"></div>
+            </div>
+          </div>
+          <div class="wf-box usage-visual">
+            KcLogger Kullanım Alanları — Görsel
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+      <div class="contact-inner">
+        <div>
+          <div class="placeholder-line form-field-label"></div>
+          <div class="wf-box form-field-box">E-posta Girişi</div>
+        </div>
+        <div>
+          <div class="placeholder-line form-field-label"></div>
+          <div class="wf-box form-field-box--textarea">Not / Mesaj Alanı</div>
+        </div>
+        <div class="wf-box wf-box--solid contact-submit">Gönder</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-row">
+        <div class="placeholder-line footer-logo"></div>
+        <div class="footer-links-inline">
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+        </div>
+        <div class="placeholder-line footer-copy"></div>
+        <div class="footer-social">
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
