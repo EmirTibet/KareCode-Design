@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KareCode — Hakkımızda Wireframe</title>
+    <style>
+      :root {
+        --wf-line: #9aa0a6;
+        --wf-line-dark: #5c6270;
+        --wf-fill: #e9eaed;
+        --wf-fill-dark: #d3d5da;
+        --wf-bg: #f5f6f8;
+        --wf-text: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--wf-bg);
+        color: var(--wf-text);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .wf-box {
+        border: 1.5px dashed var(--wf-line);
+        background: var(--wf-fill);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--wf-text);
+        font-size: 13px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .wf-box--solid {
+        border-style: solid;
+        border-color: var(--wf-line-dark);
+        background: var(--wf-fill-dark);
+      }
+
+      .placeholder-line {
+        height: 10px;
+        background: var(--wf-fill-dark);
+        border-radius: 3px;
+        margin: 8px auto;
+      }
+
+      /* ---- Header  ---- */
+      header {
+        background: #fff;
+        border-bottom: 1px solid var(--wf-line);
+      }
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 20px;
+      }
+      .logo-box {
+        width: 110px;
+        height: 36px;
+        flex-shrink: 0;
+      }
+      .nav-links {
+        display: flex;
+        gap: 14px;
+        flex: 1;
+        justify-content: center;
+      }
+      .nav-links .wf-box {
+        flex: 0 0 auto;
+        width: 130px;
+        height: 32px;
+      }
+      .nav-links .wf-box.active {
+        background: var(--wf-fill-dark);
+        border-style: solid;
+      }
+      .cta-box {
+        width: 140px;
+        height: 38px;
+        flex-shrink: 0;
+      }
+
+      /* ---- Section heading ---- */
+      .section {
+        padding: 50px 0;
+        border-top: 1px dashed var(--wf-line);
+      }
+      .section-heading {
+        text-align: center;
+        margin-bottom: 34px;
+      }
+      .section-kicker {
+        width: 130px;
+        height: 14px;
+        margin: 0 auto 12px;
+      }
+      .section-title {
+        width: 340px;
+        height: 22px;
+        margin: 0 auto;
+      }
+
+      /* ---- Intro ---- */
+      .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 60px 0;
+      }
+      .intro-eyebrow {
+        width: 160px;
+        height: 14px;
+      }
+      .intro-title-line {
+        height: 24px;
+      }
+      .intro-title-line:nth-child(2) {
+        width: 90%;
+      }
+      .intro-title-line:nth-child(3) {
+        width: 65%;
+      }
+      .intro-text-line {
+        height: 11px;
+      }
+      .intro-text-line:nth-of-type(4) {
+        width: 95%;
+      }
+      .intro-text-line:nth-of-type(5) {
+        width: 85%;
+      }
+      .intro-text-line:nth-of-type(6) {
+        width: 90%;
+      }
+      .intro-visual {
+        height: 320px;
+      }
+
+      /* ---- istatistikler ---- */
+      .stats-row {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      .stat-block {
+        text-align: center;
+        flex: 1;
+      }
+      .stat-num {
+        width: 70px;
+        height: 34px;
+        margin: 0 auto 8px;
+      }
+      .stat-label {
+        width: 100px;
+        height: 10px;
+        margin: 0 auto;
+      }
+
+      /* ---- Partner çarkı ---- */
+      .partner-wheel {
+        position: relative;
+        width: 420px;
+        height: 420px;
+        margin: 0 auto;
+      }
+      .partner-wheel::before {
+        content: "";
+        position: absolute;
+        inset: 9%;
+        border: 1.5px dashed var(--wf-line);
+        border-radius: 50%;
+      }
+      .partner-hub {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .partner-node {
+        position: absolute;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 11px;
+      }
+      .partner-node--1 {
+        top: 8%;
+        left: 50%;
+      }
+      .partner-node--2 {
+        top: 29%;
+        left: 86.4%;
+      }
+      .partner-node--3 {
+        top: 71%;
+        left: 86.4%;
+      }
+      .partner-node--4 {
+        top: 92%;
+        left: 50%;
+      }
+      .partner-node--5 {
+        top: 71%;
+        left: 13.6%;
+      }
+      .partner-node--6 {
+        top: 29%;
+        left: 13.6%;
+      }
+
+      /* ---- Kullandığımız teknolojiler (4x2 grid) ---- */
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .tech-box {
+        height: 100px;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .tech-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 6px;
+      }
+      .tech-label {
+        width: 60%;
+        height: 9px;
+        margin: 0;
+      }
+
+      /* ---- Footer (ince / tek satır) ---- */
+      footer {
+        background: #2a2e36;
+        color: #b7bbc3;
+        padding: 16px 0;
+      }
+      footer .wf-box {
+        border-color: #565a63;
+        background: #383c45;
+        color: #b7bbc3;
+      }
+      footer .placeholder-line {
+        background: #454955;
+      }
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .footer-logo {
+        width: 90px;
+        height: 22px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-links-inline {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .footer-link-inline {
+        width: 70px;
+        height: 9px;
+        margin: 0;
+      }
+      .footer-copy {
+        width: 200px;
+        height: 9px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-social {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .footer-social .wf-box {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 800px) {
+        .intro,
+        .tech-grid {
+          grid-template-columns: 1fr;
+        }
+        .tech-grid {
+          grid-template-rows: none;
+        }
+        .nav-links {
+          display: none;
+        }
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .partner-wheel {
+          width: 320px;
+          height: 320px;
+        }
+        .partner-hub {
+          width: 90px;
+          height: 90px;
+        }
+        .partner-node {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="wrap nav-row">
+        <div class="wf-box logo-box">LOGO</div>
+        <div class="nav-links">
+          <div class="wf-box active">Hakkımızda</div>
+          <div class="wf-box">Özellikler</div>
+          <div class="wf-box">KcLogger</div>
+        </div>
+        <div class="wf-box wf-box--solid cta-box">CTA Buton</div>
+      </div>
+    </header>
+
+    <section class="wrap intro">
+      <div>
+        <div class="placeholder-line intro-eyebrow"></div>
+        <div class="placeholder-line intro-title-line"></div>
+        <div class="placeholder-line intro-title-line"></div>
+        <div style="height: 14px"></div>
+        <div class="placeholder-line intro-text-line"></div>
+        <div class="placeholder-line intro-text-line"></div>
+        <div class="placeholder-line intro-text-line"></div>
+      </div>
+      <div class="wf-box intro-visual">Bizi Tanıtan Görsel</div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="placeholder-line stat-num"></div>
+          <div class="placeholder-line stat-label"></div>
+        </div>
+        <div class="stat-block">
+          <div class="placeholder-line stat-num"></div>
+          <div class="placeholder-line stat-label"></div>
+        </div>
+        <div class="stat-block">
+          <div class="placeholder-line stat-num"></div>
+          <div class="placeholder-line stat-label"></div>
+        </div>
+        <div class="stat-block">
+          <div class="placeholder-line stat-num"></div>
+          <div class="placeholder-line stat-label"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+      <div class="partner-wheel">
+        <div class="wf-box wf-box--solid partner-hub">KareCode</div>
+        <div class="wf-box partner-node partner-node--1">Marka 1</div>
+        <div class="wf-box partner-node partner-node--2">Marka 2</div>
+        <div class="wf-box partner-node partner-node--3">Marka 3</div>
+        <div class="wf-box partner-node partner-node--4">Marka 4</div>
+        <div class="wf-box partner-node partner-node--5">Marka 5</div>
+        <div class="wf-box partner-node partner-node--6">Marka 6</div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+      <div class="tech-grid">
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+        <div class="wf-box tech-box">
+          <div class="wf-box tech-icon"></div>
+          <div class="placeholder-line tech-label"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-row">
+        <div class="placeholder-line footer-logo"></div>
+        <div class="footer-links-inline">
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+        </div>
+        <div class="placeholder-line footer-copy"></div>
+        <div class="footer-social">
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
