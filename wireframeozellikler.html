@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KareCode — Özellikler Wireframe</title>
+    <style>
+      :root {
+        --wf-line: #9aa0a6;
+        --wf-line-dark: #5c6270;
+        --wf-fill: #e9eaed;
+        --wf-fill-dark: #d3d5da;
+        --wf-bg: #f5f6f8;
+        --wf-text: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--wf-bg);
+        color: var(--wf-text);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .wf-box {
+        border: 1.5px dashed var(--wf-line);
+        background: var(--wf-fill);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--wf-text);
+        font-size: 13px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .wf-box--solid {
+        border-style: solid;
+        border-color: var(--wf-line-dark);
+        background: var(--wf-fill-dark);
+      }
+
+      .placeholder-line {
+        height: 10px;
+        background: var(--wf-fill-dark);
+        border-radius: 3px;
+        margin: 8px auto;
+      }
+
+      /* ---- Header ---- */
+      header {
+        background: #fff;
+        border-bottom: 1px solid var(--wf-line);
+      }
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        gap: 20px;
+      }
+      .logo-box {
+        width: 110px;
+        height: 36px;
+        flex-shrink: 0;
+      }
+      .nav-links {
+        display: flex;
+        gap: 14px;
+        flex: 1;
+        justify-content: center;
+      }
+      .nav-links .wf-box {
+        flex: 0 0 auto;
+        width: 130px;
+        height: 32px;
+      }
+      .nav-links .wf-box.active {
+        background: var(--wf-fill-dark);
+        border-style: solid;
+      }
+      .cta-box {
+        width: 140px;
+        height: 38px;
+        flex-shrink: 0;
+      }
+
+      /* ---- Section heading ---- */
+      .section {
+        padding: 50px 0;
+        border-top: 1px dashed var(--wf-line);
+      }
+      .section-heading {
+        text-align: center;
+        margin-bottom: 34px;
+      }
+      .section-kicker {
+        width: 130px;
+        height: 14px;
+        margin: 0 auto 12px;
+      }
+      .section-title {
+        width: 340px;
+        height: 22px;
+        margin: 0 auto;
+      }
+
+      .top-visual {
+        position: relative;
+      }
+      .top-visual-box {
+        height: 380px;
+        margin: 0;
+      }
+      .top-visual-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        padding: 20px;
+      }
+      .top-visual-overlay .placeholder-line {
+        background: rgba(92, 98, 112, 0.55);
+      }
+      .top-visual-title {
+        height: 24px;
+        width: 55%;
+      }
+      .top-visual-sub {
+        height: 11px;
+        width: 38%;
+      }
+
+      /* ---- Kaydırmalı ürün kullanım alanı ---- */
+      .carousel-wrap {
+        position: relative;
+      }
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        z-index: 2;
+        font-size: 16px;
+      }
+      .carousel-arrow--left {
+        left: -21px;
+      }
+      .carousel-arrow--right {
+        right: -21px;
+      }
+      .carousel-track {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        overflow: hidden;
+      }
+      .carousel-card {
+        height: 180px;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .carousel-card-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+      }
+      .carousel-card-label {
+        width: 65%;
+        height: 9px;
+        margin: 0;
+      }
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 22px;
+      }
+      .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--wf-fill-dark);
+        border: 1px solid var(--wf-line);
+      }
+      .carousel-dot.active {
+        background: var(--wf-line-dark);
+      }
+
+      /* ---- 5651 loglama kanunu ---- */
+      .law-section {
+        background: #edeef1;
+      }
+      .law-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .law-eyebrow {
+        width: 170px;
+        height: 14px;
+      }
+      .law-title-line {
+        height: 22px;
+      }
+      .law-title-line:nth-child(2) {
+        width: 90%;
+      }
+      .law-text-line {
+        height: 10px;
+      }
+      .law-text-line:nth-of-type(4) {
+        width: 95%;
+      }
+      .law-text-line:nth-of-type(5) {
+        width: 88%;
+      }
+      .law-text-line:nth-of-type(6) {
+        width: 92%;
+      }
+      .law-text-line:nth-of-type(7) {
+        width: 70%;
+      }
+      .law-visual {
+        height: 280px;
+      }
+
+      /* ---- Footer ---- */
+      footer {
+        background: #2a2e36;
+        color: #b7bbc3;
+        padding: 16px 0;
+      }
+      footer .wf-box {
+        border-color: #565a63;
+        background: #383c45;
+        color: #b7bbc3;
+      }
+      footer .placeholder-line {
+        background: #454955;
+      }
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .footer-logo {
+        width: 90px;
+        height: 22px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-links-inline {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .footer-link-inline {
+        width: 70px;
+        height: 9px;
+        margin: 0;
+      }
+      .footer-copy {
+        width: 200px;
+        height: 9px;
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .footer-social {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .footer-social .wf-box {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 800px) {
+        .carousel-track {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .law-inner {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .top-visual-box {
+          height: 280px;
+        }
+        .carousel-arrow--left {
+          left: 4px;
+        }
+        .carousel-arrow--right {
+          right: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="wrap nav-row">
+        <div class="wf-box logo-box">LOGO</div>
+        <div class="nav-links">
+          <div class="wf-box">Hakkımızda</div>
+          <div class="wf-box active">Özellikler</div>
+          <div class="wf-box">KcLogger</div>
+        </div>
+        <div class="wf-box wf-box--solid cta-box">CTA Buton</div>
+      </div>
+    </header>
+
+    <section class="top-visual">
+      <div class="wf-box top-visual-box">Üst Görsel</div>
+      <div class="top-visual-overlay">
+        <div class="placeholder-line top-visual-title"></div>
+        <div class="placeholder-line top-visual-sub"></div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <div class="placeholder-line section-kicker"></div>
+        <div class="placeholder-line section-title"></div>
+      </div>
+
+      <div class="carousel-wrap">
+        <div class="wf-box wf-box--solid carousel-arrow carousel-arrow--left">
+          ‹
+        </div>
+        <div class="carousel-track">
+          <div class="wf-box carousel-card">
+            <div class="wf-box carousel-card-icon"></div>
+            <div class="placeholder-line carousel-card-label"></div>
+          </div>
+          <div class="wf-box carousel-card">
+            <div class="wf-box carousel-card-icon"></div>
+            <div class="placeholder-line carousel-card-label"></div>
+          </div>
+          <div class="wf-box carousel-card">
+            <div class="wf-box carousel-card-icon"></div>
+            <div class="placeholder-line carousel-card-label"></div>
+          </div>
+          <div class="wf-box carousel-card">
+            <div class="wf-box carousel-card-icon"></div>
+            <div class="placeholder-line carousel-card-label"></div>
+          </div>
+        </div>
+        <div class="wf-box wf-box--solid carousel-arrow carousel-arrow--right">
+          ›
+        </div>
+      </div>
+
+      <div class="carousel-dots">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+      </div>
+    </section>
+
+    <section class="law-section">
+      <div class="wrap section">
+        <div class="law-inner">
+          <div>
+            <div class="placeholder-line law-eyebrow"></div>
+            <div class="placeholder-line law-title-line"></div>
+            <div class="placeholder-line law-title-line"></div>
+            <div style="height: 14px"></div>
+            <div class="placeholder-line law-text-line"></div>
+            <div class="placeholder-line law-text-line"></div>
+            <div class="placeholder-line law-text-line"></div>
+            <div class="placeholder-line law-text-line"></div>
+          </div>
+          <div class="wf-box law-visual">5651 Loglama Kanunu — Görsel</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-row">
+        <div class="placeholder-line footer-logo"></div>
+        <div class="footer-links-inline">
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+          <div class="placeholder-line footer-link-inline"></div>
+        </div>
+        <div class="placeholder-line footer-copy"></div>
+        <div class="footer-social">
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+          <div class="wf-box"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
