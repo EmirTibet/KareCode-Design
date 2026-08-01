@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
   /* Mobil menü aç/kapat */
@@ -55,5 +54,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* Scroll ile beliren animasyonlar (yalnızca .reveal sınıflı elemanlarda) */
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("in-view"); });
+    } else {
+      var revealObserver = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          revealEls.forEach(function (el) { revealObserver.observe(el); });
+        });
+      });
+    }
+  }
 
 });

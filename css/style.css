@@ -56,7 +56,7 @@ section {
   }
 }
 
-
+/* Görsel yer tutucu */
 .media-slot {
   border-radius: var(--radius-lg);
   background: var(--color-primary-100);
@@ -86,7 +86,7 @@ section {
   aspect-ratio: 1 / 1;
 }
 
-/* Header */
+/* Header / Navigasyon */
 .site-header {
   position: sticky;
   top: 0;
@@ -225,7 +225,7 @@ section {
   color: var(--color-white);
 }
 
-
+/* Kayan tanıtım şeridi (ticker) */
 .ticker-section {
   overflow: hidden;
   background: var(--color-primary-900);
@@ -264,6 +264,7 @@ section {
   }
 }
 
+/* Sayfa üst banner (Özellikler) */
 .page-banner {
   position: relative;
   overflow: hidden;
@@ -299,6 +300,7 @@ section {
   font-size: 16.5px;
 }
 
+/* Ortak bölüm başlığı */
 .section-head {
   text-align: center;
   max-width: 620px;
@@ -315,6 +317,7 @@ section {
   margin-bottom: 12px;
 }
 .section-head h2 {
+  font-size: 34px;
   margin-bottom: 0;
 }
 .section-head p {
@@ -345,10 +348,10 @@ section {
   margin-top: 88px;
 }
 .feature-row.reverse .feature-media {
-  order: 2;
+  order: 1;
 }
 .feature-row.reverse .feature-copy {
-  order: 1;
+  order: 2;
 }
 .feature-media {
   height: 260px;
@@ -386,30 +389,34 @@ section {
   align-items: center;
 }
 .device-row {
-  display: flex;
-  gap: 28px;
-  margin-top: 26px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 .device-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-ink-300);
+  border-radius: var(--radius-md);
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-ink-700);
 }
 .device-icon {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: var(--color-white);
+  background: var(--color-primary-100);
   border: 1px solid var(--color-ink-300);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 /* Kullanım alanları */
@@ -855,6 +862,9 @@ section {
   }
   .hero-center h1 {
     font-size: 32px;
+  }
+  .section-head h2 {
+    font-size: 26px;
   }
   .ticker-text {
     font-size: 24px;
