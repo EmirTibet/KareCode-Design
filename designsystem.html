@@ -1,458 +1,749 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KareCode — Design System</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/designsystem.css">
-</head>
-<body>
-<div class="wrap">
-
-  <div class="hero">
-    <span class="tag">KareCode Design System · v2.0 — Component Library</span>
-    <h1>KareCode</h1>
-    <p>Fikirleriniz için uygulamalar oluşturabilir veya mevcut uygulamalarınızı kapsayıcı hale getirerek modernleştirmenize yardımcı olabiliriz.</p>
-  </div>
-
-  <div class="toc">
-    <a href="#renkler">Renkler</a>
-    <a href="#tipografi">Tipografi</a>
-    <a href="#butonlar">Butonlar</a>
-    <a href="#form">Form Elemanları</a>
-    <a href="#kartlar">Kartlar</a>
-    <a href="#navigasyon">Navigasyon</a>
-    <a href="#sidebar">Sidebar</a>
-    <a href="#tabs">Sekmeler</a>
-    <a href="#stepper">Stepper</a>
-    <a href="#accordion">Accordion</a>
-    <a href="#overlay">Modal / Dropdown / Tooltip</a>
-    <a href="#feedback">Bildirim &amp; Durum</a>
-    <a href="#tablo">Tablo</a>
-    <a href="#footer">Footer</a>
-  </div>
-
-  <div class="section" id="renkler">
-    <span class="kicker">Foundations</span>
-    <h2>Renk Paleti</h2>
-    <p>Ana renk koyu lacivert — teknoloji ve güven hissi verir. Turuncu tek vurgu rengi olarak yalnızca aksiyon noktalarında (CTA butonlar, aktif durumlar) kullanılır.</p>
-
-    <h3>Marka (Primary)</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="fill fill--primary-900"></div><div class="label"><strong>Primary 900</strong><span>#0F1C3F</span></div></div>
-      <div class="swatch"><div class="fill fill--primary-700"></div><div class="label"><strong>Primary 700</strong><span>#1B2F5E</span></div></div>
-      <div class="swatch"><div class="fill fill--primary-500"></div><div class="label"><strong>Primary 500</strong><span>#2D4A8A</span></div></div>
-      <div class="swatch"><div class="fill fill--primary-200"></div><div class="label"><strong>Primary 200</strong><span>#C4D2EC</span></div></div>
-      <div class="swatch"><div class="fill fill--primary-100"></div><div class="label"><strong>Primary 100</strong><span>#EAEFF9</span></div></div>
-    </div>
-
-    <h3 class="mt-24">Vurgu (Accent)</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="fill fill--accent-600"></div><div class="label"><strong>Accent 600</strong><span>#F77422</span></div></div>
-      <div class="swatch"><div class="fill fill--accent-500"></div><div class="label"><strong>Accent 500</strong><span>#F37121</span></div></div>
-      <div class="swatch"><div class="fill fill--accent-100"></div><div class="label"><strong>Accent 100</strong><span>#FBEAD3</span></div></div>
-    </div>
-
-    <h3 class="mt-24">Nötr (Ink)</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="fill fill--ink-900"></div><div class="label"><strong>Ink 900</strong><span>#1A1D23</span></div></div>
-      <div class="swatch"><div class="fill fill--ink-700"></div><div class="label"><strong>Ink 700</strong><span>#454B55</span></div></div>
-      <div class="swatch"><div class="fill fill--ink-500"></div><div class="label"><strong>Ink 500</strong><span>#6C7280</span></div></div>
-      <div class="swatch"><div class="fill fill--ink-300"></div><div class="label"><strong>Ink 300</strong><span>#D5D8DD</span></div></div>
-      <div class="swatch"><div class="fill fill--ink-100"></div><div class="label"><strong>Ink 100</strong><span>#F4F5F7</span></div></div>
-    </div>
-
-    <h3 class="mt-24">Durum Renkleri</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="fill fill--success"></div><div class="label"><strong>Success</strong><span>#4CAF50</span></div></div>
-      <div class="swatch"><div class="fill fill--warning"></div><div class="label"><strong>Warning</strong><span>#E6BE00</span></div></div>
-      <div class="swatch"><div class="fill fill--error"></div><div class="label"><strong>Error</strong><span>#B22222</span></div></div>
-    </div>
-  </div>
-
-  <div class="section" id="tipografi">
-    <span class="kicker">Foundations</span>
-    <h2>Tipografi</h2>
-    <p><strong>Başlıklar:</strong> Sora (600–800 ağırlık) <br>
-    <strong>Gövde metni:</strong> Inter <br>
-    <strong>Kod / teknik içerik:</strong> JetBrains Mono.</p>
-
-    <div class="mt-20">
-      <div class="type-row"><span class="type-meta">H1 / 40px / 800</span><span class="type-demo type-demo--h1">Başlık Örneği</span></div>
-      <div class="type-row"><span class="type-meta">H2 / 26px / 700</span><span class="type-demo type-demo--h2">Alt Başlık Örneği</span></div>
-      <div class="type-row"><span class="type-meta">H3 / 18px / 600</span><span class="type-demo type-demo--h3">Bölüm Başlığı</span></div>
-      <div class="type-row"><span class="type-meta">Body / 17px / 400</span><span class="type-demo type-demo--body">Gövde metni — uzun okuma blokları için optimize edilmiş satır yüksekliği.</span></div>
-      <div class="type-row"><span class="type-meta">Small / 14px / 400</span><span class="type-demo type-demo--small">İkincil / yardımcı metin.</span></div>
-      <div class="type-row"><span class="type-meta">Mono / 14px</span><span class="mono">const kare = "code";</span></div>
-    </div>
-  </div>
-
-  <div class="section" id="butonlar">
-    <span class="kicker">Actions</span>
-    <h2>Butonlar</h2>
-    <p>Birincil aksiyon her ekranda tek bir turuncu buton olarak kalır; ikincil ve destekleyici aksiyonlar için daha sakin varyantlar kullanılır.</p>
-    <div class="btn-row mb-16">
-      <button class="btn btn-primary">Devam Et</button>
-      <button class="btn btn-secondary">Kaydet</button>
-      <button class="btn btn-outline">İptal</button>
-      <button class="btn btn-ghost">Daha Fazla Bilgi</button>
-      <button class="btn btn-danger">Sil</button>
-      <button class="btn btn-primary" disabled>Devre Dışı</button>
-    </div>
-    <div class="btn-row">
-      <button class="btn btn-primary btn-sm">Küçük</button>
-      <button class="btn btn-primary">Normal</button>
-      <button class="btn btn-primary btn-lg">Büyük</button>
-      <button class="btn btn-outline btn-icon" title="Ayarlar">⚙</button>
-      <button class="btn btn-primary"><span class="spinner spinner--sm"></span> Yükleniyor</button>
-    </div>
-  </div>
-
-  <div class="section" id="form">
-    <span class="kicker">Inputs</span>
-    <h2>Form Elemanları</h2>
-    <div class="form-grid">
-      <div class="field">
-        <label>Ad Soyad</label>
-        <input type="text" placeholder="Örn. Ahmet Yılmaz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KareCode — Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/designsystem.css"/>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <span class="tag"
+          >KareCode Design System · v2.0 — Component Library</span
+        >
+        <h1>KareCode</h1>
+        <p>
+          Fikirleriniz için uygulamalar oluşturabilir veya mevcut
+          uygulamalarınızı kapsayıcı hale getirerek modernleştirmenize yardımcı
+          olabiliriz.
+        </p>
       </div>
-      <div class="field input-icon">
-        <label>Arama</label>
-        <span class="ic">🔍</span>
-        <input type="text" placeholder="Proje ara...">
-      </div>
-      <div class="field has-error">
-        <label>E-posta</label>
-        <input type="email" value="hatali-eposta">
-        <div class="hint">Geçerli bir e-posta adresi girin.</div>
-      </div>
-      <div class="field has-success">
-        <label>Kullanıcı Adı</label>
-        <input type="text" value="karecode_admin">
-        <div class="hint">Kullanılabilir.</div>
-      </div>
-      <div class="field">
-        <label>Plan Seçimi</label>
-        <select>
-          <option>Standart</option>
-          <option>Kurumsal</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Mesaj</label>
-        <textarea rows="1" placeholder="Notunuzu yazın..."></textarea>
-      </div>
-    </div>
 
-    <div class="flex-row gap-48 flex-wrap mt-8">
-      <div>
-        <h3 class="mb-10">Checkbox &amp; Radio</h3>
-        <div class="check-row"><input type="checkbox" id="c1" checked><label for="c1">E-posta bildirimleri</label></div>
-        <div class="check-row"><input type="checkbox" id="c2"><label for="c2">SMS bildirimleri</label></div>
-        <div class="check-row"><input type="radio" name="plan" id="r1" checked><label for="r1">Aylık</label></div>
-        <div class="check-row"><input type="radio" name="plan" id="r2"><label for="r2">Yıllık</label></div>
+      <div class="toc">
+        <a href="#renkler">Renkler</a>
+        <a href="#tipografi">Tipografi</a>
+        <a href="#butonlar">Butonlar</a>
+        <a href="#form">Form Elemanları</a>
+        <a href="#kartlar">Kartlar</a>
+        <a href="#navigasyon">Navigasyon</a>
+        <a href="#sidebar">Sidebar</a>
+        <a href="#tabs">Sekmeler</a>
+        <a href="#stepper">Stepper</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#overlay">Modal / Dropdown / Tooltip</a>
+        <a href="#feedback">Bildirim &amp; Durum</a>
+        <a href="#tablo">Tablo</a>
+        <a href="#footer">Footer</a>
       </div>
-      <div>
-        <h3 class="mb-10">Switch</h3>
-        <div class="switch-row"><label class="switch"><input type="checkbox" checked><span class="track"></span></label> Otomatik yedekleme</div>
-        <div class="switch-row"><label class="switch"><input type="checkbox"><span class="track"></span></label> Karanlık mod</div>
-      </div>
-    </div>
 
-    <h3 class="mt-20">Dosya Yükleme</h3>
-    <div class="dropzone"><strong>Dosyaları buraya sürükleyin</strong> veya seçmek için tıklayın — PDF, PNG, JPG (maks. 10MB)</div>
-  </div>
+      <div class="section" id="renkler">
+        <span class="kicker">Foundations</span>
+        <h2>Renk Paleti</h2>
+        <p>
+          Ana renk koyu lacivert — teknoloji ve güven hissi verir. Turuncu tek
+          vurgu rengi olarak yalnızca aksiyon noktalarında (CTA butonlar, aktif
+          durumlar) kullanılır.
+        </p>
 
-  <div class="section" id="kartlar">
-    <span class="kicker">Content</span>
-    <h2>Kartlar</h2>
-    <div class="card-grid mb-24">
-      <div class="card">
-        <div class="icon">A</div>
-        <h3>Altyapı</h3>
-        <p>Ölçeklenebilir sunucu ve dağıtım hizmetleri.</p>
-      </div>
-      <div class="card">
-        <div class="icon">B</div>
-        <h3>Güvenlik</h3>
-        <p>Kurumsal düzeyde veri koruma ve erişim kontrolü.</p>
-      </div>
-      <div class="card">
-        <div class="icon">C</div>
-        <h3>Destek</h3>
-        <p>7/24 teknik danışmanlık ve öncelikli çözüm hattı.</p>
-      </div>
-    </div>
+        <h3>Marka (Primary)</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="fill fill--primary-900"></div>
+            <div class="label">
+              <strong>Primary 900</strong><span>#0F1C3F</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--primary-700"></div>
+            <div class="label">
+              <strong>Primary 700</strong><span>#1B2F5E</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--primary-500"></div>
+            <div class="label">
+              <strong>Primary 500</strong><span>#2D4A8A</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--primary-200"></div>
+            <div class="label">
+              <strong>Primary 200</strong><span>#C4D2EC</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--primary-100"></div>
+            <div class="label">
+              <strong>Primary 100</strong><span>#EAEFF9</span>
+            </div>
+          </div>
+        </div>
 
-    <h3>İstatistik Kartları</h3>
-    <div class="stat-grid mb-24">
-      <div class="stat-card"><div class="stat-label">Aktif Kullanıcı</div><div class="stat-value">12.480</div><div class="stat-delta up">▲ %8.2 bu ay</div></div>
-      <div class="stat-card"><div class="stat-label">Aylık Gelir</div><div class="stat-value">₺342K</div><div class="stat-delta up">▲ %4.1 bu ay</div></div>
-      <div class="stat-card"><div class="stat-label">Talep / Destek</div><div class="stat-value">37</div><div class="stat-delta down">▼ %2.5 bu ay</div></div>
-      <div class="stat-card"><div class="stat-label">Kullanım Oranı</div><div class="stat-value">%91</div><div class="stat-delta up">▲ %1.3 bu ay</div></div>
-    </div>
+        <h3 class="mt-24">Vurgu (Accent)</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="fill fill--accent-600"></div>
+            <div class="label">
+              <strong>Accent 600</strong><span>#F77422</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--accent-500"></div>
+            <div class="label">
+              <strong>Accent 500</strong><span>#F37121</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--accent-100"></div>
+            <div class="label">
+              <strong>Accent 100</strong><span>#FBEAD3</span>
+            </div>
+          </div>
+        </div>
 
-    <h3>Fiyatlandırma Kartları</h3>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Standart</h3>
-        <p class="text-sm">Küçük ekipler için</p>
-        <div class="price">₺2.490<span>/ay</span></div>
-        <ul><li>3 proje</li><li>E-posta desteği</li><li>10GB depolama</li></ul>
-        <button class="btn btn-outline w-full justify-center">Seç</button>
-      </div>
-      <div class="price-card featured">
-        <span class="badge badge-info badge-featured">En Popüler</span>
-        <h3>Kurumsal</h3>
-        <p class="text-sm">Büyüyen şirketler için</p>
-        <div class="price">₺6.990<span>/ay</span></div>
-        <ul><li>Sınırsız proje</li><li>Öncelikli destek</li><li>100GB depolama</li></ul>
-        <button class="btn btn-primary w-full justify-center">Seç</button>
-      </div>
-      <div class="price-card">
-        <h3>Özel</h3>
-        <p class="text-sm">Kurumsal ihtiyaçlar için</p>
-        <div class="price">Teklif Al</div>
-        <ul><li>Özel entegrasyon</li><li>SLA garantisi</li><li>Sınırsız depolama</li></ul>
-        <button class="btn btn-outline w-full justify-center">İletişime Geç</button>
-      </div>
-    </div>
-  </div>
+        <h3 class="mt-24">Nötr (Ink)</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="fill fill--ink-900"></div>
+            <div class="label">
+              <strong>Ink 900</strong><span>#1A1D23</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--ink-700"></div>
+            <div class="label">
+              <strong>Ink 700</strong><span>#454B55</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--ink-500"></div>
+            <div class="label">
+              <strong>Ink 500</strong><span>#6C7280</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--ink-300"></div>
+            <div class="label">
+              <strong>Ink 300</strong><span>#D5D8DD</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--ink-100"></div>
+            <div class="label">
+              <strong>Ink 100</strong><span>#F4F5F7</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="section" id="navigasyon">
-    <span class="kicker">Navigation</span>
-    <h2>Üst Navigasyon</h2>
-    <div class="navbar">
-      <div class="logo"><span class="dot"></span> KareCode</div>
-      <nav>
-        <a href="#" class="active">Panel</a>
-        <a href="#">Projeler</a>
-        <a href="#">Raporlar</a>
-        <a href="#">Ayarlar</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="btn btn-ghost btn-sm">Giriş Yap</button>
-        <button class="btn btn-primary btn-sm">Ücretsiz Dene</button>
-      </div>
-    </div>
-
-    <h3 class="mt-22">Breadcrumb</h3>
-    <div class="breadcrumb">
-      <a href="#">Panel</a><span class="sep">/</span><a href="#">Projeler</a><span class="sep">/</span><span class="current">Web Sitesi Yenileme</span>
-    </div>
-
-    <h3 class="mt-22">Sayfalama</h3>
-    <div class="pagination">
-      <button class="page-btn">‹</button>
-      <button class="page-btn active">1</button>
-      <button class="page-btn">2</button>
-      <button class="page-btn">3</button>
-      <button class="page-btn">…</button>
-      <button class="page-btn">8</button>
-      <button class="page-btn">›</button>
-    </div>
-  </div>
-
-  <div class="section" id="sidebar">
-    <span class="kicker">Navigation</span>
-    <h2>Sidebar</h2>
-    <div class="sidebar-demo">
-      <div class="sidebar">
-        <div class="side-title">Genel</div>
-        <a class="active">📊 Panel</a>
-        <a>📁 Projeler</a>
-        <a>📈 Raporlar</a>
-        <div class="side-title">Hesap</div>
-        <a>👤 Profil</a>
-        <a>⚙ Ayarlar</a>
-      </div>
-      <div class="sidebar-content">
-        <h3 class="mt-0">Panel</h3>
-        <p class="m-0">Seçili menü öğesine göre içerik burada değişir.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" id="tabs">
-    <span class="kicker">Navigation</span>
-    <h2>Sekmeler (Tabs)</h2>
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab(this,'t1')">Genel Bakış</button>
-      <button class="tab-btn" onclick="switchTab(this,'t2')">Faturalandırma</button>
-      <button class="tab-btn" onclick="switchTab(this,'t3')">Ekip</button>
-    </div>
-    <div class="tab-panel active" id="t1">Hesap özetiniz ve son aktiviteleriniz burada görüntülenir.</div>
-    <div class="tab-panel" id="t2">Fatura geçmişi ve ödeme yöntemleri bu sekmede yer alır.</div>
-    <div class="tab-panel" id="t3">Ekip üyelerinizi ve rollerini buradan yönetebilirsiniz.</div>
-  </div>
-
-  <div class="section" id="stepper">
-    <span class="kicker">Process</span>
-    <h2>Stepper</h2>
-    <div class="stepper">
-      <div class="step done"><div class="circle">✓</div><div class="label">Hesap Bilgisi</div></div>
-      <div class="step done"><div class="circle">✓</div><div class="label">Plan Seçimi</div></div>
-      <div class="step active"><div class="circle">3</div><div class="label">Ödeme</div></div>
-      <div class="step"><div class="circle">4</div><div class="label">Onay</div></div>
-    </div>
-    <h3 class="mt-28">İlerleme Çubuğu</h3>
-    <div class="progress-row">
-      <div class="p-label"><span>Depolama Kullanımı</span><span>68%</span></div>
-      <div class="progress"><div class="fill progress-fill--68"></div></div>
-    </div>
-    <div class="progress-row">
-      <div class="p-label"><span>Proje Tamamlanma</span><span>32%</span></div>
-      <div class="progress"><div class="fill progress-fill--32"></div></div>
-    </div>
-  </div>
-
-  <div class="section" id="accordion">
-    <span class="kicker">Content</span>
-    <h2>Accordion</h2>
-    <div class="accordion-item open">
-      <button class="accordion-head" onclick="toggleAcc(this)">KareCode nedir? <span class="chev">⌄</span></button>
-      <div class="accordion-body"><p>KareCode, ekiplerin yazılım süreçlerini yönetmesine yardımcı olan bir platformdur.</p></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-head" onclick="toggleAcc(this)">Fiyatlandırma nasıl işliyor? <span class="chev">⌄</span></button>
-      <div class="accordion-body"><p>Kullanıcı sayısına ve seçilen plana göre aylık veya yıllık faturalandırılırsınız.</p></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-head" onclick="toggleAcc(this)">Verilerim güvende mi? <span class="chev">⌄</span></button>
-      <div class="accordion-body"><p>Tüm veriler şifrelenerek saklanır ve düzenli olarak yedeklenir.</p></div>
-    </div>
-  </div>
-
-  <div class="section" id="overlay">
-    <span class="kicker">Overlays</span>
-    <h2>Modal, Dropdown &amp; Tooltip</h2>
-    <div class="btn-row">
-      <button class="btn btn-primary" onclick="document.getElementById('demoModal').classList.add('show')">Modal Aç</button>
-
-      <div class="dropdown" id="ddMenu">
-        <button class="btn btn-outline" onclick="document.getElementById('ddMenu').classList.toggle('open')">Seçenekler ▾</button>
-        <div class="dropdown-menu">
-          <a href="#">Profili Düzenle</a>
-          <a href="#">Dışa Aktar</a>
-          <a href="#" class="link--danger">Hesabı Sil</a>
+        <h3 class="mt-24">Durum Renkleri</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="fill fill--success"></div>
+            <div class="label">
+              <strong>Success</strong><span>#4CAF50</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--warning"></div>
+            <div class="label">
+              <strong>Warning</strong><span>#E6BE00</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="fill fill--error"></div>
+            <div class="label"><strong>Error</strong><span>#B22222</span></div>
+          </div>
         </div>
       </div>
 
-      <span class="tooltip">Kredi limiti nedir?<span class="tip">Aylık kullanılabilir toplam limit</span></span>
-    </div>
+      <div class="section" id="tipografi">
+        <span class="kicker">Foundations</span>
+        <h2>Tipografi</h2>
+        <p>
+          <strong>Başlıklar:</strong> Sora (600–800 ağırlık) <br />
+          <strong>Gövde metni:</strong> Inter <br />
+          <strong>Kod / teknik içerik:</strong> JetBrains Mono.
+        </p>
 
-    <h3 class="mt-22">Avatar</h3>
-    <div class="avatar-group">
-      <div class="avatar">AY</div>
-      <div class="avatar avatar--accent">EK</div>
-      <div class="avatar avatar--success">MD</div>
-      <div class="avatar avatar--muted">+5</div>
-    </div>
-  </div>
-
-  <div class="section" id="feedback">
-    <span class="kicker">Feedback</span>
-    <h2>Bildirim &amp; Durum Bileşenleri</h2>
-
-    <div class="alert">Bu bir bilgilendirme mesajı örneğidir. Kullanıcıya nötr bir uyarı iletmek için kullanılır.</div>
-    <div class="alert alert-success">İşleminiz başarıyla tamamlandı.</div>
-    <div class="alert alert-warning">Planınızın süresi 3 gün içinde doluyor.</div>
-    <div class="alert alert-error">Ödeme işlemi başarısız oldu, lütfen tekrar deneyin.</div>
-
-    <div class="badge-row badge-row--spaced">
-      <span class="badge badge-success">Aktif</span>
-      <span class="badge badge-warning">Beklemede</span>
-      <span class="badge badge-error">İptal Edildi</span>
-      <span class="badge badge-info">Yeni</span>
-    </div>
-
-    <button class="btn btn-secondary" onclick="showToast()">Toast Bildirim Göster</button>
-
-    <h3 class="mt-26">Skeleton / Yükleme Durumu</h3>
-    <div class="flex-row gap-14 items-center mb-20">
-      <div class="skeleton skeleton--avatar"></div>
-      <div class="flex-1">
-        <div class="skeleton skeleton--line skeleton--line-wide mb-8"></div>
-        <div class="skeleton skeleton--line skeleton--line-narrow"></div>
+        <div class="mt-20">
+          <div class="type-row">
+            <span class="type-meta">H1 / 40px / 800</span
+            ><span class="type-demo type-demo--h1">Başlık Örneği</span>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">H2 / 26px / 700</span
+            ><span class="type-demo type-demo--h2">Alt Başlık Örneği</span>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">H3 / 18px / 600</span
+            ><span class="type-demo type-demo--h3">Bölüm Başlığı</span>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">Body / 17px / 400</span
+            ><span class="type-demo type-demo--body"
+              >Gövde metni — uzun okuma blokları için optimize edilmiş satır
+              yüksekliği.</span
+            >
+          </div>
+          <div class="type-row">
+            <span class="type-meta">Small / 14px / 400</span
+            ><span class="type-demo type-demo--small"
+              >İkincil / yardımcı metin.</span
+            >
+          </div>
+          <div class="type-row">
+            <span class="type-meta">Mono / 14px</span
+            ><span class="mono">const kare = "code";</span>
+          </div>
+        </div>
       </div>
-      <div class="spinner"></div>
+
+      <div class="section" id="butonlar">
+        <span class="kicker">Actions</span>
+        <h2>Butonlar</h2>
+        <p>
+          Birincil aksiyon her ekranda tek bir turuncu buton olarak kalır;
+          ikincil ve destekleyici aksiyonlar için daha sakin varyantlar
+          kullanılır.
+        </p>
+        <div class="btn-row mb-16">
+          <button class="btn btn-primary">Devam Et</button>
+          <button class="btn btn-secondary">Kaydet</button>
+          <button class="btn btn-outline">İptal</button>
+          <button class="btn btn-ghost">Daha Fazla Bilgi</button>
+          <button class="btn btn-danger">Sil</button>
+          <button class="btn btn-primary" disabled>Devre Dışı</button>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary btn-sm">Küçük</button>
+          <button class="btn btn-primary">Normal</button>
+          <button class="btn btn-primary btn-lg">Büyük</button>
+          <button class="btn btn-outline btn-icon" title="Ayarlar">⚙</button>
+          <button class="btn btn-primary">
+            <span class="spinner spinner--sm"></span> Yükleniyor
+          </button>
+        </div>
+      </div>
+
+      <div class="section" id="form">
+        <span class="kicker">Inputs</span>
+        <h2>Form Elemanları</h2>
+        <div class="form-grid">
+          <div class="field">
+            <label>Ad Soyad</label>
+            <input type="text" placeholder="Örn. Ahmet Yılmaz" />
+          </div>
+          <div class="field input-icon">
+            <label>Arama</label>
+            <span class="ic">🔍</span>
+            <input type="text" placeholder="Proje ara..." />
+          </div>
+          <div class="field has-error">
+            <label>E-posta</label>
+            <input type="email" value="hatali-eposta" />
+            <div class="hint">Geçerli bir e-posta adresi girin.</div>
+          </div>
+          <div class="field has-success">
+            <label>Kullanıcı Adı</label>
+            <input type="text" value="karecode_admin" />
+            <div class="hint">Kullanılabilir.</div>
+          </div>
+          <div class="field">
+            <label>Plan Seçimi</label>
+            <select>
+              <option>Standart</option>
+              <option>Kurumsal</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Mesaj</label>
+            <textarea rows="1" placeholder="Notunuzu yazın..."></textarea>
+          </div>
+        </div>
+
+        <div class="flex-row gap-48 flex-wrap mt-8">
+          <div>
+            <h3 class="mb-10">Checkbox &amp; Radio</h3>
+            <div class="check-row">
+              <input type="checkbox" id="c1" checked /><label for="c1"
+                >E-posta bildirimleri</label
+              >
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="c2" /><label for="c2"
+                >SMS bildirimleri</label
+              >
+            </div>
+            <div class="check-row">
+              <input type="radio" name="plan" id="r1" checked /><label for="r1"
+                >Aylık</label
+              >
+            </div>
+            <div class="check-row">
+              <input type="radio" name="plan" id="r2" /><label for="r2"
+                >Yıllık</label
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-10">Switch</h3>
+            <div class="switch-row">
+              <label class="switch"
+                ><input type="checkbox" checked /><span class="track"></span
+              ></label>
+              Otomatik yedekleme
+            </div>
+            <div class="switch-row">
+              <label class="switch"
+                ><input type="checkbox" /><span class="track"></span
+              ></label>
+              Karanlık mod
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-20">Dosya Yükleme</h3>
+        <div class="dropzone">
+          <strong>Dosyaları buraya sürükleyin</strong> veya seçmek için tıklayın
+          — PDF, PNG, JPG (maks. 10MB)
+        </div>
+      </div>
+
+      <div class="section" id="kartlar">
+        <span class="kicker">Content</span>
+        <h2>Kartlar</h2>
+        <div class="card-grid mb-24">
+          <div class="card">
+            <div class="icon">A</div>
+            <h3>Altyapı</h3>
+            <p>Ölçeklenebilir sunucu ve dağıtım hizmetleri.</p>
+          </div>
+          <div class="card">
+            <div class="icon">B</div>
+            <h3>Güvenlik</h3>
+            <p>Kurumsal düzeyde veri koruma ve erişim kontrolü.</p>
+          </div>
+          <div class="card">
+            <div class="icon">C</div>
+            <h3>Destek</h3>
+            <p>7/24 teknik danışmanlık ve öncelikli çözüm hattı.</p>
+          </div>
+        </div>
+
+        <h3>İstatistik Kartları</h3>
+        <div class="stat-grid mb-24">
+          <div class="stat-card">
+            <div class="stat-label">Aktif Kullanıcı</div>
+            <div class="stat-value">12.480</div>
+            <div class="stat-delta up">▲ %8.2 bu ay</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Aylık Gelir</div>
+            <div class="stat-value">₺342K</div>
+            <div class="stat-delta up">▲ %4.1 bu ay</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Talep / Destek</div>
+            <div class="stat-value">37</div>
+            <div class="stat-delta down">▼ %2.5 bu ay</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Kullanım Oranı</div>
+            <div class="stat-value">%91</div>
+            <div class="stat-delta up">▲ %1.3 bu ay</div>
+          </div>
+        </div>
+
+        <h3>Fiyatlandırma Kartları</h3>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Standart</h3>
+            <p class="text-sm">Küçük ekipler için</p>
+            <div class="price">₺2.490<span>/ay</span></div>
+            <ul>
+              <li>3 proje</li>
+              <li>E-posta desteği</li>
+              <li>10GB depolama</li>
+            </ul>
+            <button class="btn btn-outline w-full justify-center">Seç</button>
+          </div>
+          <div class="price-card featured">
+            <span class="badge badge-info badge-featured">En Popüler</span>
+            <h3>Kurumsal</h3>
+            <p class="text-sm">Büyüyen şirketler için</p>
+            <div class="price">₺6.990<span>/ay</span></div>
+            <ul>
+              <li>Sınırsız proje</li>
+              <li>Öncelikli destek</li>
+              <li>100GB depolama</li>
+            </ul>
+            <button class="btn btn-primary w-full justify-center">Seç</button>
+          </div>
+          <div class="price-card">
+            <h3>Özel</h3>
+            <p class="text-sm">Kurumsal ihtiyaçlar için</p>
+            <div class="price">Teklif Al</div>
+            <ul>
+              <li>Özel entegrasyon</li>
+              <li>SLA garantisi</li>
+              <li>Sınırsız depolama</li>
+            </ul>
+            <button class="btn btn-outline w-full justify-center">
+              İletişime Geç
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="navigasyon">
+        <span class="kicker">Navigation</span>
+        <h2>Üst Navigasyon</h2>
+        <div class="navbar">
+          <div class="logo"><span class="dot"></span> KareCode</div>
+          <nav>
+            <a href="#" class="active">Panel</a>
+            <a href="#">Projeler</a>
+            <a href="#">Raporlar</a>
+            <a href="#">Ayarlar</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="btn btn-ghost btn-sm">Giriş Yap</button>
+            <button class="btn btn-primary btn-sm">Ücretsiz Dene</button>
+          </div>
+        </div>
+
+        <h3 class="mt-22">Breadcrumb</h3>
+        <div class="breadcrumb">
+          <a href="#">Panel</a><span class="sep">/</span><a href="#">Projeler</a
+          ><span class="sep">/</span
+          ><span class="current">Web Sitesi Yenileme</span>
+        </div>
+
+        <h3 class="mt-22">Sayfalama</h3>
+        <div class="pagination">
+          <button class="page-btn">‹</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">…</button>
+          <button class="page-btn">8</button>
+          <button class="page-btn">›</button>
+        </div>
+      </div>
+
+      <div class="section" id="sidebar">
+        <span class="kicker">Navigation</span>
+        <h2>Sidebar</h2>
+        <div class="sidebar-demo">
+          <div class="sidebar">
+            <div class="side-title">Genel</div>
+            <a class="active">📊 Panel</a>
+            <a>📁 Projeler</a>
+            <a>📈 Raporlar</a>
+            <div class="side-title">Hesap</div>
+            <a>👤 Profil</a>
+            <a>⚙ Ayarlar</a>
+          </div>
+          <div class="sidebar-content">
+            <h3 class="mt-0">Panel</h3>
+            <p class="m-0">Seçili menü öğesine göre içerik burada değişir.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="tabs">
+        <span class="kicker">Navigation</span>
+        <h2>Sekmeler (Tabs)</h2>
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab(this, 't1')">
+            Genel Bakış
+          </button>
+          <button class="tab-btn" onclick="switchTab(this, 't2')">
+            Faturalandırma
+          </button>
+          <button class="tab-btn" onclick="switchTab(this, 't3')">Ekip</button>
+        </div>
+        <div class="tab-panel active" id="t1">
+          Hesap özetiniz ve son aktiviteleriniz burada görüntülenir.
+        </div>
+        <div class="tab-panel" id="t2">
+          Fatura geçmişi ve ödeme yöntemleri bu sekmede yer alır.
+        </div>
+        <div class="tab-panel" id="t3">
+          Ekip üyelerinizi ve rollerini buradan yönetebilirsiniz.
+        </div>
+      </div>
+
+      <div class="section" id="stepper">
+        <span class="kicker">Process</span>
+        <h2>Stepper</h2>
+        <div class="stepper">
+          <div class="step done">
+            <div class="circle">✓</div>
+            <div class="label">Hesap Bilgisi</div>
+          </div>
+          <div class="step done">
+            <div class="circle">✓</div>
+            <div class="label">Plan Seçimi</div>
+          </div>
+          <div class="step active">
+            <div class="circle">3</div>
+            <div class="label">Ödeme</div>
+          </div>
+          <div class="step">
+            <div class="circle">4</div>
+            <div class="label">Onay</div>
+          </div>
+        </div>
+        <h3 class="mt-28">İlerleme Çubuğu</h3>
+        <div class="progress-row">
+          <div class="p-label">
+            <span>Depolama Kullanımı</span><span>68%</span>
+          </div>
+          <div class="progress"><div class="fill progress-fill--68"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="p-label">
+            <span>Proje Tamamlanma</span><span>32%</span>
+          </div>
+          <div class="progress"><div class="fill progress-fill--32"></div></div>
+        </div>
+      </div>
+
+      <div class="section" id="accordion">
+        <span class="kicker">Content</span>
+        <h2>Accordion</h2>
+        <div class="accordion-item open">
+          <button class="accordion-head" onclick="toggleAcc(this)">
+            KareCode nedir? <span class="chev">⌄</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              KareCode, ekiplerin yazılım süreçlerini yönetmesine yardımcı olan
+              bir platformdur.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-head" onclick="toggleAcc(this)">
+            Fiyatlandırma nasıl işliyor? <span class="chev">⌄</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Kullanıcı sayısına ve seçilen plana göre aylık veya yıllık
+              faturalandırılırsınız.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-head" onclick="toggleAcc(this)">
+            Verilerim güvende mi? <span class="chev">⌄</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Tüm veriler şifrelenerek saklanır ve düzenli olarak yedeklenir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="overlay">
+        <span class="kicker">Overlays</span>
+        <h2>Modal, Dropdown &amp; Tooltip</h2>
+        <div class="btn-row">
+          <button
+            class="btn btn-primary"
+            onclick="document.getElementById('demoModal').classList.add('show')"
+          >
+            Modal Aç
+          </button>
+
+          <div class="dropdown" id="ddMenu">
+            <button
+              class="btn btn-outline"
+              onclick="
+                document.getElementById('ddMenu').classList.toggle('open')
+              "
+            >
+              Seçenekler ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Profili Düzenle</a>
+              <a href="#">Dışa Aktar</a>
+              <a href="#" class="link--danger">Hesabı Sil</a>
+            </div>
+          </div>
+
+          <span class="tooltip"
+            >Kredi limiti nedir?<span class="tip"
+              >Aylık kullanılabilir toplam limit</span
+            ></span
+          >
+        </div>
+
+        <h3 class="mt-22">Avatar</h3>
+        <div class="avatar-group">
+          <div class="avatar">AY</div>
+          <div class="avatar avatar--accent">EK</div>
+          <div class="avatar avatar--success">MD</div>
+          <div class="avatar avatar--muted">+5</div>
+        </div>
+      </div>
+
+      <div class="section" id="feedback">
+        <span class="kicker">Feedback</span>
+        <h2>Bildirim &amp; Durum Bileşenleri</h2>
+
+        <div class="alert">
+          Bu bir bilgilendirme mesajı örneğidir. Kullanıcıya nötr bir uyarı
+          iletmek için kullanılır.
+        </div>
+        <div class="alert alert-success">İşleminiz başarıyla tamamlandı.</div>
+        <div class="alert alert-warning">
+          Planınızın süresi 3 gün içinde doluyor.
+        </div>
+        <div class="alert alert-error">
+          Ödeme işlemi başarısız oldu, lütfen tekrar deneyin.
+        </div>
+
+        <div class="badge-row badge-row--spaced">
+          <span class="badge badge-success">Aktif</span>
+          <span class="badge badge-warning">Beklemede</span>
+          <span class="badge badge-error">İptal Edildi</span>
+          <span class="badge badge-info">Yeni</span>
+        </div>
+
+        <button class="btn btn-secondary" onclick="showToast()">
+          Toast Bildirim Göster
+        </button>
+
+        <h3 class="mt-26">Skeleton / Yükleme Durumu</h3>
+        <div class="flex-row gap-14 items-center mb-20">
+          <div class="skeleton skeleton--avatar"></div>
+          <div class="flex-1">
+            <div class="skeleton skeleton--line skeleton--line-wide mb-8"></div>
+            <div class="skeleton skeleton--line skeleton--line-narrow"></div>
+          </div>
+          <div class="spinner"></div>
+        </div>
+
+        <h3>Boş Durum (Empty State)</h3>
+        <div class="empty-state">
+          <div class="icon">🗂</div>
+          <h3 class="mb-6">Henüz proje yok</h3>
+          <p>İlk projenizi oluşturarak başlayın.</p>
+          <button class="btn btn-primary btn-sm">Proje Oluştur</button>
+        </div>
+      </div>
+
+      <div class="section" id="tablo">
+        <span class="kicker">Content</span>
+        <h2>Tablo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Proje</th>
+              <th>Durum</th>
+              <th>Tarih</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kurumsal Web Sitesi</td>
+              <td><span class="badge badge-success">Tamamlandı</span></td>
+              <td>12.06.2026</td>
+            </tr>
+            <tr>
+              <td>Mobil Uygulama</td>
+              <td><span class="badge badge-warning">Devam Ediyor</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>API Entegrasyonu</td>
+              <td><span class="badge badge-error">Durduruldu</span></td>
+              <td>03.05.2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer" id="footer">
+        KareCode Design System · v2.0 — Dahili kullanım için hazırlanmıştır.
+      </div>
     </div>
 
-    <h3>Boş Durum (Empty State)</h3>
-    <div class="empty-state">
-      <div class="icon">🗂</div>
-      <h3 class="mb-6">Henüz proje yok</h3>
-      <p>İlk projenizi oluşturarak başlayın.</p>
-      <button class="btn btn-primary btn-sm">Proje Oluştur</button>
+    <!-- Modal -->
+    <div class="modal-overlay" id="demoModal">
+      <div class="modal-box">
+        <h3>Değişiklikleri kaydet?</h3>
+        <p>
+          Yaptığınız değişiklikler kaydedilmeden bu sayfadan çıkarsanız
+          kaybolur.
+        </p>
+        <div class="modal-actions">
+          <button
+            class="btn btn-ghost"
+            onclick="
+              document.getElementById('demoModal').classList.remove('show')
+            "
+          >
+            Vazgeç
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="
+              document.getElementById('demoModal').classList.remove('show')
+            "
+          >
+            Kaydet
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="section" id="tablo">
-    <span class="kicker">Content</span>
-    <h2>Tablo</h2>
-    <table>
-      <thead>
-        <tr><th>Proje</th><th>Durum</th><th>Tarih</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Kurumsal Web Sitesi</td><td><span class="badge badge-success">Tamamlandı</span></td><td>12.06.2026</td></tr>
-        <tr><td>Mobil Uygulama</td><td><span class="badge badge-warning">Devam Ediyor</span></td><td>—</td></tr>
-        <tr><td>API Entegrasyonu</td><td><span class="badge badge-error">Durduruldu</span></td><td>03.05.2026</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <!-- Toast stack -->
+    <div class="toast-stack" id="toastStack"></div>
 
-  <div class="footer" id="footer">
-    KareCode Design System · v2.0 — Dahili kullanım için hazırlanmıştır.
-  </div>
+    <script>
+      function switchTab(btn, panelId) {
+        var tabs = btn.parentElement.querySelectorAll(".tab-btn");
+        tabs.forEach(function (t) {
+          t.classList.remove("active");
+        });
+        btn.classList.add("active");
+        var panels = btn.closest(".section").querySelectorAll(".tab-panel");
+        panels.forEach(function (p) {
+          p.classList.remove("active");
+        });
+        document.getElementById(panelId).classList.add("active");
+      }
 
-</div>
+      function toggleAcc(head) {
+        var item = head.closest(".accordion-item");
+        item.classList.toggle("open");
+      }
 
-<!-- Modal -->
-<div class="modal-overlay" id="demoModal">
-  <div class="modal-box">
-    <h3>Değişiklikleri kaydet?</h3>
-    <p>Yaptığınız değişiklikler kaydedilmeden bu sayfadan çıkarsanız kaybolur.</p>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="document.getElementById('demoModal').classList.remove('show')">Vazgeç</button>
-      <button class="btn btn-primary" onclick="document.getElementById('demoModal').classList.remove('show')">Kaydet</button>
-    </div>
-  </div>
-</div>
+      document.addEventListener("click", function (e) {
+        var dd = document.getElementById("ddMenu");
+        if (dd && !dd.contains(e.target)) dd.classList.remove("open");
+      });
 
-<!-- Toast stack -->
-<div class="toast-stack" id="toastStack"></div>
-
-<script>
-  function switchTab(btn, panelId) {
-    var tabs = btn.parentElement.querySelectorAll('.tab-btn');
-    tabs.forEach(function(t){ t.classList.remove('active'); });
-    btn.classList.add('active');
-    var panels = btn.closest('.section').querySelectorAll('.tab-panel');
-    panels.forEach(function(p){ p.classList.remove('active'); });
-    document.getElementById(panelId).classList.add('active');
-  }
-
-  function toggleAcc(head) {
-    var item = head.closest('.accordion-item');
-    item.classList.toggle('open');
-  }
-
-  document.addEventListener('click', function(e) {
-    var dd = document.getElementById('ddMenu');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-  });
-
-  function showToast() {
-    var stack = document.getElementById('toastStack');
-    var el = document.createElement('div');
-    el.className = 'toast';
-    el.innerHTML = '✅ İşlem başarıyla kaydedildi.';
-    stack.appendChild(el);
-    setTimeout(function(){ el.remove(); }, 3000);
-  }
-</script>
-</body>
+      function showToast() {
+        var stack = document.getElementById("toastStack");
+        var el = document.createElement("div");
+        el.className = "toast";
+        el.innerHTML = "✅ İşlem başarıyla kaydedildi.";
+        stack.appendChild(el);
+        setTimeout(function () {
+          el.remove();
+        }, 3000);
+      }
+    </script>
+  </body>
 </html>
