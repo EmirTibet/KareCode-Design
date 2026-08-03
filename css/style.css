@@ -317,7 +317,9 @@ section {
   margin-bottom: 12px;
 }
 .section-head h2 {
-  font-size: 34px;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
   margin-bottom: 0;
 }
 .section-head p {
@@ -532,14 +534,19 @@ section {
   box-shadow: var(--shadow-md);
   z-index: 1;
 }
+.partner-hub-logo {
+  width: 56px;
+  height: auto;
+  display: block;
+}
 .partner-node {
   position: absolute;
   width: 84px;
   height: 84px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  background: var(--color-white);
-  background-size: cover;
+  background-color: var(--color-white);
+  background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid var(--color-ink-300);
@@ -604,10 +611,13 @@ section {
   box-shadow: var(--shadow-md);
 }
 .tech-icon {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   border-radius: var(--radius-sm);
-  background: var(--color-primary-100);
+  background: transparent;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--color-primary-700);
   display: flex;
   align-items: center;
@@ -620,6 +630,15 @@ section {
   font-size: 13.5px;
   font-weight: 600;
   color: var(--color-ink-900);
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+.tech-card:hover span.name {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Kaydırmalı kartlar (Özellikler) */
@@ -839,6 +858,9 @@ section {
     height: 96px;
     font-size: 13px;
   }
+  .partner-hub-logo {
+    width: 42px;
+  }
   .partner-node {
     width: 62px;
     height: 62px;
@@ -953,14 +975,53 @@ section {
   height: 340px;
   border: none;
 }
-/* #img-sirket { background-image: url('../img/sirket.jpg'); } */
-/* #img-partner-1 { background-image: url('../img/partner-1.png'); } */
-/* #img-partner-2 { background-image: url('../img/partner-2.png'); } */
-/* #img-partner-3 { background-image: url('../img/partner-3.png'); } */
-/* #img-partner-4 { background-image: url('../img/partner-4.png'); } */
-/* #img-partner-5 { background-image: url('../img/partner-5.png'); } */
-/* #img-partner-6 { background-image: url('../img/partner-6.png'); } */
-/* #img-banner-ozellikler { background-image: url('../img/banner-ozellikler.jpg'); } */
+#img-sirket {
+  background-image: url("../img/sirket.png");
+  border: none;
+}
+#img-partner-1 {
+  background-image: url("../img/sirket1.png");
+}
+#img-partner-2 {
+  background-image: url("../img/sirket2.png");
+}
+#img-partner-3 {
+  background-image: url("../img/sirket3.png");
+}
+#img-partner-4 {
+  background-image: url("../img/sirket4.png");
+}
+#img-partner-5 {
+  background-image: url("../img/sirket5.jpg");
+}
+#img-partner-6 {
+  background-image: url("../img/sirket6.png");
+}
+#img-tech-html {
+  background-image: url("../img/tech-html.png");
+}
+#img-tech-js {
+  background-image: url("../img/tech-js.png");
+}
+#img-tech-php {
+  background-image: url("../img/tech-php.png");
+}
+#img-tech-node {
+  background-image: url("../img/tech-node.png");
+}
+#img-tech-vue {
+  background-image: url("../img/tech-vue.png");
+}
+#img-tech-csharp {
+  background-image: url("../img/tech-c-sharp.png");
+}
+#img-tech-python {
+  background-image: url("../img/tech-python.png");
+}
+#img-tech-flutter{
+  background-image: url("../img/tech-flutter.png");
+}
+#img-banner-ozellikler { background-image: url('../img/banner-ozellikler.png'); } 
 /* #img-ozellikler-giris { background-image: url('../img/ozellikler-giris.jpg'); } */
 /* #img-carousel-1 { background-image: url('../img/carousel-1.jpg'); } */
 /* #img-carousel-2 { background-image: url('../img/carousel-2.jpg'); } */
