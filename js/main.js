@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!card) return;
       var cardWidth = card.getBoundingClientRect().width + 20; // gap dahil
 
-      /* Sona gelindiğinde "ileri" tıklanırsa başa dön */
+      
       if (direction > 0) {
         var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
         if (atEnd) {
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      /* Başa gelindiğinde "geri" tıklanırsa sona git */
       if (direction < 0) {
         var atStart = track.scrollLeft <= 4;
         if (atStart) {
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Scroll ile beliren animasyonlar (yalnızca .reveal sınıflı elemanlarda) */
+  /* Scroll ile beliren animasyonlar  */
   var revealEls = document.querySelectorAll(".reveal");
   if (revealEls.length) {
     var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
