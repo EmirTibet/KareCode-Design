@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("KareCode main.js yüklendi, .reveal sayısı:", document.querySelectorAll(".reveal").length);
+
 
   /* Mobil menü aç/kapat */
   var toggle = document.querySelector(".nav-toggle");
@@ -21,6 +23,25 @@ document.addEventListener("DOMContentLoaded", function () {
       var card = cards[0];
       if (!card) return;
       var cardWidth = card.getBoundingClientRect().width + 20; // gap dahil
+
+      /* Sona gelindiğinde "ileri" tıklanırsa başa dön */
+      if (direction > 0) {
+        var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+        if (atEnd) {
+          track.scrollTo({ left: 0, behavior: "smooth" });
+          return;
+        }
+      }
+
+      /* Başa gelindiğinde "geri" tıklanırsa sona git */
+      if (direction < 0) {
+        var atStart = track.scrollLeft <= 4;
+        if (atStart) {
+          track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+          return;
+        }
+      }
+
       track.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
     }
 
@@ -70,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
 
+      
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
           revealEls.forEach(function (el) { revealObserver.observe(el); });

@@ -270,7 +270,7 @@ section {
   overflow: hidden;
 }
 .page-banner-media {
-  min-height: 340px;
+  min-height: 540px;
   border-radius: 0;
   border-width: 0 0 1.5px 0;
 }
@@ -1018,13 +1018,21 @@ section {
 #img-tech-python {
   background-image: url("../img/tech-python.png");
 }
-#img-tech-flutter{
+#img-tech-flutter {
   background-image: url("../img/tech-flutter.png");
 }
-#img-banner-ozellikler { background-image: url('../img/banner-ozellikler.png'); } 
-/* #img-ozellikler-giris { background-image: url('../img/ozellikler-giris.jpg'); } */
+#img-banner-ozellikler {
+  background-image: url("../img/banner-ozellikler.png");
+}
 /* #img-carousel-1 { background-image: url('../img/carousel-1.jpg'); } */
 /* #img-carousel-2 { background-image: url('../img/carousel-2.jpg'); } */
 /* #img-carousel-3 { background-image: url('../img/carousel-3.jpg'); } */
 /* #img-carousel-4 { background-image: url('../img/carousel-4.jpg'); } */
-/* #img-5651 { background-image: url('../img/5651.jpg'); } */
+/* #img-carousel-5 { background-image: url('../img/carousel-5.jpg'); } */
+/* #img-carousel-6 { background-image: url('../img/carousel-6.jpg'); } */
+/* #img-carousel-7 { background-image: url('../img/carousel-7.jpg'); } */
+/* #img-carousel-8 { background-image: url('../img/carousel-8.jpg'); } */
+#img-5651 {
+  background-image: url("../img/background-5651.png");
+  border: none;
+}
