@@ -1024,14 +1024,39 @@ section {
 #img-banner-ozellikler {
   background-image: url("../img/banner-ozellikler.png");
 }
-/* #img-carousel-1 { background-image: url('../img/carousel-1.jpg'); } */
-/* #img-carousel-2 { background-image: url('../img/carousel-2.jpg'); } */
-/* #img-carousel-3 { background-image: url('../img/carousel-3.jpg'); } */
-/* #img-carousel-4 { background-image: url('../img/carousel-4.jpg'); } */
-/* #img-carousel-5 { background-image: url('../img/carousel-5.jpg'); } */
-/* #img-carousel-6 { background-image: url('../img/carousel-6.jpg'); } */
-/* #img-carousel-7 { background-image: url('../img/carousel-7.jpg'); } */
-/* #img-carousel-8 { background-image: url('../img/carousel-8.jpg'); } */
+#img-carousel-1 {
+  background-image: url("../img/carousel-1.jpg");
+  border: none;
+}
+#img-carousel-2 {
+  background-image: url("../img/carousel-2.png");
+  border: none;
+}
+
+#img-carousel-3 {
+  background-image: url("../img/5651.png");
+  border: none;
+}
+#img-carousel-4 {
+  background-image: url("../img/carousel-4.png");
+  border: none;
+}
+#img-carousel-5 {
+  background-image: url("../img/carousel-5.jpg");
+  border: none;
+}
+#img-carousel-6 {
+  background-image: url("../img/carousel-6.png");
+  border: none;
+}
+#img-carousel-7 {
+  background-image: url("../img/carousel-7.png");
+  border: none;
+}
+#img-carousel-8 {
+  background-image: url("../img/carousel-8.png");
+  border: none;
+}
 #img-5651 {
   background-image: url("../img/background-5651.png");
   border: none;
