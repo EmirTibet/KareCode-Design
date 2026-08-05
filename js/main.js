@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       nav.classList.toggle("open");
+      var icon = toggle.querySelector(".material-symbols-outlined");
+      if (icon) {
+        icon.textContent = nav.classList.contains("open") ? "close" : "menu";
+      }
     });
   }
 
@@ -61,6 +65,82 @@ document.addEventListener("DOMContentLoaded", function () {
         dot.classList.toggle("active", i === index);
       });
     });
+  }
+
+  /* Mesaj karakter sayacı */
+  var messageInput = document.getElementById("message");
+  var messageCount = document.getElementById("messageCount");
+  if (messageInput && messageCount) {
+    messageInput.addEventListener("input", function () {
+      messageCount.textContent = messageInput.value.length;
+    });
+  }
+
+  /* İstatistik sayaç animasyonu (Hakkımızda) */
+  var statNums = document.querySelectorAll(".stats-row .num");
+  if (statNums.length) {
+    var prefersReducedStats =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var parseStatValue = function (text) {
+      var raw = text.trim();
+      var prefix = "";
+      var suffix = "";
+      if (raw.charAt(0) === "%") {
+        prefix = "%";
+        raw = raw.slice(1);
+      }
+      if (raw.charAt(raw.length - 1) === "+") {
+        suffix = "+";
+        raw = raw.slice(0, -1);
+      }
+      var normalized = raw.replace(",", ".");
+      var decimals =
+        normalized.indexOf(".") > -1 ? normalized.split(".")[1].length : 0;
+      var value = parseFloat(normalized);
+      return { prefix: prefix, suffix: suffix, value: value, decimals: decimals };
+    };
+
+    var animateStat = function (el) {
+      var data = parseStatValue(el.textContent);
+      if (isNaN(data.value) || prefersReducedStats) return;
+
+      var duration = 1400;
+      var start = null;
+
+      var step = function (timestamp) {
+        if (!start) start = timestamp;
+        var progress = Math.min((timestamp - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        var current = data.value * eased;
+        el.textContent = data.prefix + current.toFixed(data.decimals) + data.suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent =
+            data.prefix + data.value.toFixed(data.decimals) + data.suffix;
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
+    if ("IntersectionObserver" in window) {
+      var statsObserver = new IntersectionObserver(
+        function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateStat(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      statNums.forEach(function (el) {
+        statsObserver.observe(el);
+      });
+    }
   }
 
   /* TaptoTop butonu */

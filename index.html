@@ -10,7 +10,11 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/designsystem.css" />
@@ -33,10 +37,16 @@
           <a href="ozellikler.html#kclogger">KcLogger</a>
         </nav>
         <div class="nav-actions">
-          <button class="btn btn-ghost btn-sm">Giriş Yap</button>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <img
+              src="img/linkedin-icon.png"
+              alt="LinkedIn"
+              class="social-icon-img"
+            />
+          </a>
         </div>
         <button class="nav-toggle" aria-label="Menüyü aç">
-          <span></span><span></span><span></span>
+          <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
     </header>
@@ -146,19 +156,27 @@
         <div class="device-grid">
           <div class="device-row reveal reveal-left">
             <div class="device-item">
-              <span class="device-icon">🖥️</span>
+              <span class="device-icon material-symbols-outlined"
+                >desktop_windows</span
+              >
               <span>Masaüstü</span>
             </div>
             <div class="device-item">
-              <span class="device-icon">💻</span>
+              <span class="device-icon material-symbols-outlined"
+                >laptop_mac</span
+              >
               <span>Dizüstü</span>
             </div>
             <div class="device-item">
-              <span class="device-icon">📱</span>
+              <span class="device-icon material-symbols-outlined"
+                >tablet_mac</span
+              >
               <span>Tablet</span>
             </div>
             <div class="device-item">
-              <span class="device-icon">📲</span>
+              <span class="device-icon material-symbols-outlined"
+                >smartphone</span
+              >
               <span>Akıllı Telefon</span>
             </div>
           </div>
@@ -259,7 +277,20 @@
               type="email"
               id="email"
               name="email"
+              maxlength="50"
               placeholder="ornek@sirket.com"
+              required
+            />
+            <div class="hint">En fazla 50 karakter.</div>
+          </div>
+          <div class="field">
+            <label for="phone">Telefon Numarası</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              maxlength="20"
+              placeholder="+90 (5xx) xxx xx xx"
               required
             />
           </div>
@@ -269,9 +300,13 @@
               id="message"
               name="message"
               rows="5"
+              maxlength="1000"
               placeholder="Bize iletmek istediğiniz notu yazın..."
               required
             ></textarea>
+            <div class="hint">
+              <span id="messageCount">0</span>/1000 karakter
+            </div>
           </div>
           <div class="contact-submit-row">
             <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
@@ -282,9 +317,18 @@
 
     <footer class="site-footer">
       <div class="container footer-contact">
-        <span class="footer-contact-item">📧 info@karecode.com.tr</span>
-        <span class="footer-contact-item">📞 +90 (232) 332 22 84</span>
-        <span class="footer-contact-item">📍 Bornova, İzmir</span>
+        <span class="footer-contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          info@karecode.com.tr
+        </span>
+        <span class="footer-contact-item">
+          <span class="material-symbols-outlined">call</span> +90 (232) 332 22
+          84
+        </span>
+        <span class="footer-contact-item">
+          <span class="material-symbols-outlined">location_on</span> Bornova,
+          İzmir
+        </span>
       </div>
       <div class="container footer-simple">
         <a href="index.html" class="brand">
@@ -305,7 +349,7 @@
     </footer>
 
     <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Yukarı çık">
-      ↑
+      <span class="material-symbols-outlined">arrow_upward</span>
     </button>
 
     <script src="js/main.js"></script>
