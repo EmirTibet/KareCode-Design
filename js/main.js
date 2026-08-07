@@ -67,6 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* Telefon alanına sadece rakam girilebilsin */
+  var phoneInput = document.getElementById("phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function () {
+      phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
+    });
+  }
+
   /* Mesaj karakter sayacı */
   var messageInput = document.getElementById("message");
   var messageCount = document.getElementById("messageCount");
