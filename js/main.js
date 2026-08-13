@@ -20,54 +20,100 @@ document.addEventListener("DOMContentLoaded", function () {
   if (track) {
     var leftBtn = document.querySelector(".carousel-arrow--left");
     var rightBtn = document.querySelector(".carousel-arrow--right");
-    var dots = document.querySelectorAll(".carousel-dot");
+    var dotsContainer = document.querySelector(".carousel-dots");
     var cards = track.querySelectorAll(".carousel-card");
 
-    function scrollByCard(direction) {
-      var card = cards[0];
-      if (!card) return;
-      var cardWidth = card.getBoundingClientRect().width + 20; // gap dahil
+    var cardsPerView = 1;
+    var totalPages = 1;
+    var pageStarts = [];
 
-      
-      if (direction > 0) {
-        var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-        if (atEnd) {
-          track.scrollTo({ left: 0, behavior: "smooth" });
-          return;
-        }
-      }
-
-      if (direction < 0) {
-        var atStart = track.scrollLeft <= 4;
-        if (atStart) {
-          track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
-          return;
-        }
-      }
-
-      track.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
+    function getCardStep() {
+      if (!cards.length) return 0;
+      return cards[0].getBoundingClientRect().width + 20; // gap dahil
     }
 
-    if (leftBtn) leftBtn.addEventListener("click", function () { scrollByCard(-1); });
-    if (rightBtn) rightBtn.addEventListener("click", function () { scrollByCard(1); });
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = "";
+      for (var i = 0; i < totalPages; i++) {
+        var dot = document.createElement("button");
+        dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+        dot.setAttribute("aria-label", (i + 1) + ". görsel");
+        dot.addEventListener("click", (function (index) {
+          return function () {
+            track.scrollTo({ left: pageStarts[index], behavior: "smooth" });
+          };
+        })(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
 
-    dots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () {
-        var card = cards[i];
-        if (!card) return;
-        track.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
+    function recalcPages() {
+      var step = getCardStep();
+      if (!step || !cards.length) return;
+
+      cardsPerView = Math.max(1, Math.round(track.clientWidth / step));
+      totalPages = Math.max(1, Math.ceil(cards.length / cardsPerView));
+
+      pageStarts = [];
+      for (var p = 0; p < totalPages; p++) {
+        var cardIndex = Math.min(p * cardsPerView, cards.length - 1);
+        pageStarts.push(cards[cardIndex].offsetLeft);
+      }
+
+      buildDots();
+    }
+
+    function currentPageIndex() {
+      var closest = 0;
+      var minDiff = Infinity;
+      pageStarts.forEach(function (pos, i) {
+        var diff = Math.abs(track.scrollLeft - pos);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closest = i;
+        }
       });
-    });
+      return closest;
+    }
 
-    track.addEventListener("scroll", function () {
-      var index = Math.round(track.scrollLeft / (cards[0].getBoundingClientRect().width + 20));
-      dots.forEach(function (dot, i) {
+    function updateActiveDot() {
+      if (!dotsContainer || !pageStarts.length) return;
+      var index = currentPageIndex();
+      var dotEls = dotsContainer.querySelectorAll(".carousel-dot");
+      dotEls.forEach(function (dot, i) {
         dot.classList.toggle("active", i === index);
       });
+    }
+
+    function scrollByPage(direction) {
+      if (!pageStarts.length) return;
+      var nextPage = currentPageIndex() + direction;
+      if (nextPage >= totalPages) nextPage = 0;
+      if (nextPage < 0) nextPage = totalPages - 1;
+      track.scrollTo({ left: pageStarts[nextPage], behavior: "smooth" });
+    }
+
+    if (leftBtn) leftBtn.addEventListener("click", function () { scrollByPage(-1); });
+    if (rightBtn) rightBtn.addEventListener("click", function () { scrollByPage(1); });
+
+    track.addEventListener("scroll", function () {
+      updateActiveDot();
+    });
+
+    recalcPages();
+
+    var carouselResizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(carouselResizeTimer);
+      carouselResizeTimer = setTimeout(function () {
+        recalcPages();
+        track.scrollTo({ left: 0, behavior: "auto" });
+      }, 200);
     });
   }
 
-  /* Telefon alanına sadece rakam girilebilsin */
+  
   var phoneInput = document.getElementById("phone");
   if (phoneInput) {
     phoneInput.addEventListener("input", function () {
