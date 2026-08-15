@@ -1,0 +1,68 @@
+.navbar {
+  position: sticky; top: 0; z-index: var(--z-sticky);
+  background: var(--surface-inverse);
+  border-bottom: 1px solid var(--border-inverse);
+}
+.navbar__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-6); height: 64px; }
+.navbar__links { display: flex; align-items: center; gap: var(--sp-6); }
+.navbar__link { position: relative; padding: var(--sp-2) 0; font-size: var(--fs-sm); color: var(--gray-400); }
+.navbar__link:hover { color: var(--white); }
+.navbar__link.is-active { color: var(--white); font-weight: var(--fw-medium); }
+.navbar__link.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--white); }
+.navbar__linkedin { display: flex; align-items: center; }
+.navbar__linkedin img { display: block; width: 20px; height: 20px; object-fit: contain; opacity: .7; transition: opacity var(--dur-fast) var(--ease); }
+.navbar__linkedin:hover img { opacity: 1; }
+
+.navbar__toggle { display: none; }
+.navbar__burger { display: none; width: 40px; height: 40px; place-items: center; border: 1px solid var(--border-inverse); border-radius: var(--r-md); cursor: pointer; }
+.navbar__burger span, .navbar__burger span::before, .navbar__burger span::after {
+  content: ""; display: block; width: 16px; height: 2px; background: var(--white); position: relative;
+}
+.navbar__burger span::before { position: absolute; top: -5px; }
+.navbar__burger span::after  { position: absolute; top: 5px; }
+
+@media (max-width: 860px) {
+  .navbar__burger { display: grid; }
+  .navbar__links {
+    position: absolute; top: 64px; left: 0; right: 0;
+    flex-direction: column; align-items: flex-start; gap: 0;
+    background: var(--surface-inverse); border-bottom: 1px solid var(--border-inverse);
+    padding: var(--sp-2) var(--sp-6) var(--sp-5);
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: max-height var(--dur-slow) var(--ease), opacity var(--dur-base) var(--ease);
+  }
+  .navbar__toggle:checked ~ .navbar__links { max-height: 360px; opacity: 1; }
+  .navbar__link { padding: var(--sp-3) 0; border-bottom: 1px solid var(--border-inverse); }
+  .navbar__linkedin { padding: var(--sp-3) 0; }
+}
+
+/* --------------------------------------------------------------------------
+   EK: sarmalayıcılar
+   -------------------------------------------------------------------------- */
+.tabs { display: block; }
+.tabs__panels { display: block; }
+.gallery--spaced { margin-top: var(--sp-5); }
+
+.logo__image { display: block; height: 34px; width: auto; }
+.logo__image--lg { height: 42px; }
+
+
+.media-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-6);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-lg);
+  background: var(--surface-sunken);
+  color: var(--text-subtle);
+  text-align: center;
+}
+.media-slot .material-symbols-outlined { font-size: 28px; color: var(--text-subtle); }
+.media-slot__title { font-size: var(--fs-sm); font-weight: var(--fw-medium); color: var(--text-muted); }
+.media-slot__hint  { font-size: var(--fs-2xs); color: var(--text-subtle); }
+
+.media-slot--tall { aspect-ratio: 4 / 3; }
+.media-slot--wide { aspect-ratio: 21 / 9; }

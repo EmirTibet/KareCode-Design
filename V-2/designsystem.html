@@ -1,0 +1,1850 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KareCode — Design System</title>
+    <meta
+      name="description"
+      content="KareCode tasarım sistemi: renk, tipografi, ölçü ve 64 bileşenlik arayüz kütüphanesi. Saf HTML ve CSS."
+    />
+    <link rel="stylesheet" href="css/designsystem.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body id="ust">
+    <!-- 21 · ÜST ŞERİT ------------------------------------------------------ -->
+    <div class="topbar">
+      <div class="container row row--between">
+        
+        <a href="#bilesenler">Bileşenlere git</a>
+      </div>
+    </div>
+
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a class="logo" href="#ust">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">KareCode</span>
+        </a>
+
+        <input
+          class="navbar__toggle sr-only"
+          type="checkbox"
+          id="menu"
+          aria-label="Menüyü aç"
+        />
+        <label class="navbar__burger" for="menu" aria-hidden="true"
+          ><span></span
+        ></label>
+
+        <nav class="navbar__links" aria-label="Ana menü">
+          <a class="navbar__link is-active" href="#temeller">Temeller</a>
+          <a class="navbar__link" href="#aksiyon">Aksiyon</a>
+          <a class="navbar__link" href="#icerik">İçerik</a>
+          <a class="navbar__link" href="#geribildirim">Geri bildirim</a>
+          <a class="navbar__link" href="#form">Form</a>
+          <a class="navbar__link" href="#yapi">Yapı</a>
+        </nav>
+
+        <div class="row">
+          <span class="badge">64 bileşen</span>
+          <a class="btn btn--primary btn--sm" href="#modal-tarama">Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 63 · HERO ----------------------------------------------------------- -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">KareCode Tasarım Sistemi</p>
+        <h1 class="display hero__title">Tek renk. Net kurallar.</h1>
+        <p class="lead hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Ut elit tellus, luctus nec 
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#bilesenler"
+            >Bileşenleri gör</a
+          >
+          <a class="btn btn--secondary btn--lg" href="#temeller"
+            >Token'ları incele</a
+          >
+        </div>
+
+        <div class="grid grid--4 hero__stats">
+          <div class="stat">
+            <p class="stat__value">64</p>
+            <p class="stat__label">Bileşen</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">12</p>
+            <p class="stat__label">Gri tonu</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">4px</p>
+            <p class="stat__label">Izgara birimi</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">0</p>
+            <p class="stat__label">Satır JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 · TİCKER --------------------------------------------------------- -->
+    <div class="ticker">
+      <div class="ticker__track">
+        <span class="ticker__item">Sızma testi</span>
+        <span class="ticker__item">Kaynak kodu denetimi</span>
+        <span class="ticker__item">Log yönetimi</span>
+        <span class="ticker__item">Olay müdahale</span>
+        <span class="ticker__item">KVKK uyumluluk</span>
+        <span class="ticker__item">SIEM kurulumu</span>
+        <span class="ticker__item">Sızma testi</span>
+        <span class="ticker__item">Kaynak kodu denetimi</span>
+        <span class="ticker__item">Log yönetimi</span>
+        <span class="ticker__item">Olay müdahale</span>
+        <span class="ticker__item">KVKK uyumluluk</span>
+        <span class="ticker__item">SIEM kurulumu</span>
+      </div>
+    </div>
+
+    <main class="container section">
+      <div class="grid grid--sidebar">
+        <!-- 34 · YAN MENÜ ---------------------------------------------------- -->
+        <aside class="docs__aside">
+          <nav class="sidenav" aria-label="Sistem içeriği">
+            <p class="sidenav__group">Temeller</p>
+            <a class="sidenav__link is-active" href="#renk">Renk</a>
+            <a class="sidenav__link" href="#tipografi">Tipografi</a>
+            <a class="sidenav__link" href="#olcu">Ölçü ve yüzey</a>
+            <p class="sidenav__group">Bileşenler</p>
+            <a class="sidenav__link" href="#aksiyon">Aksiyon · 01–08</a>
+            <a class="sidenav__link" href="#icerik">İçerik · 09–18</a>
+            <a class="sidenav__link" href="#geribildirim"
+              >Geri bildirim · 19–27</a
+            >
+            <a class="sidenav__link" href="#gezinme">Gezinme · 28–35</a>
+            <a class="sidenav__link" href="#veri">Veri · 36–38</a>
+            <a class="sidenav__link" href="#form">Form · 39–50</a>
+            <a class="sidenav__link" href="#durum">Durum · 51–56</a>
+            <a class="sidenav__link" href="#yapi">Yapı · 57–64</a>
+          </nav>
+        </aside>
+
+        <div class="docs__main">
+          <!-- ================================================================== -->
+          <!-- TEMELLER · RENK                                                    -->
+          <!-- ================================================================== -->
+          <section class="block" id="temeller">
+            <header class="block__head" id="renk">
+              <p class="eyebrow">Temeller</p>
+              <h2 class="block__title">Renk</h2>
+              <p class="block__desc">
+                Sistem tek bir gri ailesi üzerine kurulu.
+                <span class="code-inline">#545454</span> ana renk, beyaz
+                taşıyıcı yüzey. Diğer her ton bu ikisinin arasından türetildi.
+              </p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">Gri skala</p>
+              <div class="grid grid--4">
+                <div class="swatch">
+                  <div class="swatch__chip fill-950"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-950</p>
+                    <p class="swatch__hex">#141414</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-900"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-900</p>
+                    <p class="swatch__hex">#1F1F1F</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-800"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-800</p>
+                    <p class="swatch__hex">#2E2E2E</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-700"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-700</p>
+                    <p class="swatch__hex">#3F3F3F</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-600"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-600 · primary</p>
+                    <p class="swatch__hex">#545454</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-500"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-500</p>
+                    <p class="swatch__hex">#6E6E6E</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-400"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-400</p>
+                    <p class="swatch__hex">#8A8A8A</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-300"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-300</p>
+                    <p class="swatch__hex">#A8A8A8</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-200"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-200</p>
+                    <p class="swatch__hex">#C9C9C9</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-150"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-150</p>
+                    <p class="swatch__hex">#DEDEDE</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-100"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">gray-100</p>
+                    <p class="swatch__hex">#E9E9E9</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-white"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">white · secondary</p>
+                    <p class="swatch__hex">#FFFFFF</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">Durum renkleri</p>
+              <p class="block__desc">
+                 Yalnızca uyarı ve
+                doğrulamada kullanılır.
+              </p>
+              <div class="grid grid--4">
+                <div class="swatch">
+                  <div class="swatch__chip fill-success"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">success</p>
+                    <p class="swatch__hex">#4A6B57</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-warning"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">warning</p>
+                    <p class="swatch__hex">#7A6534</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-danger"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">danger</p>
+                    <p class="swatch__hex">#B71C1C</p>
+                  </div>
+                </div>
+                <div class="swatch">
+                  <div class="swatch__chip fill-info"></div>
+                  <div class="swatch__meta">
+                    <p class="swatch__name">info</p>
+                    <p class="swatch__hex">#545454</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TEMELLER · TİPOGRAFİ ---------------------------------------------- -->
+          <section class="block" id="tipografi">
+            <header class="block__head">
+              <p class="eyebrow">Temeller</p>
+              <h2 class="block__title">Tipografi</h2>
+              <p class="block__desc">
+                Tek aile:
+                <span class="code-inline"
+                  >"Helvetica Neue", Helvetica, Arial, sans-serif</span
+                >. Karakter punto farkından değil harf aralığından geliyor:
+                başlıklar sıkı (−0.035em), etiketler geniş (+0.12em).
+              </p>
+            </header>
+
+            <div class="demo stack-lg">
+              <div>
+                <p class="caption">display · 68px / 700</p>
+                <p class="display">Güvenli yazılım</p>
+              </div>
+              <div>
+                <p class="caption">h1 · 48px / 700</p>
+                <p class="h1">Sistemi kur, sonra hızlan</p>
+              </div>
+              <div>
+                <p class="caption">h2 · 30px / 700</p>
+                <p class="h2">Denetim ve sızma testleri</p>
+              </div>
+              <div>
+                <p class="caption">h3 · 24px / 500</p>
+                <p class="h3">Uçtan uca log yönetimi</p>
+              </div>
+              <div>
+                <p class="caption">h4 · 20px / 500</p>
+                <p class="h4">Olay müdahale ekibi</p>
+              </div>
+              <div>
+                <p class="caption">lead · 18px</p>
+                <p class="lead">
+                  Kurumsal altyapınızı izleyen, olayları tek panelde toplayan
+                  bir katman.
+                </p>
+              </div>
+              <div>
+                <p class="caption">body · 16px</p>
+                <p class="body">
+                  Gövde metni bu ölçüde ayarlanır. Satır yüksekliği 1.7, ölçü
+                  genişliği 65 karakteri geçmez.
+                </p>
+              </div>
+              <div>
+                <p class="caption">small · 14px</p>
+                <p class="small">
+                  İkincil bilgi, tablo hücreleri ve form yardım metinleri.
+                </p>
+              </div>
+              <div>
+                <p class="caption">eyebrow · 11px / +0.12em</p>
+                <p class="eyebrow">Siber güvenlik</p>
+              </div>
+              <div>
+                <p class="caption">mono · 13px</p>
+                <p class="mono">GET /api/v1/events?severity=critical</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- TEMELLER · ÖLÇÜ ---------------------------------------------------- -->
+          <section class="block" id="olcu">
+            <header class="block__head">
+              <p class="eyebrow">Temeller</p>
+              <h2 class="block__title">Ölçü ve yüzey</h2>
+              <p class="block__desc">
+                Boşluk 4px'in katları. Köşe yarıçapı kasıtlı olarak küçük —
+                marka adı “kare”.
+              </p>
+            </header>
+
+            <div class="grid grid--2">
+              <div>
+                <p class="subblock__label">Boşluk ve genişlik</p>
+                <div class="spec">
+                  <span class="spec__key">--sp-1 … --sp-4</span
+                  ><span class="spec__val">4 · 8 · 12 · 16 px</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--sp-5 … --sp-8</span
+                  ><span class="spec__val">20 · 24 · 32 px</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--sp-10 … --sp-24</span
+                  ><span class="spec__val">40 · 48 · 64 · 80 · 96 px</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--container</span
+                  ><span class="spec__val">1200 px</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--container-narrow</span
+                  ><span class="spec__val">820 px</span>
+                </div>
+              </div>
+              <div>
+                <p class="subblock__label">Yarıçap, gölge, hareket</p>
+                <div class="spec">
+                  <span class="spec__key">--r-sm / --r-md</span
+                  ><span class="spec__val">2 / 4 px — kontroller</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--r-lg / --r-xl</span
+                  ><span class="spec__val">8 / 12 px — kart ve panel</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--shadow-sm</span
+                  ><span class="spec__val">durağan yüzey</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--shadow-lg</span
+                  ><span class="spec__val">modal ve bildirim</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">--dur-base / --ease</span
+                  ><span class="spec__val"
+                    >200ms · cubic-bezier(.2,.6,.2,1)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 01–08 · AKSİYON                                                    -->
+          <!-- ================================================================== -->
+          <section class="block" id="aksiyon">
+            <header class="block__head" id="bilesenler">
+              <p class="eyebrow">Bileşenler · 01–08</p>
+              <h2 class="block__title">Aksiyon</h2>
+              <p class="block__desc">
+                Kullanıcının bastığı, seçtiği, filtrelediği her şey.
+              </p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">01 · Buton — varyantlar</p>
+              <div class="demo row">
+                <button class="btn btn--primary">Birincil</button>
+                <button class="btn btn--secondary">İkincil</button>
+                <button class="btn btn--ghost">Hayalet</button>
+                <button class="btn btn--danger">Sil</button>
+                <button class="btn btn--link">Bağlantı</button>
+                <button class="btn btn--primary" disabled>Pasif</button>
+                <button class="btn btn--primary btn--loading">
+                  Kaydediliyor
+                </button>
+                <button
+                  class="btn btn--secondary btn--icon"
+                  aria-label="Ayarlar"
+                >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >settings</span
+                  >
+                </button>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">01 · Buton — boyut ve ikon</p>
+              <div class="demo row">
+                <button class="btn btn--primary btn--sm">Küçük</button>
+                <button class="btn btn--primary">Standart</button>
+                <button class="btn btn--primary btn--lg">Büyük</button>
+                <button class="btn btn--secondary">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >download</span
+                  >Raporu indir
+                </button>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                02 · Buton grubu &nbsp;·&nbsp; 03 · Segment kontrol
+              </p>
+              <div class="demo row">
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Sayfa aksiyonları"
+                >
+                  <button class="btn btn--secondary">Kopyala</button>
+                  <button class="btn btn--secondary">Taşı</button>
+                  <button class="btn btn--secondary">Arşivle</button>
+                </div>
+
+                <div
+                  class="segment"
+                  role="radiogroup"
+                  aria-label="Zaman aralığı"
+                >
+                  <input type="radio" name="aralik" id="ar-gun" checked />
+                  <label for="ar-gun">Gün</label>
+                  <input type="radio" name="aralik" id="ar-hafta" />
+                  <label for="ar-hafta">Hafta</label>
+                  <input type="radio" name="aralik" id="ar-ay" />
+                  <label for="ar-ay">Ay</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                04 · Rozet &nbsp;·&nbsp; 05 · Sayaç &nbsp;·&nbsp; 06 · Durum
+                noktası
+              </p>
+              <div class="demo row">
+                <span class="badge">Varsayılan</span>
+                <span class="badge badge--solid">Dolu</span>
+                <span class="badge badge--outline">Çerçeve</span>
+                <span class="badge badge--success badge--dot">Aktif</span>
+                <span class="badge badge--warning badge--dot">Beklemede</span>
+                <span class="badge badge--danger badge--dot">Kritik</span>
+                <span class="count">7</span>
+                <span class="count count--soft">24</span>
+                <span class="status status--live">Sistem çalışıyor</span>
+                <span class="status status--warning">Bakım planlandı</span>
+                <span class="status status--down">Bağlantı yok</span>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">07 · Çip (etiket ve filtre)</p>
+              <div class="demo row">
+                <span class="chip chip--active">Tümü</span>
+                <span class="chip"
+                  >Sızma testi
+                  <button class="chip__remove" aria-label="Kaldır">
+                    &times;
+                  </button></span
+                >
+                <span class="chip"
+                  >SIEM
+                  <button class="chip__remove" aria-label="Kaldır">
+                    &times;
+                  </button></span
+                >
+
+                <span class="chip-check">
+                  <input type="checkbox" id="f-log" />
+                  <label for="f-log">Log analizi</label>
+                </span>
+                <span class="chip-check">
+                  <input type="checkbox" id="f-kod" checked />
+                  <label for="f-kod">Kod denetimi</label>
+                </span>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">08 · Avatar</p>
+              <div class="demo row">
+                <span class="avatar avatar--sm">EM</span>
+                <span class="avatar">KC</span>
+                <span class="avatar avatar--solid avatar--lg">AY</span>
+                <span class="avatar avatar--round avatar--solid">SD</span>
+                <span class="avatar-group">
+                  <span class="avatar avatar--sm">EM</span>
+                  <span class="avatar avatar--sm">AY</span>
+                  <span class="avatar avatar--sm">SD</span>
+                  <span class="avatar avatar--sm avatar--solid">+6</span>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 09–18 · İÇERİK                                                     -->
+          <!-- ================================================================== -->
+          <section class="block" id="icerik">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 09–18</p>
+              <h2 class="block__title">İçerik</h2>
+              <p class="block__desc">Bilgiyi taşıyan yüzeyler ve vitrinler.</p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">09 · Kart</p>
+              <div class="grid grid--3">
+                <article class="card card--hover">
+                  <div class="card__media"></div>
+                  <h3 class="card__title">Olay müdahale</h3>
+                  <p class="card__text">
+                    İhlal anında devreye giren 7/24 ekip ve hazır oyun kitabı.
+                  </p>
+                  <div class="card__footer">
+                    <span class="caption">4 dk ortalama yanıt</span>
+                    <a class="btn btn--link" href="#icerik">İncele</a>
+                  </div>
+                </article>
+                <article class="card card--flat">
+                  <h3 class="card__title">Düz kart</h3>
+                  <p class="card__text">
+                    Kenarlık yerine yüzey farkı kullanan sakin varyant. İkincil
+                    içerik için.
+                  </p>
+                </article>
+                <article class="card card--inverse">
+                  <h3 class="card__title">Ters kart</h3>
+                  <p class="card__text">
+                    Koyu yüzey. Sayfada en fazla bir kez, dikkat çekmesi gereken
+                    yerde.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">10 · Özellik kartı</p>
+              <div class="grid grid--3">
+                <article class="feature">
+                  <div class="feature__icon">
+                    <span class="material-symbols-outlined" aria-hidden="true"
+                      >shield_lock</span
+                    >
+                  </div>
+                  <h3 class="feature__title">Sürekli izleme</h3>
+                  <p class="feature__text">
+                    Ağ trafiği ve uç noktalar tek panelde, kesintisiz.
+                  </p>
+                </article>
+                <article class="feature">
+                  <div class="feature__icon">
+                    <span class="material-symbols-outlined" aria-hidden="true"
+                      >terminal</span
+                    >
+                  </div>
+                  <h3 class="feature__title">Kod denetimi</h3>
+                  <p class="feature__text">
+                    Her sürüm öncesi otomatik statik analiz ve manuel gözden
+                    geçirme.
+                  </p>
+                </article>
+                <article class="feature">
+                  <div class="feature__icon">
+                    <span class="material-symbols-outlined" aria-hidden="true"
+                      >policy</span
+                    >
+                  </div>
+                  <h3 class="feature__title">Uyumluluk</h3>
+                  <p class="feature__text">
+                    KVKK ve ISO 27001 gereksinimlerini karşılayan raporlama.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                11 · Medya nesnesi &nbsp;·&nbsp; 12 · İstatistik &nbsp;·&nbsp;
+                13 · Sütun grafik
+              </p>
+              <div class="demo grid grid--2">
+                <div class="media">
+                  <div class="media__figure"></div>
+                  <div>
+                    <p class="media__title">Haftalık güvenlik özeti</p>
+                    <p class="media__text">
+                      Bu hafta 3 kritik, 11 orta seviye bulgu kapatıldı.
+                    </p>
+                  </div>
+                </div>
+                <div class="stat">
+                  <p class="stat__value">99,98%</p>
+                  <p class="stat__label">Çalışma süresi</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__value">1.240</p>
+                  <p class="stat__label">İzlenen uç nokta</p>
+                </div>
+                <div>
+                  <p class="caption">Son 7 gün · olay sayısı</p>
+                  <div class="bars">
+                    <span class="bars__bar h-35"></span>
+                    <span class="bars__bar h-55"></span>
+                    <span class="bars__bar h-20"></span>
+                    <span class="bars__bar h-80"></span>
+                    <span class="bars__bar h-45"></span>
+                    <span class="bars__bar h-65"></span>
+                    <span class="bars__bar bars__bar--on h-100"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">14 · Fiyat kartı</p>
+              <div class="grid grid--3">
+                <div class="pricing">
+                  <p class="pricing__name">Başlangıç</p>
+                  <p class="pricing__price">
+                    ₺4.900<span class="pricing__period">/ay</span>
+                  </p>
+                  <ul class="pricing__list">
+                    <li>25 uç nokta izleme</li>
+                    <li>Aylık zafiyet taraması</li>
+                    <li>E-posta desteği</li>
+                  </ul>
+                  <button class="btn btn--secondary btn--block">
+                    Planı seç
+                  </button>
+                </div>
+                <div class="pricing pricing--featured">
+                  <p class="pricing__name">Kurumsal</p>
+                  <p class="pricing__price">
+                    ₺12.500<span class="pricing__period">/ay</span>
+                  </p>
+                  <ul class="pricing__list">
+                    <li>Sınırsız uç nokta</li>
+                    <li>7/24 olay müdahale</li>
+                    <li>Yıllık sızma testi</li>
+                    <li>Özel çözüm mimarı</li>
+                  </ul>
+                  <button class="btn btn--inverse btn--block">Planı seç</button>
+                </div>
+                <div class="pricing">
+                  <p class="pricing__name">Özel</p>
+                  <p class="pricing__price">Teklife bağlı</p>
+                  <ul class="pricing__list">
+                    <li>Yerinde kurulum</li>
+                    <li>Ekip eğitimi</li>
+                    <li>SLA görüşmesi</li>
+                  </ul>
+                  <button class="btn btn--secondary btn--block">
+                    Bize ulaşın
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                15 · Referans &nbsp;·&nbsp; 61 · Karusel (yatay kaydır)
+              </p>
+              <div class="carousel">
+                <blockquote class="quote carousel__slide">
+                  <p class="quote__text">
+                    Denetim raporunu okuduğumuz gün üç kritik açığı kapattık.
+                  </p>
+                  <div class="quote__author">
+                    <span class="avatar avatar--sm avatar--solid">AY</span>
+                    <span
+                      ><span class="quote__name">Ayşe Yıldız</span
+                      ><span class="quote__role"
+                        >BT Direktörü, Ege Lojistik</span
+                      ></span
+                    >
+                  </div>
+                </blockquote>
+                <blockquote class="quote carousel__slide">
+                  <p class="quote__text">
+                    Panel ekibin ortak diline dönüştü. Artık kimse ekran
+                    görüntüsü paylaşmıyor.
+                  </p>
+                  <div class="quote__author">
+                    <span class="avatar avatar--sm avatar--solid">SD</span>
+                    <span
+                      ><span class="quote__name">Serkan Demir</span
+                      ><span class="quote__role"
+                        >Yazılım Müdürü, Bornova Yazılım</span
+                      ></span
+                    >
+                  </div>
+                </blockquote>
+                <blockquote class="quote carousel__slide">
+                  <p class="quote__text">
+                    Kurulum bir öğleden sonra sürdü, ilk uyarı aynı akşam geldi.
+                  </p>
+                  <div class="quote__author">
+                    <span class="avatar avatar--sm avatar--solid">MK</span>
+                    <span
+                      ><span class="quote__name">Merve Kaya</span
+                      ><span class="quote__role"
+                        >Sistem Yöneticisi, Aliağa Metal</span
+                      ></span
+                    >
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                16 · Ekip kartı &nbsp;·&nbsp; 62 · Galeri
+              </p>
+              <div class="grid grid--4">
+                <div class="person">
+                  <div class="person__photo"></div>
+                  <p class="person__name">Emir Tibet</p>
+                  <p class="person__role">Ön yüz</p>
+                </div>
+                <div class="person">
+                  <div class="person__photo"></div>
+                  <p class="person__name">Ayşe Yıldız</p>
+                  <p class="person__role">Güvenlik</p>
+                </div>
+                <div class="person">
+                  <div class="person__photo"></div>
+                  <p class="person__name">Serkan Demir</p>
+                  <p class="person__role">Altyapı</p>
+                </div>
+                <div class="person">
+                  <div class="person__photo"></div>
+                  <p class="person__name">Merve Kaya</p>
+                  <p class="person__role">Denetim</p>
+                </div>
+              </div>
+              <div class="gallery gallery--spaced">
+                <div class="gallery__cell"></div>
+                <div class="gallery__cell"></div>
+                <div class="gallery__cell"></div>
+                <div class="gallery__cell"></div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">17 · Logo duvarı</p>
+              <div class="logowall">
+                <div class="logowall__cell">EGE LOJİSTİK</div>
+                <div class="logowall__cell">BORNOVA YAZILIM</div>
+                <div class="logowall__cell">ALİAĞA METAL</div>
+                <div class="logowall__cell">İZBAN TEKNİK</div>
+                <div class="logowall__cell">KEMALPAŞA GIDA</div>
+                <div class="logowall__cell">ÇEŞME TURİZM</div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">18 · Ticker</p>
+              <p class="block__desc">
+                Sayfanın üst kısmında canlı hâlde çalışıyor. Üzerine gelince
+                durur.
+              </p>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 19–27 · GERİ BİLDİRİM                                              -->
+          <!-- ================================================================== -->
+          <section class="block" id="geribildirim">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 19–27</p>
+              <h2 class="block__title">Geri bildirim</h2>
+              <p class="block__desc">
+                Sistem ne yaptığını söyler: uyarı, bildirim, pencere, menü,
+                ipucu.
+              </p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                19 · Uyarı &nbsp;·&nbsp; 20 · Not kutusu
+              </p>
+              <div class="stack">
+                <div class="alert">
+                  <div>
+                    <p class="alert__title">Tarama planlandı</p>
+                    <p class="alert__body">
+                      Sonraki tarama bu gece 02.00'de başlayacak.
+                    </p>
+                  </div>
+                  <button class="alert__close" aria-label="Kapat">
+                    &times;
+                  </button>
+                </div>
+                <div class="alert alert--success">
+                  <div>
+                    <p class="alert__title">Yapılandırma kaydedildi</p>
+                    <p class="alert__body">
+                      Değişiklikler tüm sunuculara uygulandı.
+                    </p>
+                  </div>
+                </div>
+                <div class="alert alert--warning">
+                  <div>
+                    <p class="alert__title">Sertifika 14 gün içinde doluyor</p>
+                    <p class="alert__body">
+                      Yenilemeyi ayarlar bölümünden başlatın.
+                    </p>
+                  </div>
+                </div>
+                <div class="alert alert--danger">
+                  <div>
+                    <p class="alert__title">Yetkisiz erişim denemesi</p>
+                    <p class="alert__body">
+                      3 farklı IP'den 42 başarısız giriş kaydedildi.
+                    </p>
+                  </div>
+                </div>
+                <div class="note">
+                  <span class="note__label">Not</span>
+                  Ajan kurulumu için sunucuda root yetkisi gerekir. Yetkiniz
+                  yoksa sistem yöneticinizle iletişime geçin.
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">22 · Bildirim (toast)</p>
+              <div class="demo">
+                <div class="toast">
+                  <div>
+                    <p class="toast__title">Rapor hazır</p>
+                    <p>PDF indirme klasörüne kaydedildi.</p>
+                  </div>
+                  <button class="toast__close" aria-label="Kapat">
+                    &times;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                23 · Pencere &nbsp;·&nbsp; 24 · Yan panel — ikisi de saf CSS
+                (<span class="code-inline">:target</span>)
+              </p>
+              <div class="demo row">
+                <a class="btn btn--primary" href="#modal-tarama"
+                  >Pencereyi aç</a
+                >
+                <a class="btn btn--secondary" href="#drawer-filtre"
+                  >Yan paneli aç</a
+                >
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                25 · Açılır menü &nbsp;·&nbsp; 26 · Popover &nbsp;·&nbsp; 27 ·
+                İpucu
+              </p>
+              <div class="demo row">
+                <div class="dropdown">
+                  <button class="btn btn--secondary">
+                    Sunucu seç<span
+                      class="material-symbols-outlined"
+                      aria-hidden="true"
+                      >expand_more</span
+                    >
+                  </button>
+                  <div class="dropdown__menu">
+                    <button class="dropdown__item">İzmir · birincil</button>
+                    <button class="dropdown__item">Ankara · yedek</button>
+                    <div class="dropdown__sep"></div>
+                    <button class="dropdown__item">Yeni sunucu ekle</button>
+                  </div>
+                </div>
+
+                <div class="popover">
+                  <button class="btn btn--secondary">Kapsam nedir?</button>
+                  <div class="popover__panel">
+                    Kapsam, test edilecek sistemlerin listesi ve sınırlarıdır.
+                    Sözleşme ekinde yazılı olarak onaylanır.
+                  </div>
+                </div>
+
+                <span class="tooltip" data-tip="Son 24 saatteki olay sayısı">
+                  <button class="btn btn--ghost btn--icon" aria-label="Bilgi">
+                    <span class="material-symbols-outlined" aria-hidden="true"
+                      >info</span
+                    >
+                  </button>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 28–35 · GEZİNME                                                    -->
+          <!-- ================================================================== -->
+          <section class="block" id="gezinme">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 28–35</p>
+              <h2 class="block__title">Gezinme</h2>
+              <p class="block__desc">
+                Kullanıcının nerede olduğunu ve nereye gidebileceğini gösteren
+                her şey.
+              </p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                28 · Sekme — radio tabanlı, JavaScript'siz
+              </p>
+              <div class="demo">
+                <div class="tabs">
+                  <input
+                    class="tabs__input"
+                    type="radio"
+                    name="sekme"
+                    id="sk-1"
+                    checked
+                  />
+                  <input
+                    class="tabs__input"
+                    type="radio"
+                    name="sekme"
+                    id="sk-2"
+                  />
+                  <input
+                    class="tabs__input"
+                    type="radio"
+                    name="sekme"
+                    id="sk-3"
+                  />
+                  <div class="tabs__list">
+                    <label class="tabs__tab" for="sk-1">Genel bakış</label>
+                    <label class="tabs__tab" for="sk-2">Bulgular</label>
+                    <label class="tabs__tab" for="sk-3">Ekip</label>
+                  </div>
+                  <div class="tabs__panels">
+                    <div class="tabs__panel">
+                      Sistem sağlıklı. Son 30 günde kritik olay kaydedilmedi.
+                    </div>
+                    <div class="tabs__panel">
+                      Açık 6 bulgu var; 2'si orta, 4'ü düşük öncelikli.
+                    </div>
+                    <div class="tabs__panel">
+                      Projede 4 kişi görevli. Nöbet listesi haftalık dönüyor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                29 · Akordiyon —
+                <span class="code-inline">&lt;details&gt;</span> ile
+              </p>
+              <div class="accordion">
+                <details class="accordion__item" open>
+                  <summary class="accordion__trigger">
+                    Sızma testi ne kadar sürer?<span
+                      class="accordion__icon"
+                      aria-hidden="true"
+                    ></span>
+                  </summary>
+                  <p class="accordion__content">
+                    Kapsamına göre 5–15 iş günü. Rapor teslimi testin bitiminden
+                    3 gün sonra yapılır.
+                  </p>
+                </details>
+                <details class="accordion__item">
+                  <summary class="accordion__trigger">
+                    Test sırasında sistem kapanır mı?<span
+                      class="accordion__icon"
+                      aria-hidden="true"
+                    ></span>
+                  </summary>
+                  <p class="accordion__content">
+                    Hayır. Testler üretim dışı saatlerde ve önceden yazılı
+                    onayla yürütülür.
+                  </p>
+                </details>
+                <details class="accordion__item">
+                  <summary class="accordion__trigger">
+                    Bulgular kiminle paylaşılır?<span
+                      class="accordion__icon"
+                      aria-hidden="true"
+                    ></span>
+                  </summary>
+                  <p class="accordion__content">
+                    Yalnızca sözleşmede adı geçen yetkililerle. Raporlar şifreli
+                    kanaldan iletilir.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                30 · Kırıntı yolu &nbsp;·&nbsp; 31 · Sayfalama
+              </p>
+              <div class="demo stack-lg">
+                <ol class="breadcrumb">
+                  <li><a href="#gezinme">Ana sayfa</a></li>
+                  <li><a href="#gezinme">Hizmetler</a></li>
+                  <li aria-current="page">Sızma testi</li>
+                </ol>
+                <nav class="pagination" aria-label="Sayfalar">
+                  <a
+                    class="pagination__item"
+                    href="#gezinme"
+                    aria-label="Önceki"
+                    >&lsaquo;</a
+                  >
+                  <a class="pagination__item" href="#gezinme">1</a>
+                  <a
+                    class="pagination__item"
+                    href="#gezinme"
+                    aria-current="page"
+                    >2</a
+                  >
+                  <a class="pagination__item" href="#gezinme">3</a>
+                  <span class="pagination__ellipsis">…</span>
+                  <a class="pagination__item" href="#gezinme">12</a>
+                  <a
+                    class="pagination__item"
+                    href="#gezinme"
+                    aria-label="Sonraki"
+                    >&rsaquo;</a
+                  >
+                </nav>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">34 · Yan menü</p>
+              <div class="demo">
+                <nav class="sidenav" aria-label="Örnek panel menüsü">
+                  <p class="sidenav__group">Panel</p>
+                  <a class="sidenav__link is-active" href="#gezinme"
+                    >Genel bakış</a
+                  >
+                  <a class="sidenav__link" href="#gezinme">Olaylar</a>
+                  <a class="sidenav__link" href="#gezinme">Varlıklar</a>
+                  <p class="sidenav__group">Yönetim</p>
+                  <a class="sidenav__link" href="#gezinme">Kullanıcılar</a>
+                  <a class="sidenav__link" href="#gezinme">Ayarlar</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                21 · Üst şerit &nbsp;·&nbsp; 32 · Üst menü &nbsp;·&nbsp; 33 ·
+                Logo &nbsp;·&nbsp; 35 · Alt bilgi
+              </p>
+              <p class="block__desc">
+                Dördü de sayfanın en üstünde ve en altında canlı hâlde. Üst menü
+                860px altında hamburger menüye dönüşür — o da checkbox ile,
+                JavaScript'siz.
+              </p>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 36–38 · VERİ                                                       -->
+          <!-- ================================================================== -->
+          <section class="block" id="veri">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 36–38</p>
+              <h2 class="block__title">Veri</h2>
+              <p class="block__desc">Satır satır okunan içerik.</p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">36 · Tablo</p>
+              <div class="table-wrap">
+                <table class="table table--zebra">
+                  <thead>
+                    <tr>
+                      <th scope="col">Olay</th>
+                      <th scope="col">Kaynak</th>
+                      <th scope="col">Önem</th>
+                      <th scope="col">Zaman</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Başarısız giriş serisi</td>
+                      <td class="mono">10.14.2.87</td>
+                      <td>
+                        <span class="badge badge--danger badge--dot"
+                          >Kritik</span
+                        >
+                      </td>
+                      <td class="mono">09:42</td>
+                    </tr>
+                    <tr>
+                      <td>Yeni yönetici hesabı</td>
+                      <td class="mono">panel-01</td>
+                      <td>
+                        <span class="badge badge--warning badge--dot"
+                          >Orta</span
+                        >
+                      </td>
+                      <td class="mono">08:15</td>
+                    </tr>
+                    <tr>
+                      <td>Port taraması algılandı</td>
+                      <td class="mono">45.9.120.3</td>
+                      <td>
+                        <span class="badge badge--warning badge--dot"
+                          >Orta</span
+                        >
+                      </td>
+                      <td class="mono">05:27</td>
+                    </tr>
+                    <tr>
+                      <td>Yedekleme tamamlandı</td>
+                      <td class="mono">backup-node</td>
+                      <td>
+                        <span class="badge badge--success badge--dot"
+                          >Bilgi</span
+                        >
+                      </td>
+                      <td class="mono">03:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">37 · Liste grubu</p>
+              <div class="list-group">
+                <div class="list-group__item">
+                  <span class="avatar avatar--sm">EM</span>
+                  <span class="list-group__body">
+                    <span class="list-group__title">Emir Tibet</span>
+                    <span class="list-group__meta"
+                      >Front-end geliştirici · İzmir</span
+                    >
+                  </span>
+                  <span class="badge badge--success badge--dot">Çevrimiçi</span>
+                </div>
+                <div class="list-group__item">
+                  <span class="avatar avatar--sm">AY</span>
+                  <span class="list-group__body">
+                    <span class="list-group__title">Ayşe Yıldız</span>
+                    <span class="list-group__meta"
+                      >Güvenlik analisti · Ankara</span
+                    >
+                  </span>
+                  <span class="badge">Nöbette</span>
+                </div>
+                <div class="list-group__item">
+                  <span class="avatar avatar--sm">SD</span>
+                  <span class="list-group__body">
+                    <span class="list-group__title">Serkan Demir</span>
+                    <span class="list-group__meta"
+                      >Altyapı mühendisi · İzmir</span
+                    >
+                  </span>
+                  <span class="badge">İzinde</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">38 · Künye listesi</p>
+              <div class="demo demo--plain">
+                <div class="spec">
+                  <span class="spec__key">Rapor no</span
+                  ><span class="spec__val">KC-2026-0147</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">Kapsam</span
+                  ><span class="spec__val">12 sunucu, 3 web uygulaması</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">Yöntem</span
+                  ><span class="spec__val">Gri kutu</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__key">Teslim</span
+                  ><span class="spec__val">14 Ağustos 2026</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 39–50 · FORM                                                       -->
+          <!-- ================================================================== -->
+          <section class="block" id="form">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 39–50</p>
+              <h2 class="block__title">Form</h2>
+              <p class="block__desc">
+                Etiket üstte, yardım metni altta. Hata mesajı her zaman ne
+                olduğunu ve nasıl düzeltileceğini söyler.
+              </p>
+            </header>
+
+            <div class="demo">
+              <form class="grid grid--2">
+                <div class="field">
+                  <label class="label" for="ad">Ad soyad</label>
+                  <input
+                    class="input"
+                    id="ad"
+                    type="text"
+                    placeholder="Emir Tibet"
+                  />
+                  <p class="help">Sözleşmedeki adla aynı olmalı.</p>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="eposta">Kurumsal e-posta</label>
+                  <input
+                    class="input is-invalid"
+                    id="eposta"
+                    type="email"
+                    value="emir@"
+                    aria-describedby="eposta-hata"
+                  />
+                  <p class="error" id="eposta-hata">
+                    E-posta adresi eksik. Alan adını da yazın.
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="hizmet">Hizmet</label>
+                  <select class="select" id="hizmet">
+                    <option>Sızma testi</option>
+                    <option>Kaynak kodu denetimi</option>
+                    <option>Log yönetimi</option>
+                    <option>Olay müdahale</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="site">Alan adı</label>
+                  <div class="input-group">
+                    <span class="input-group__addon">https://</span>
+                    <input
+                      class="input"
+                      id="site"
+                      type="text"
+                      placeholder="karecode.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="ara">Kayıtlarda ara</label>
+                  <div class="search">
+                    <span
+                      class="material-symbols-outlined search__icon"
+                      aria-hidden="true"
+                      >search</span
+                    >
+                    <input
+                      class="input"
+                      id="ara"
+                      type="search"
+                      placeholder="IP, kullanıcı veya olay kodu"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="esik">Uyarı eşiği</label>
+                  <input
+                    class="range"
+                    id="esik"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="60"
+                  />
+                  <p class="help">
+                    Bu değerin üstündeki olaylar anında bildirilir.
+                  </p>
+                </div>
+
+                <div class="field grid-span">
+                  <label class="label" for="mesaj"
+                    >Talep detayı
+                    <span class="label__optional">— isteğe bağlı</span></label
+                  >
+                  <textarea
+                    class="textarea"
+                    id="mesaj"
+                    maxlength="400"
+                    placeholder="Altyapınızı ve beklentinizi kısaca anlatın."
+                  ></textarea>
+                  <p class="help">En fazla 400 karakter.</p>
+                </div>
+
+                <div class="field grid-span">
+                  <p class="label">Paket seçimi</p>
+                  <div class="pick grid grid--3">
+                    <span>
+                      <input type="radio" name="paket" id="p-1" checked />
+                      <label for="p-1">
+                        <span class="pick__title">Tek seferlik</span>
+                        <span class="pick__text">Bir tarama, bir rapor.</span>
+                      </label>
+                    </span>
+                    <span>
+                      <input type="radio" name="paket" id="p-2" />
+                      <label for="p-2">
+                        <span class="pick__title">Aylık</span>
+                        <span class="pick__text">Düzenli tarama ve özet.</span>
+                      </label>
+                    </span>
+                    <span>
+                      <input type="radio" name="paket" id="p-3" />
+                      <label for="p-3">
+                        <span class="pick__title">Yönetilen</span>
+                        <span class="pick__text">7/24 izleme ve müdahale.</span>
+                      </label>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <p class="label">Bildirim kanalları</p>
+                  <label class="check"
+                    ><input type="checkbox" checked /><span
+                      class="check__box"
+                      aria-hidden="true"
+                    ></span
+                    ><span>E-posta</span></label
+                  >
+                  <label class="check"
+                    ><input type="checkbox" /><span
+                      class="check__box"
+                      aria-hidden="true"
+                    ></span
+                    ><span>SMS</span></label
+                  >
+                  <label class="check"
+                    ><input type="checkbox" /><span
+                      class="check__box"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Webhook</span></label
+                  >
+                </div>
+
+                <div class="field">
+                  <p class="label">Rapor sıklığı</p>
+                  <label class="radio"
+                    ><input type="radio" name="siklik" checked /><span
+                      class="radio__dot"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Haftalık</span></label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="siklik" /><span
+                      class="radio__dot"
+                      aria-hidden="true"
+                    ></span
+                    ><span>Aylık</span></label
+                  >
+                  <label class="switch"
+                    ><input type="checkbox" checked /><span
+                      class="switch__track"
+                      aria-hidden="true"
+                      ><span class="switch__thumb"></span></span
+                    ><span>Şüpheli oturumu kapat</span></label
+                  >
+                </div>
+
+                <div class="field grid-span">
+                  <p class="label">Ağ şeması</p>
+                  <label class="dropzone" for="dosya">
+                    <p class="dropzone__title">
+                      Dosyayı buraya sürükleyin veya seçmek için tıklayın
+                    </p>
+                    <p class="dropzone__hint">
+                      PDF, PNG veya SVG · en fazla 10 MB
+                    </p>
+                  </label>
+                  <input class="sr-only" type="file" id="dosya" />
+                </div>
+
+                <div class="field grid-span">
+                  <p class="label">Yüklenen dosyalar</p>
+                  <div class="stack-sm">
+                    <div class="file">
+                      <span class="file__ext">PDF</span>
+                      <span
+                        ><span class="file__name">ag-semasi-2026.pdf</span
+                        ><br /><span class="file__meta"
+                          >2,4 MB · yüklendi</span
+                        ></span
+                      >
+                      <button class="alert__close" aria-label="Kaldır">
+                        &times;
+                      </button>
+                    </div>
+                    <div class="file">
+                      <span class="file__ext">PNG</span>
+                      <span
+                        ><span class="file__name">topoloji.png</span><br /><span
+                          class="file__meta"
+                          >870 KB · yüklendi</span
+                        ></span
+                      >
+                      <button class="alert__close" aria-label="Kaldır">
+                        &times;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field grid-span">
+                  <div class="row">
+                    <button class="btn btn--primary" type="button">
+                      Talebi gönder
+                    </button>
+                    <button class="btn btn--ghost" type="button">Vazgeç</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 51–56 · DURUM                                                      -->
+          <!-- ================================================================== -->
+          <section class="block" id="durum">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 51–56</p>
+              <h2 class="block__title">Durum</h2>
+              <p class="block__desc">
+                Bekleme, ilerleme ve hiçbir şeyin olmadığı anlar.
+              </p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                51 · İlerleme &nbsp;·&nbsp; 52 · Döner ikon
+              </p>
+              <div class="demo stack">
+                <div class="progress">
+                  <div class="progress__bar w-72"></div>
+                </div>
+                <div class="progress progress--square">
+                  <div class="progress__bar w-34"></div>
+                </div>
+                <div class="progress-steps">
+                  <span class="is-on"></span><span class="is-on"></span
+                  ><span class="is-on"></span><span></span><span></span>
+                </div>
+                <div class="row">
+                  <span class="spinner spinner--sm"></span>
+                  <span class="spinner"></span>
+                  <span class="spinner spinner--lg"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">53 · İskelet</p>
+              <div class="card">
+                <div class="row row--top">
+                  <span class="skeleton skeleton--avatar"></span>
+                  <span class="full-width stack-sm">
+                    <span class="skeleton skeleton--title"></span>
+                    <span class="skeleton skeleton--text"></span>
+                    <span class="skeleton skeleton--text w-60"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">54 · Adım göstergesi</p>
+              <div class="demo">
+                <div class="stepper">
+                  <div class="step is-done">
+                    <div class="step__marker">
+                      <span class="step__num">1</span
+                      ><span class="step__line"></span>
+                    </div>
+                    <p class="step__title">Kapsam belirleme</p>
+                    <p class="step__text">
+                      Sistemler ve sınırlar yazılı olarak onaylanır.
+                    </p>
+                  </div>
+                  <div class="step is-active">
+                    <div class="step__marker">
+                      <span class="step__num">2</span
+                      ><span class="step__line"></span>
+                    </div>
+                    <p class="step__title">Test</p>
+                    <p class="step__text">
+                      Otomatik tarama ve manuel doğrulama yürütülür.
+                    </p>
+                  </div>
+                  <div class="step">
+                    <div class="step__marker">
+                      <span class="step__num">3</span>
+                    </div>
+                    <p class="step__title">Rapor</p>
+                    <p class="step__text">
+                      Bulgular önem sırasına göre teslim edilir.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">55 · Zaman çizelgesi</p>
+              <div class="demo">
+                <ol class="timeline">
+                  <li class="timeline__item is-current">
+                    <p class="timeline__date">09:42</p>
+                    <p class="timeline__title">Şüpheli oturum kapatıldı</p>
+                    <p class="timeline__text">
+                      Kural motoru 10.14.2.87 adresini otomatik engelledi.
+                    </p>
+                  </li>
+                  <li class="timeline__item">
+                    <p class="timeline__date">08:15</p>
+                    <p class="timeline__title">Yönetici hesabı oluşturuldu</p>
+                    <p class="timeline__text">İşlem onay bekliyor.</p>
+                  </li>
+                  <li class="timeline__item">
+                    <p class="timeline__date">03:00</p>
+                    <p class="timeline__title">Gece yedeklemesi tamamlandı</p>
+                    <p class="timeline__text">142 GB, doğrulama başarılı.</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">56 · Boş durum</p>
+              <div class="empty">
+                <div class="empty__mark" aria-hidden="true"></div>
+                <p class="empty__title">Henüz kayıtlı olay yok</p>
+                <p class="empty__text">
+                  İlk sunucunuzu bağladığınızda olaylar burada listelenmeye
+                  başlar.
+                </p>
+                <button class="btn btn--primary">Sunucu bağla</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================================================================== -->
+          <!-- 57–64 · YAPI                                                       -->
+          <!-- ================================================================== -->
+          <section class="block" id="yapi">
+            <header class="block__head">
+              <p class="eyebrow">Bileşenler · 57–64</p>
+              <h2 class="block__title">Yapı</h2>
+              <p class="block__desc">Sayfayı bir arada tutan büyük parçalar.</p>
+            </header>
+
+            <div class="subblock">
+              <p class="subblock__label">57 · Çağrı bandı</p>
+              <div class="cta">
+                <div>
+                  <p class="cta__title">Altyapınızı<br />ücretsiz tarayalım</p>
+                  <p class="cta__text">
+                    30 dakikalık ön değerlendirme, üç günde özet rapor. Taahhüt
+                    yok.
+                  </p>
+                </div>
+                <div class="row">
+                  <a class="btn btn--inverse btn--lg" href="#modal-tarama"
+                    >Taramayı başlat</a
+                  >
+                  <a class="btn btn--ghost-inverse btn--lg" href="#veri"
+                    >Örnek raporu gör</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                58 · Kod bloğu, satır içi kod ve klavye tuşu
+              </p>
+              <pre
+                class="code"
+              ><span class="code__token"># KcLogger ajanını kur</span>
+curl -sSL https://karecode.com/agent.sh | sh
+kclogger init --tenant karecode --region tr-izmir</pre>
+              <p class="small">
+                Paneli açmak için <span class="kbd">Ctrl</span> +
+                <span class="kbd">K</span>, aramayı temizlemek için
+                <span class="kbd">Esc</span>.
+              </p>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                59 · Puan göstergesi &nbsp;·&nbsp; 60 · Ayraç
+              </p>
+              <div class="demo stack-lg">
+                <div class="row">
+                  <span class="rating" role="img" aria-label="5 üzerinden 4">
+                    <span class="rating__unit is-on"></span>
+                    <span class="rating__unit is-on"></span>
+                    <span class="rating__unit is-on"></span>
+                    <span class="rating__unit is-on"></span>
+                    <span class="rating__unit"></span>
+                  </span>
+                  <span class="small text-muted">4,0 · 128 değerlendirme</span>
+                </div>
+                <hr class="divider" />
+                <p class="divider-labeled">veya</p>
+              </div>
+            </div>
+
+            <div class="subblock">
+              <p class="subblock__label">
+                62 · Renk örneği &nbsp;·&nbsp; 63 · Hero &nbsp;·&nbsp; 64 ·
+                Doküman iskeleti
+              </p>
+              <p class="block__desc">
+                Renk örnekleri en üstteki renk bölümünde, hero sayfanın başında,
+                doküman iskeleti ise şu an okuduğunuz bu düzenin kendisi.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- 35 · ALT BİLGİ ------------------------------------------------------ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a class="logo" href="#ust">
+              <span class="logo__mark" aria-hidden="true"></span>
+              <span class="logo__text text-inverse">KareCode</span>
+            </a>
+            <p class="small text-muted">
+              Bornova, İzmir<br />Yazılım ve siber güvenlik.
+            </p>
+          </div>
+          <div>
+            <p class="footer__title">Hizmetler</p>
+            <a class="footer__link" href="#icerik">Sızma testi</a>
+            <a class="footer__link" href="#icerik">Kod denetimi</a>
+            <a class="footer__link" href="#icerik">Log yönetimi</a>
+          </div>
+          <div>
+            <p class="footer__title">Kurumsal</p>
+            <a class="footer__link" href="#ust">Hakkımızda</a>
+            <a class="footer__link" href="#form">İletişim</a>
+            <a class="footer__link" href="#gezinme">Kariyer</a>
+          </div>
+          <div>
+            <p class="footer__title">Sistem</p>
+            <a class="footer__link" href="#renk">Renk</a>
+            <a class="footer__link" href="#tipografi">Tipografi</a>
+            <a class="footer__link" href="#bilesenler">Bileşenler</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 KareCode. Tüm hakları saklıdır.</span>
+          <span class="mono">Design System v2.0</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 62 · YUKARI ÇIK ----------------------------------------------------- -->
+    <a class="to-top" href="#ust" aria-label="Sayfanın başına dön">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </a>
+
+    <!-- 23 · PENCERE (:target) ---------------------------------------------- -->
+    <div
+      class="modal"
+      id="modal-tarama"
+      role="dialog"
+      aria-labelledby="modal-baslik"
+    >
+      <a
+        class="modal__backdrop"
+        href="#geribildirim"
+        aria-label="Pencereyi kapat"
+      ></a>
+      <div class="modal__dialog">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modal-baslik">Taramayı başlat</h2>
+          <a
+            class="modal__close"
+            href="#geribildirim"
+            aria-label="Pencereyi kapat"
+            >&times;</a
+          >
+        </div>
+        <div class="modal__body stack">
+          <p>
+            Seçili 24 uç nokta taranacak. Tarama yaklaşık 40 dakika sürer ve
+            sistem performansını etkilemez.
+          </p>
+          <label class="check"
+            ><input type="checkbox" /><span
+              class="check__box"
+              aria-hidden="true"
+            ></span
+            ><span>Tamamlandığında e-posta gönder</span></label
+          >
+        </div>
+        <div class="modal__footer">
+          <a class="btn btn--ghost" href="#geribildirim">Vazgeç</a>
+          <a class="btn btn--primary" href="#geribildirim">Taramayı başlat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24 · YAN PANEL (:target) -------------------------------------------- -->
+    <div
+      class="drawer"
+      id="drawer-filtre"
+      role="dialog"
+      aria-labelledby="drawer-baslik"
+    >
+      <a
+        class="drawer__backdrop"
+        href="#geribildirim"
+        aria-label="Paneli kapat"
+      ></a>
+      <div class="drawer__panel stack-lg">
+        <div class="row row--between">
+          <h2 class="h4" id="drawer-baslik">Filtreler</h2>
+          <a class="modal__close" href="#geribildirim" aria-label="Paneli kapat"
+            >&times;</a
+          >
+        </div>
+        <div class="field">
+          <p class="label">Önem derecesi</p>
+          <label class="check"
+            ><input type="checkbox" checked /><span
+              class="check__box"
+              aria-hidden="true"
+            ></span
+            ><span>Kritik</span></label
+          >
+          <label class="check"
+            ><input type="checkbox" checked /><span
+              class="check__box"
+              aria-hidden="true"
+            ></span
+            ><span>Orta</span></label
+          >
+          <label class="check"
+            ><input type="checkbox" /><span
+              class="check__box"
+              aria-hidden="true"
+            ></span
+            ><span>Düşük</span></label
+          >
+        </div>
+        <div class="field">
+          <label class="label" for="drawer-kaynak">Kaynak</label>
+          <input
+            class="input"
+            id="drawer-kaynak"
+            type="text"
+            placeholder="IP veya sunucu adı"
+          />
+        </div>
+        <div class="row">
+          <a class="btn btn--primary" href="#geribildirim">Uygula</a>
+          <a class="btn btn--ghost" href="#geribildirim">Temizle</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
