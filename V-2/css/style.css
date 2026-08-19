@@ -1,51 +1,195 @@
+/* --------------------------------------------------------------------------
+   32 · ÜST MENÜ + MOBİL MENÜ (checkbox tabanlı)
+   -------------------------------------------------------------------------- */
 .navbar {
-  position: sticky; top: 0; z-index: var(--z-sticky);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
   background: var(--surface-inverse);
   border-bottom: 1px solid var(--border-inverse);
 }
-.navbar__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-6); height: 64px; }
-.navbar__links { display: flex; align-items: center; gap: var(--sp-6); }
-.navbar__link { position: relative; padding: var(--sp-2) 0; font-size: var(--fs-sm); color: var(--gray-400); }
-.navbar__link:hover { color: var(--white); }
-.navbar__link.is-active { color: var(--white); font-weight: var(--fw-medium); }
-.navbar__link.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--white); }
-.navbar__linkedin { display: flex; align-items: center; }
-.navbar__linkedin img { display: block; width: 20px; height: 20px; object-fit: contain; opacity: .7; transition: opacity var(--dur-fast) var(--ease); }
-.navbar__linkedin:hover img { opacity: 1; }
-
-.navbar__toggle { display: none; }
-.navbar__burger { display: none; width: 40px; height: 40px; place-items: center; border: 1px solid var(--border-inverse); border-radius: var(--r-md); cursor: pointer; }
-.navbar__burger span, .navbar__burger span::before, .navbar__burger span::after {
-  content: ""; display: block; width: 16px; height: 2px; background: var(--white); position: relative;
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  height: 64px;
+  position: relative;
 }
-.navbar__burger span::before { position: absolute; top: -5px; }
-.navbar__burger span::after  { position: absolute; top: 5px; }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar__link {
+  position: relative;
+  padding: var(--sp-2) 0;
+  font-size: var(--fs-sm);
+  color: var(--gray-400);
+  white-space: nowrap;
+}
+.navbar__link:hover {
+  color: var(--white);
+}
+.navbar__link.is-active {
+  color: var(--white);
+  font-weight: var(--fw-medium);
+}
+.navbar__link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--white);
+}
+.navbar__linkedin {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.navbar__linkedin img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+.navbar__linkedin:hover img {
+  opacity: 1;
+}
 
-@media (max-width: 860px) {
-  .navbar__burger { display: grid; }
-  .navbar__links {
-    position: absolute; top: 64px; left: 0; right: 0;
-    flex-direction: column; align-items: flex-start; gap: 0;
-    background: var(--surface-inverse); border-bottom: 1px solid var(--border-inverse);
-    padding: var(--sp-2) var(--sp-6) var(--sp-5);
-    max-height: 0; overflow: hidden; opacity: 0;
-    transition: max-height var(--dur-slow) var(--ease), opacity var(--dur-base) var(--ease);
+.navbar__toggle {
+  display: none;
+}
+.navbar__burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--border-inverse);
+  border-radius: var(--r-md);
+  cursor: pointer;
+}
+.navbar__burger span,
+.navbar__burger span::before,
+.navbar__burger span::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--white);
+  position: relative;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    opacity var(--dur-fast) var(--ease),
+    top var(--dur-fast) var(--ease);
+}
+.navbar__burger span::before {
+  position: absolute;
+  top: -5px;
+}
+.navbar__burger span::after {
+  position: absolute;
+  top: 5px;
+}
+.navbar__toggle:checked ~ .navbar__burger span {
+  background: transparent;
+}
+.navbar__toggle:checked ~ .navbar__burger span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.navbar__toggle:checked ~ .navbar__burger span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 681px) {
+  .navbar__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
   }
-  .navbar__toggle:checked ~ .navbar__links { max-height: 360px; opacity: 1; }
-  .navbar__link { padding: var(--sp-3) 0; border-bottom: 1px solid var(--border-inverse); }
-  .navbar__linkedin { padding: var(--sp-3) 0; }
+  .navbar__links {
+    position: static;
+    transform: none;
+    justify-self: center;
+  }
+  .navbar__linkedin {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar__burger {
+    display: grid;
+    margin-left: auto;
+  }
+  .navbar__links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--surface-inverse);
+    border-bottom: 1px solid var(--border-inverse);
+    padding: var(--sp-2) var(--sp-6) var(--sp-5);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: var(--z-dropdown);
+    transition:
+      max-height var(--dur-slow) var(--ease),
+      opacity var(--dur-base) var(--ease);
+  }
+  .navbar__toggle:checked ~ .navbar__links {
+    max-height: 360px;
+    opacity: 1;
+  }
+  .navbar__link {
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--border-inverse);
+    width: 100%;
+  }
+  .navbar__link.is-active::after {
+    right: auto;
+    width: 32px;
+  }
+  .navbar__linkedin {
+    margin-left: 0;
+  }
 }
 
 /* --------------------------------------------------------------------------
    EK: sarmalayıcılar
    -------------------------------------------------------------------------- */
-.tabs { display: block; }
-.tabs__panels { display: block; }
-.gallery--spaced { margin-top: var(--sp-5); }
+.tabs {
+  display: block;
+}
+.tabs__panels {
+  display: block;
+}
+.gallery--spaced {
+  margin-top: var(--sp-5);
+}
 
-.logo__image { display: block; height: 34px; width: auto; }
-.logo__image--lg { height: 42px; }
-
+.logo__image {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+.logo__image--lg {
+  height: 42px;
+}
 
 .media-slot {
   display: flex;
@@ -60,9 +204,266 @@
   color: var(--text-subtle);
   text-align: center;
 }
-.media-slot .material-symbols-outlined { font-size: 28px; color: var(--text-subtle); }
-.media-slot__title { font-size: var(--fs-sm); font-weight: var(--fw-medium); color: var(--text-muted); }
-.media-slot__hint  { font-size: var(--fs-2xs); color: var(--text-subtle); }
+.media-slot .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--text-subtle);
+}
+.media-slot__title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-muted);
+}
+.media-slot__hint {
+  font-size: var(--fs-2xs);
+  color: var(--text-subtle);
+}
 
-.media-slot--tall { aspect-ratio: 4 / 3; }
-.media-slot--wide { aspect-ratio: 21 / 9; }
+.media-slot--tall {
+  aspect-ratio: 4 / 3;
+}
+.media-slot--wide {
+  aspect-ratio: 21 / 9;
+}
+
+.footer__grid--3col {
+  grid-template-columns: 1.4fr 1fr 1fr;
+}
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.footer__social {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border-inverse);
+  border-radius: var(--r-md);
+  opacity: 0.6;
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+.footer__social-link:hover {
+  opacity: 1;
+  border-color: var(--gray-400);
+}
+.footer__social-link img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .footer__grid--3col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .footer__grid--3col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.textarea--fixed {
+  resize: none;
+}
+
+/* Sayfa hero (hakkimizda, ozellikler) */
+.page-hero {
+  padding-block: var(--sp-16) var(--sp-12);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface-inverse);
+}
+.page-hero__title {
+  margin-top: var(--sp-3);
+  color: var(--white);
+}
+.page-hero__text {
+  margin-top: var(--sp-4);
+  color: var(--gray-400);
+  max-width: 54ch;
+}
+
+/* Hakkımızda giriş */
+.about-intro {
+  align-items: center;
+}
+
+/* Hakkımızda bölüm tekrarlı yapısı */
+.about-sections {
+  display: grid;
+  gap: var(--sp-16);
+  margin-top: var(--sp-12);
+}
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--sp-10);
+  align-items: start;
+}
+.about-section--reverse {
+  grid-template-columns: 340px 1fr;
+}
+.about-section--reverse .about-section__content {
+  order: 2;
+}
+.about-section--reverse .about-section__visual {
+  order: 1;
+}
+
+.about-section__num {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-heading);
+  color: var(--text-strong);
+  margin-bottom: var(--sp-5);
+}
+
+/* Madde listesi (görseldeki stil: o · bold başlık + açıklama) */
+.about-list {
+  display: grid;
+  gap: var(--sp-5);
+  list-style: none;
+}
+.about-list li {
+  display: flex;
+  gap: var(--sp-4);
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+}
+.about-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-top: 9px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  flex: none;
+}
+.about-list strong {
+  color: var(--text-strong);
+  font-weight: var(--fw-medium);
+}
+
+/* Kare görsel yer tutucu */
+.media-slot--square {
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 900px) {
+  .about-section,
+  .about-section--reverse {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-section--reverse .about-section__content {
+    order: 1;
+  }
+  .about-section--reverse .about-section__visual {
+    order: 2;
+  }
+}
+
+/* Görsel tanımları — url() içine dosya yolunu yaz, placeholder kaybolur */
+#img-mevzuat {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-hakkimizda-tanitim {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-hakkimizda-yazilim {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-hakkimizda-guvenlik {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-hakkimizda-teknoloji {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-hakkimizda-surec {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+#img-ozellikler-panel {
+  background-image: url("../assets/");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero — görsel arka plan, yazılar üstünde */
+.hero--banner {
+  padding-block: 0;
+}
+.hero--banner .hero__stats {
+  padding-block: var(--sp-10);
+}
+
+.hero__banner {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background: var(--gray-100) center / cover no-repeat;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(31, 31, 31, 0.72) 40%,
+    rgba(31, 31, 31, 0.25) 100%
+  );
+}
+.hero__banner-inner {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--sp-20);
+}
+.hero__eyebrow {
+  color: var(--gray-300);
+}
+.hero--banner .hero__title {
+  color: var(--white);
+}
+.hero--banner .hero__text {
+  color: var(--gray-200);
+}
+
+#img-hero {
+  background-image: url("../assets/panel.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.anim-ready {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.anim-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity var(--dur-slow) var(--ease),
+    transform var(--dur-slow) var(--ease);
+}

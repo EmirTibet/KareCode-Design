@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Özellikler — KareCode KcLogger</title>
+    <meta
+      name="description"
+      content="KcLogger'ın tüm özellikleri: zaman damgalama, değiştirilemez arşiv, çoklu sunucu izleme ve daha fazlası."
+    />
+    <link rel="stylesheet" href="css/designsystem.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body id="ust">
+    <!-- ÜST MENÜ -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a class="logo" href="index.html" aria-label="KareCode anasayfa">
+          <img
+            class="logo__image"
+            src="assets/karecode-logo.png"
+            alt="KareCode logosu"
+            width="954"
+            height="217"
+          />
+        </a>
+
+        <input
+          class="navbar__toggle sr-only"
+          type="checkbox"
+          id="menu"
+          aria-label="Menüyü aç"
+        />
+        <label class="navbar__burger" for="menu" aria-hidden="true"
+          ><span></span
+        ></label>
+
+        <nav class="navbar__links" aria-label="Ana menü">
+          <a class="navbar__link" href="index.html">Ana Sayfa</a>
+          <a class="navbar__link" href="hakkimizda.html">Hakkımızda</a>
+          <a class="navbar__link is-active" href="ozellikler.html"
+            >Özellikler</a
+          >
+          <a class="navbar__link" href="index.html#iletisim">İletişim</a>
+        </nav>
+
+        <a
+          class="navbar__linkedin"
+          href="https://linkedin.com/company/karecode"
+          target="_blank"
+          rel="noopener"
+          aria-label="KareCode LinkedIn"
+        >
+          <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </header>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">KcLogger</p>
+        <h1 class="h1 page-hero__title">Özellikler</h1>
+        <p class="lead page-hero__text">
+          5651 uyumlu log yönetiminin her adımını otomatize eden araçlar.
+        </p>
+      </div>
+    </section>
+
+    <!-- BÖLÜM 1 · TEMEL ÖZELLİKLER -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Temel</p>
+        <h2 class="h2">Uyumluluğun çekirdeği</h2>
+        <p class="lead">
+          Her özellik tek bir amaca hizmet eder: denetimde sorun yaşamamak.
+        </p>
+
+        <div class="grid grid--3">
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >schedule</span
+              >
+            </div>
+            <h3 class="feature__title">Otomatik zaman damgası</h3>
+            <p class="feature__text">
+              Her log girişi oluşturulduğu anda imzalanır. Manuel işlem yok,
+              atlanan kayıt yok.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >lock</span
+              >
+            </div>
+            <h3 class="feature__title">Değiştirilemez arşiv</h3>
+            <p class="feature__text">
+              Yazılan kayıt silinemez, üzerinde değişiklik yapılamaz. Veri
+              bütünlüğü garantili.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >dns</span
+              >
+            </div>
+            <h3 class="feature__title">Bağımsız log sunucusu</h3>
+            <p class="feature__text">
+              Kayıtlar üretim sistemlerinden fiziksel olarak ayrı tutulur.
+              Erişim kısıtlı ve denetimli.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >fact_check</span
+              >
+            </div>
+            <h3 class="feature__title">Denetime hazır rapor</h3>
+            <p class="feature__text">
+              Yetkili mercilerin talep ettiği formatta, tek tıkla hazırlanan
+              doğrulanabilir raporlar.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >storage</span
+              >
+            </div>
+            <h3 class="feature__title">2 yıl saklama</h3>
+            <p class="feature__text">
+              Kayıtlar varsayılan olarak 2 yıl saklanır. Saklama süresi
+              yapılandırılabilir.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >encrypted</span
+              >
+            </div>
+            <h3 class="feature__title">Uçtan uca şifreleme</h3>
+            <p class="feature__text">
+              Log verisi iletim ve depolama sırasında şifreli. Yetkisiz erişime
+              kapalı.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GÖRSEL BÖLÜMÜ -->
+    <section class="section section--sunken">
+      <div class="container">
+        <div class="grid grid--2">
+          <div class="stack-lg">
+            <p class="eyebrow">Panel</p>
+            <h2 class="h2">Her şey tek ekranda</h2>
+            <p class="body">
+              KcLogger paneli; tüm sunucularınızın log durumunu, arşiv
+              doluluğunu ve son olayları tek bir ekranda gösterir. Farklı
+              şubeleriniz için ayrı oturum açmanıza gerek kalmaz.
+            </p>
+            <ul class="about-list">
+              <li>
+                <strong>Gerçek zamanlı izleme:</strong> Log akışı canlı, gecikme
+                olmadan.
+              </li>
+              <li>
+                <strong>Sunucu grupları:</strong> Şube veya departmana göre
+                organize edin.
+              </li>
+              <li><strong>Mobil uyumlu:</strong> Telefondan da tam erişim.</li>
+            </ul>
+          </div>
+          <div class="media-slot media-slot--tall" id="img-ozellikler-panel">
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >add_photo_alternate</span
+            >
+            <p class="media-slot__title">Panel görseli</p>
+            <p class="media-slot__hint">Önerilen oran 4:3 · en az 1200×900px</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BÖLÜM 3 · KURULUM ADIMLARI -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Başlangıç</p>
+        <h2 class="h2">Kurulum nasıl işler?</h2>
+        <p class="lead">Tek bir komut, aynı gün çalışan sistem.</p>
+
+        <div class="stepper">
+          <div class="step is-done">
+            <div class="step__marker">
+              <span class="step__num">1</span><span class="step__line"></span>
+            </div>
+            <p class="step__title">Görüşme</p>
+            <p class="step__text">
+              Altyapınızı ve kapsamı birlikte değerlendiriyoruz.
+            </p>
+          </div>
+          <div class="step is-done">
+            <div class="step__marker">
+              <span class="step__num">2</span><span class="step__line"></span>
+            </div>
+            <p class="step__title">Ajan kurulumu</p>
+            <p class="step__text">
+              KcLogger ajanı mevcut sunucularınıza eklenir.
+            </p>
+          </div>
+          <div class="step is-active">
+            <div class="step__marker">
+              <span class="step__num">3</span><span class="step__line"></span>
+            </div>
+            <p class="step__title">Yapılandırma</p>
+            <p class="step__text">
+              Saklama süresi, sunucu grupları ve raporlama ayarlanır.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step__marker"><span class="step__num">4</span></div>
+            <p class="step__title">Canlı</p>
+            <p class="step__text">
+              Sistem devreye girer, log kaydı otomatik başlar.
+            </p>
+          </div>
+        </div>
+
+        <section class="section section--sunken">
+          <div class="container">
+            <p class="eyebrow">Karşılaştırma</p>
+            <h2 class="h2">KcLogger ile manuel loglama</h2>
+
+            <div class="table-wrap">
+              <table class="table table--zebra">
+                <thead>
+                  <tr>
+                    <th scope="col">Kriter</th>
+                    <th scope="col">KcLogger</th>
+                    <th scope="col">Manuel loglama</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Kurulum süresi</td>
+                    <td class="text-strong">1 gün</td>
+                    <td class="text-muted">2–3 hafta</td>
+                  </tr>
+                  <tr>
+                    <td>Zaman damgası</td>
+                    <td class="text-strong">Otomatik, her kayıtta</td>
+                    <td class="text-muted">Elle, düzensiz</td>
+                  </tr>
+                  <tr>
+                    <td>Log bütünlüğü</td>
+                    <td class="text-strong">Değiştirilemez arşiv</td>
+                    <td class="text-muted">Dosya sistemine bağlı</td>
+                  </tr>
+                  <tr>
+                    <td>Denetim raporu</td>
+                    <td class="text-strong">Tek tıkla</td>
+                    <td class="text-muted">Elle derleme</td>
+                  </tr>
+                  <tr>
+                    <td>Çoklu sunucu</td>
+                    <td class="text-strong">Tek panelden</td>
+                    <td class="text-muted">Ayrı ayrı erişim</td>
+                  </tr>
+                  <tr>
+                    <td>Mobil erişim</td>
+                    <td class="text-strong">Tam destek</td>
+                    <td class="text-muted">Yok</td>
+                  </tr>
+                  <tr>
+                    <td>Destek</td>
+                    <td class="text-strong">7/24 Türkçe</td>
+                    <td class="text-muted">Yok</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- İLETİŞİM CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <p class="cta__title">Sisteminize uygun planı çıkaralım</p>
+            <p class="cta__text">
+              Kaç sunucunuz olduğunu söyleyin, size kurulum takvimini verelim.
+            </p>
+          </div>
+          <a class="btn btn--inverse btn--lg" href="index.html#iletisim"
+            >İletişime geçin</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ALT BİLGİ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid footer__grid--3col">
+          <div class="footer__brand">
+            <a class="logo" href="index.html">
+              <img
+                class="logo__image logo__image--lg"
+                src="assets/karecode-logo.png"
+                alt="KareCode logosu"
+              />
+            </a>
+            <p class="small text-muted">
+              Bornova, İzmir<br />Yazılım ve siber güvenlik.
+            </p>
+            <div class="footer__social">
+              <a
+                class="footer__social-link"
+                href="https://linkedin.com/company/karecode"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="assets/linkedin-icon.png"
+                  alt="LinkedIn"
+                  width="18"
+                  height="18"
+                />
+              </a>
+            </div>
+          </div>
+          <div>
+            <p class="footer__title">Sayfalar</p>
+            <a class="footer__link" href="index.html">Ana Sayfa</a>
+            <a class="footer__link" href="hakkimizda.html">Hakkımızda</a>
+            <a class="footer__link" href="ozellikler.html">Özellikler</a>
+            <a class="footer__link" href="index.html#iletisim">İletişim</a>
+          </div>
+          <div>
+            <p class="footer__title">İletişim</p>
+            <a class="footer__link" href="mailto:info@karecode.com.tr"
+              >info@karecode.com.tr</a
+            >
+            <a class="footer__link" href="tel:+902323322284"
+              >0 (232) 332 22 84</a
+            >
+            <span class="footer__link">Bornova, İzmir</span>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 KareCode. Tüm hakları saklıdır.</span>
+          <span class="mono">İzmir, Türkiye</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
