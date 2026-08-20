@@ -1,6 +1,3 @@
-/* --------------------------------------------------------------------------
-   32 · ÜST MENÜ + MOBİL MENÜ (checkbox tabanlı)
-   -------------------------------------------------------------------------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -168,9 +165,7 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   EK: sarmalayıcılar
-   -------------------------------------------------------------------------- */
+
 .tabs {
   display: block;
 }
@@ -276,7 +271,7 @@
   resize: none;
 }
 
-/* Sayfa hero (hakkimizda, ozellikler) */
+
 .page-hero {
   padding-block: var(--sp-16) var(--sp-12);
   border-bottom: 1px solid var(--border-subtle);
@@ -297,7 +292,6 @@
   align-items: center;
 }
 
-/* Hakkımızda bölüm tekrarlı yapısı */
 .about-sections {
   display: grid;
   gap: var(--sp-16);
@@ -327,7 +321,7 @@
   margin-bottom: var(--sp-5);
 }
 
-/* Madde listesi (görseldeki stil: o · bold başlık + açıklama) */
+
 .about-list {
   display: grid;
   gap: var(--sp-5);
@@ -354,7 +348,7 @@
   font-weight: var(--fw-medium);
 }
 
-/* Kare görsel yer tutucu */
+
 .media-slot--square {
   aspect-ratio: 1 / 1;
 }
@@ -372,7 +366,7 @@
   }
 }
 
-/* Görsel tanımları — url() içine dosya yolunu yaz, placeholder kaybolur */
+
 #img-mevzuat {
   background-image: url("../assets/");
   background-size: cover;
@@ -409,7 +403,7 @@
   background-position: center;
 }
 
-/* Hero — görsel arka plan, yazılar üstünde */
+
 .hero--banner {
   padding-block: 0;
 }
