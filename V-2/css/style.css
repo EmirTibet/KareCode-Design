@@ -361,42 +361,6 @@
   }
 }
 
-#img-mevzuat {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-hakkimizda-tanitim {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-hakkimizda-yazilim {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-hakkimizda-guvenlik {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-hakkimizda-teknoloji {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-hakkimizda-surec {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-#img-ozellikler-panel {
-  background-image: url("../assets/");
-  background-size: cover;
-  background-position: center;
-}
-
 .hero--banner {
   padding-block: 0;
 }
@@ -434,12 +398,6 @@
 }
 .hero--banner .hero__text {
   color: var(--gray-200);
-}
-
-#img-hero {
-  background-image: url("../assets/panel.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .anim-ready {
@@ -507,4 +465,62 @@
   .partners__track {
     animation: none;
   }
+}
+
+#img-hero {
+  border: none;
+  background-image: url("../assets/panel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-mevzuat {
+  background-image: url("../assets/mevzuat.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-hakkimizda-tanitim {
+  background-image: url("../assets/tanitim.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-hakkimizda-yazilim {
+  background-image: url("../assets/yazilim.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-hakkimizda-guvenlik {
+  background-image: url("../assets/security.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-hakkimizda-teknoloji {
+  background-image: url("../assets/teknoloji.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-hakkimizda-surec {
+  background-image: url("../assets/surec.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
+}
+#img-ozellikler-panel {
+  background-image: url("../assets/ekran.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
 }
