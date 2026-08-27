@@ -17,6 +17,21 @@
     />
   </head>
   <body id="ust">
+    <!-- ÜST BAR -->
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a
+          class="topbar__linkedin"
+          href="https://www.linkedin.com/company/karecode-yazilim/"
+          target="_blank"
+          rel="noopener"
+          aria-label="KareCode LinkedIn"
+        >
+          <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+
     <!-- ÜST MENÜ -->
     <header class="navbar">
       <div class="container navbar__inner">
@@ -50,42 +65,44 @@
           <a class="navbar__link is-active" href="ozellikler.html"
             ><span class="navbar__link-text">Özellikler</span></a
           >
-          <a class="navbar__link" href="index.html#iletisim"
+          <a class="navbar__link" href="iletisim.html"
             ><span class="navbar__link-text">İletişim</span></a
           >
+          <a
+            class="navbar__link"
+            href="https://kclogger.com"
+            target="_blank"
+            rel="noopener"
+            ><span class="navbar__link-text">KcLogger</span></a
+          >
         </nav>
-
-        <a
-          class="navbar__linkedin"
-          href="https://www.linkedin.com/company/karecode-yazilim/"
-          target="_blank"
-          rel="noopener"
-          aria-label="KareCode LinkedIn"
-        >
-          <img src="assets/linkedin-icon.png" alt="LinkedIn" />
-        </a>
       </div>
     </header>
 
     <!-- SAYFA BAŞLIĞI -->
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">KcLogger</p>
-        <h1 class="h1 page-hero__title">Özellikler</h1>
-        <p class="lead page-hero__text">
-          5651 uyumlu log yönetiminin her adımını otomatize eden araçlar.
-        </p>
+    <section class="hero hero--banner">
+      <div class="hero__banner" id="img-hero-ozellikler">
+        <div class="hero__overlay"></div>
+        <div class="container hero__banner-inner">
+          <p class="eyebrow hero__eyebrow">KcLogger</p>
+          <h1 class="display hero__title">Özellikler</h1>
+          <p class="lead hero__text">
+            5651 uyumlu log yönetiminin her adımını otomatize eden araçlar.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- BÖLÜM 1 · TEMEL ÖZELLİKLER -->
     <section class="section">
       <div class="container">
-        <p class="eyebrow">Temel</p>
-        <h2 class="h2">Uyumluluğun çekirdeği</h2>
-        <p class="lead">
-          Her özellik tek bir amaca hizmet eder: denetimde sorun yaşamamak.
-        </p>
+        <div class="block__head block__head--raised">
+          <p class="eyebrow">Temel</p>
+          <h2 class="h2">Uyumluluğun çekirdeği</h2>
+          <p class="lead">
+            Her özellik tek bir amaca hizmet eder: denetimde sorun yaşamamak.
+          </p>
+        </div>
 
         <div class="grid grid--3">
           <article class="feature">
@@ -167,10 +184,12 @@
     <!-- GÖRSEL BÖLÜMÜ -->
     <section class="section section--sunken">
       <div class="container">
-        <div class="grid grid--2">
+        <div class="grid grid--2 panel-grid">
           <div class="stack-lg">
-            <p class="eyebrow">Panel</p>
-            <h2 class="h2">Her şey tek ekranda</h2>
+            <div class="stack-xs stack-xs--tight">
+              <p class="eyebrow">Panel</p>
+              <h2 class="h2">Her şey tek ekranda</h2>
+            </div>
             <p class="body">
               KcLogger paneli; tüm sunucularınızın log durumunu, arşiv
               doluluğunu ve son olayları tek bir ekranda gösterir. Farklı
@@ -188,8 +207,10 @@
               <li><strong>Mobil uyumlu:</strong> Telefondan da tam erişim.</li>
             </ul>
           </div>
-          <div class="media-slot media-slot--tall" id="img-ozellikler-panel">
-          </div>
+          <div
+            class="media-slot media-slot--tall"
+            id="img-ozellikler-panel"
+          ></div>
         </div>
       </div>
     </section>
@@ -197,11 +218,13 @@
     <!-- BÖLÜM 3 · KURULUM ADIMLARI -->
     <section class="section">
       <div class="container">
-        <p class="eyebrow">Başlangıç</p>
-        <h2 class="h2">Kurulum nasıl işler?</h2>
-        <p class="lead">Tek bir komut, aynı gün çalışan sistem.</p>
+        <div class="block__head--center">
+          <p class="eyebrow">Başlangıç</p>
+          <h2 class="h2">Kurulum nasıl işler?</h2>
+          <p class="lead">Tek bir komut, aynı gün çalışan sistem.</p>
+        </div>
 
-        <div class="stepper">
+        <div class="stepper block__head--center-gap">
           <div class="step is-done">
             <div class="step__marker">
               <span class="step__num">1</span><span class="step__line"></span>
@@ -215,9 +238,9 @@
             <div class="step__marker">
               <span class="step__num">2</span><span class="step__line"></span>
             </div>
-            <p class="step__title">Ajan kurulumu</p>
+            <p class="step__title">Sistem kurulumu</p>
             <p class="step__text">
-              KcLogger ajanı mevcut sunucularınıza eklenir.
+              KcLogger yazılımı mevcut sunucularınıza eklenir.
             </p>
           </div>
           <div class="step is-active">
@@ -306,7 +329,7 @@
               Kaç sunucunuz olduğunu söyleyin, size kurulum takvimini verelim.
             </p>
           </div>
-          <a class="btn btn--inverse btn--lg" href="index.html#iletisim"
+          <a class="btn btn--inverse btn--lg" href="iletisim.html"
             >İletişime geçin</a
           >
         </div>
@@ -331,7 +354,7 @@
             <div class="footer__social">
               <a
                 class="footer__social-link"
-                href="https://www.linkedin.com/company/karecode-yazilim/"
+                href="https://linkedin.com/company/karecode"
                 target="_blank"
                 rel="noopener"
                 aria-label="LinkedIn"
@@ -350,7 +373,7 @@
             <a class="footer__link" href="index.html">Ana Sayfa</a>
             <a class="footer__link" href="hakkimizda.html">Hakkımızda</a>
             <a class="footer__link" href="ozellikler.html">Özellikler</a>
-            <a class="footer__link" href="index.html#iletisim">İletişim</a>
+            <a class="footer__link" href="iletisim.html">İletişim</a>
           </div>
           <div>
             <p class="footer__title">İletişim</p>

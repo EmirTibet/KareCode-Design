@@ -1,6 +1,6 @@
 :root {
 
-  /* ---- Gri skala (primary'nin tonları) ---- */
+ 
   --gray-950: #141414;
   --gray-900: #1F1F1F;
   --gray-800: #2E2E2E;
@@ -42,7 +42,7 @@
   --border-strong:  var(--gray-300);
   --border-inverse: var(--gray-700);
 
-  /* ---- Durum (desatüre, monokroma uyumlu) ---- */
+
   --state-success:      #4A6B57;
   --state-success-soft: #EDF2EF;
   --state-warning:      #7A6534;
@@ -86,7 +86,7 @@
   --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-10: 40px;
   --sp-12: 48px; --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
 
-  /* ---- Yarıçap (kare motifi: küçük) ---- */
+  /* ---- Yarıçap  ---- */
   --r-sm: 2px;  --r-md: 4px;  --r-lg: 8px;  --r-xl: 12px;  --r-pill: 999px;
 
   /* ---- Gölge (nötr) ---- */

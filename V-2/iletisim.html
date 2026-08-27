@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim — KareCode</title>
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+    <meta
+      name="description"
+      content="KareCode ile iletişime geçin: e-posta, telefon, adres ve mesaj formu."
+    />
+    <link rel="stylesheet" href="css/designsystem.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body id="ust">
+    <!-- ÜST BAR -->
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a
+          class="topbar__linkedin"
+          href="https://www.linkedin.com/company/karecode-yazilim/"
+          target="_blank"
+          rel="noopener"
+          aria-label="KareCode LinkedIn"
+        >
+          <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+
+    <!-- ÜST MENÜ -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a class="logo" href="index.html" aria-label="KareCode anasayfa">
+          <img
+            class="logo__image"
+            src="assets/karecode-logo.png"
+            alt="KareCode logosu"
+            width="954"
+            height="217"
+          />
+        </a>
+
+        <input
+          class="navbar__toggle sr-only"
+          type="checkbox"
+          id="menu"
+          aria-label="Menüyü aç"
+        />
+        <label class="navbar__burger" for="menu" aria-hidden="true"
+          ><span></span
+        ></label>
+
+        <nav class="navbar__links" aria-label="Ana menü">
+          <a class="navbar__link" href="index.html"
+            ><span class="navbar__link-text">Ana Sayfa</span></a
+          >
+          <a class="navbar__link" href="hakkimizda.html"
+            ><span class="navbar__link-text">Hakkımızda</span></a
+          >
+          <a class="navbar__link" href="ozellikler.html"
+            ><span class="navbar__link-text">Özellikler</span></a
+          >
+          <a class="navbar__link is-active" href="iletisim.html"
+            ><span class="navbar__link-text">İletişim</span></a
+          >
+          <a
+            class="navbar__link"
+            href="https://kclogger.com"
+            target="_blank"
+            rel="noopener"
+            ><span class="navbar__link-text">KcLogger</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- İLETİŞİM -->
+    <section class="section section--sunken" id="iletisim">
+      <div class="container">
+        <header class="block__head">
+          <p class="eyebrow">İletişim</p>
+          <h2 class="block__title">Bizimle İletişime Geçin</h2>
+          <p class="block__desc">
+            Sorularınızı yanıtlayalım, sisteminize uygun kurulum planını
+            birlikte çıkaralım.
+          </p>
+        </header>
+
+        <div class="grid grid--2">
+          <div class="stack-lg">
+            <div class="row row--top">
+              <div class="feature__icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >mail</span
+                >
+              </div>
+              <div>
+                <p class="h5">E-posta</p>
+                <p class="body">
+                  <a href="mailto:info@karecode.com">info@karecode.com.tr</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="row row--top">
+              <div class="feature__icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >call</span
+                >
+              </div>
+              <div>
+                <p class="h5">Telefon</p>
+                <p class="body">
+                  <a href="tel:+902325550124">+90 232 555 01 24</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="row row--top">
+              <div class="feature__icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >location_on</span
+                >
+              </div>
+              <div>
+                <p class="h5">Adres</p>
+                <p class="body">Bornova, İzmir</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <form class="grid grid--2">
+              <div class="field">
+                <label class="label" for="ad">Ad soyad</label>
+                <input
+                  class="input"
+                  id="ad"
+                  type="text"
+                  placeholder="Adınız Soyadınız"
+                  maxlength="30"
+                  autocomplete="name"
+                  oninput="
+                    this.value = this.value.replace(
+                      /[^A-Za-zÇçĞğİıÖöŞşÜü\s]/g,
+                      '',
+                    )
+                  "
+                />
+              </div>
+
+              <div class="field">
+                <label class="label" for="eposta">E-posta</label>
+                <input
+                  class="input"
+                  id="eposta"
+                  type="email"
+                  placeholder="ornek@sirket.com"
+                  maxlength="50"
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="field grid-span">
+                <label class="label" for="telefon"
+                  >Telefon
+                  <span class="label__optional">— isteğe bağlı</span></label
+                >
+                <input
+                  class="input"
+                  id="telefon"
+                  type="tel"
+                  placeholder="05xxxxxxxxx"
+                  maxlength="11"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  oninput="
+                    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)
+                  "
+                />
+              </div>
+
+              <div class="field grid-span">
+                <label class="label" for="mesaj">Mesajınız</label>
+                <textarea
+                  class="textarea textarea--fixed"
+                  id="mesaj"
+                  placeholder="Mesajınız."
+                  maxlength="750"
+                ></textarea>
+              </div>
+
+              <div class="field grid-span">
+                <a
+                  class="btn btn--primary btn--block"
+                  href="mailto:info@karecode.com?subject=Demo%20Talebi"
+                  >Mesajı gönder</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALT BİLGİ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid footer__grid--3col">
+          <div class="footer__brand">
+            <a class="logo" href="index.html">
+              <img
+                class="logo__image logo__image--lg"
+                src="assets/karecode-logo.png"
+                alt="KareCode logosu"
+              />
+            </a>
+            <p class="small text-muted">
+              Bornova, İzmir<br />Yazılım ve siber güvenlik.
+            </p>
+            <div class="footer__social">
+              <a
+                class="footer__social-link"
+                href="https://linkedin.com/company/karecode"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="assets/linkedin-icon.png"
+                  alt="LinkedIn"
+                  width="18"
+                  height="18"
+                />
+              </a>
+            </div>
+          </div>
+          <div>
+            <p class="footer__title">Sayfalar</p>
+            <a class="footer__link" href="index.html">Ana Sayfa</a>
+            <a class="footer__link" href="hakkimizda.html">Hakkımızda</a>
+            <a class="footer__link" href="ozellikler.html">Özellikler</a>
+            <a class="footer__link" href="iletisim.html">İletişim</a>
+          </div>
+          <div>
+            <p class="footer__title">İletişim</p>
+            <a class="footer__link" href="mailto:info@karecode.com.tr"
+              >info@karecode.com.tr</a
+            >
+            <a class="footer__link" href="tel:+902323322284"
+              >0 (232) 332 22 84</a
+            >
+            <span class="footer__link">Bornova, İzmir</span>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 KareCode. Tüm hakları saklıdır.</span>
+          <span class="mono">İzmir, Türkiye</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

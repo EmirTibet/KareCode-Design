@@ -1,3 +1,30 @@
+.topbar {
+  background: var(--gray-900);
+  border-bottom: 1px solid var(--border-inverse);
+}
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 32px;
+}
+.topbar__linkedin {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.topbar__linkedin img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+.topbar__linkedin:hover img {
+  opacity: 1;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -17,9 +44,7 @@
   display: flex;
   align-items: center;
   gap: var(--sp-6);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
 }
 .navbar__link {
   padding: var(--sp-2) 0;
@@ -46,23 +71,6 @@
   bottom: -6px;
   height: 2px;
   background: var(--white);
-}
-.navbar__linkedin {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  flex-shrink: 0;
-}
-.navbar__linkedin img {
-  display: block;
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  opacity: 0.7;
-  transition: opacity var(--dur-fast) var(--ease);
-}
-.navbar__linkedin:hover img {
-  opacity: 1;
 }
 
 .navbar__toggle {
@@ -111,21 +119,6 @@
   transform: rotate(-45deg);
 }
 
-@media (min-width: 681px) {
-  .navbar__inner {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-  }
-  .navbar__links {
-    position: static;
-    transform: none;
-    justify-self: center;
-  }
-  .navbar__linkedin {
-    margin-left: 0;
-  }
-}
-
 @media (max-width: 680px) {
   .navbar__burger {
     display: grid;
@@ -136,7 +129,7 @@
     top: 64px;
     left: 0;
     right: 0;
-    transform: none;
+    margin-left: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
@@ -159,9 +152,6 @@
     padding: var(--sp-3) 0;
     border-bottom: 1px solid var(--border-inverse);
     width: 100%;
-  }
-  .navbar__linkedin {
-    margin-left: 0;
   }
 }
 
@@ -270,10 +260,27 @@
   resize: none;
 }
 
+.alert--warning {
+  border-left: none;
+}
+
 .page-hero {
-  padding-block: var(--sp-16) var(--sp-12);
+  padding-block: var(--sp-12);
   border-bottom: 1px solid var(--border-subtle);
   background: var(--surface-inverse);
+}
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--sp-10);
+  align-items: center;
+}
+.page-hero__content {
+  align-self: center;
+}
+.page-hero__media {
+  border-color: var(--border-inverse);
+  background: var(--gray-900);
 }
 .page-hero__title {
   margin-top: var(--sp-3);
@@ -283,6 +290,37 @@
   margin-top: var(--sp-4);
   color: var(--gray-400);
   max-width: 54ch;
+}
+
+
+.stack-xs > * + * {
+  margin-top: var(--sp-2);
+}
+
+.stack-xs--tight > * + * {
+  margin-top: 4px;
+}
+
+.block__head--raised {
+  margin-top: -24px;
+}
+
+.block__head--center {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+}
+.block__head--center-gap {
+  margin-top: var(--sp-10);
+}
+
+@media (max-width: 860px) {
+  .page-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .page-hero__media {
+    order: -1;
+  }
 }
 
 .about-intro {
@@ -358,6 +396,28 @@
   }
   .about-section--reverse .about-section__visual {
     order: 2;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .about-section__visual {
+    display: flex;
+    justify-content: center;
+  }
+  .about-section .media-slot--square {
+    width: 55%;
+    max-width: 180px;
+    min-width: 140px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .panel-grid {
+    align-items: center;
+  }
+  .panel-grid #img-ozellikler-panel {
+    margin-top: 40px;
   }
 }
 
@@ -473,54 +533,66 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-mevzuat {
   background-image: url("../assets/mevzuat.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-hakkimizda-tanitim {
   background-image: url("../assets/tanitim.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-hakkimizda-yazilim {
   background-image: url("../assets/yazilim.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-hakkimizda-guvenlik {
   background-image: url("../assets/security.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-hakkimizda-teknoloji {
   background-image: url("../assets/teknoloji.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-hakkimizda-surec {
   background-image: url("../assets/surec.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
 }
 #img-ozellikler-panel {
   background-image: url("../assets/ekran.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
+}
+#img-hero-ozellikler {
+  background-image: url("../assets/ozellikler-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#img-hero-hakkimizda {
+  background-image: url("../assets/hakkimizda-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
