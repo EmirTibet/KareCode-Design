@@ -411,6 +411,31 @@
   }
 }
 
+@media (max-width: 900px) {
+  .about-list li {
+    display: block;
+  }
+  .about-list li::before {
+    content: none;
+  }
+  .about-list li strong {
+    display: block;
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+  }
+  .about-list li strong::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
 .media-slot--square {
   aspect-ratio: 1 / 1;
 }
@@ -629,6 +654,23 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (max-width: 480px) {
+  .spec {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .spec__key {
+    flex: none;
+    width: auto;
+  }
+  .spec__val {
+    flex: none;
+    width: auto;
+    text-align: left;
+  }
+}
+
 #img-hero-hakkimizda {
   background-image: url("../assets/hakkimizda-hero.jpg");
   background-size: cover;
