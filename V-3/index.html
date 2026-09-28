@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("karecode-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KareCode — Kurumsal Siber Güvenlik &amp; Uyumluluk</title>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <meta
+    name="description"
+    content="KareCode; KcLogger, İki Faktörlü Kimlik Doğrulama ve Bulut Yedekleme çözümleriyle Türk işletmelerine güvenli ve mevzuata uyumlu bir dijital altyapı sunar."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css?v=4" />
+</head>
+<body>
+  <div class="bg-scene" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--one"></div>
+    <div class="bg-glow bg-glow--two"></div>
+    <div class="bg-glow bg-glow--three"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__social">
+        <a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="assets/facebook-icon.png" alt="" width="15" height="15" />
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="assets/instagram-icon.png" alt="" width="15" height="15" />
+        </a>
+        <a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/linkedin-icon.png" alt="" width="15" height="15" />
+        </a>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Temayı değiştir" aria-pressed="false">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8 6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="KareCode anasayfa">
+        <img src="assets/karecode-logo.png" alt="KareCode" class="nav__logo" />
+      </a>
+
+      <nav class="nav__links" aria-label="Ana menü">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="#hikaye">Neden KareCode</a>
+        <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav__mobile" id="navMobile" aria-label="Mobil menü">
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="#hikaye">Neden KareCode</a>
+      <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Kurumsal Siber Güvenlik &amp; Uyumluluk</p>
+          <h1 class="hero__title">
+            Dijital altyapınızı,<br />
+            <span class="text-gradient">güven üzerine</span> inşa edin.
+          </h1>
+          <p class="hero__lead">
+            KareCode; erişim kayıtlarından kimlik doğrulamaya, veri yedeklemeden
+            mevzuat uyumluluğuna kadar kurumunuzun dijital güvenliğini uçtan uca
+            üstlenen bir Türk yazılım ve siber güvenlik şirketidir.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--ghost btn--lg" href="#iletisim">Ekibimizle Görüşün</a>
+          </div>
+        </div>
+
+        <div class="hero__panel glass" aria-hidden="true">
+          <div class="hero__panel-head">
+            <div class="dot dot--r"></div>
+            <div class="dot dot--y"></div>
+            <div class="dot dot--g"></div>
+            <span class="hero__panel-title">KareCode Güvenlik Merkezi</span>
+          </div>
+          <div class="hero__panel-body">
+            <div class="hp-row">
+              <span class="hp-label">5651 Loglama</span>
+              <span class="hp-pill hp-pill--ok">Aktif · Uyumlu</span>
+            </div>
+            <div class="hp-row">
+              <span class="hp-label">İki Faktörlü Doğrulama</span>
+              <span class="hp-pill hp-pill--ok">Tüm hesaplarda etkin</span>
+            </div>
+            <div class="hp-row">
+              <span class="hp-label">Bulut Yedekleme</span>
+              <span class="hp-pill hp-pill--ok">Son yedek · 12 dk önce</span>
+            </div>
+            <div class="hp-chart" role="img" aria-label="Ağ trafiği grafiği">
+              <svg viewBox="0 0 320 90" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  class="hp-chart-fill"
+                  d="M0,60 C20,45 40,65 60,50 C80,35 100,55 120,40 C140,25 160,48 180,38 C200,28 220,45 240,30 C260,15 280,35 300,22 L320,20 L320,90 L0,90 Z"
+                  fill="url(#chartFill)"
+                />
+                <path
+                  class="hp-chart-line"
+                  d="M0,60 C20,45 40,65 60,50 C80,35 100,55 120,40 C140,25 160,48 180,38 C200,28 220,45 240,30 C260,15 280,35 300,22 L320,20"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="hp-foot">
+              <span>Gerçek zamanlı izleme</span>
+              <span class="hp-live"><i></i>Canlı</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <p class="stat__value">5651</p>
+          <p class="stat__label">Kanuna tam uyum</p>
+        </div>
+        <div class="stat">
+          <p class="stat__value">7/24</p>
+          <p class="stat__label">Kesintisiz izleme</p>
+        </div>
+        <div class="stat">
+          <p class="stat__value">%99.9</p>
+          <p class="stat__label">Hizmet çalışma süresi</p>
+        </div>
+        <div class="stat">
+          <p class="stat__value">20+</p>
+          <p class="stat__label">Yıllık sektör tecrübesi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section" id="hikaye">
+      <div class="section__inner">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Neden Önemli</p>
+          <h2 class="section__title">
+            Türkiye'de güven, artık bir tercih değil<br class="hide-mobile" />
+            operasyonel bir zorunluluk.
+          </h2>
+          <p class="section__lead">
+            Dijitalleşen her işletme, aynı zamanda daha büyük bir sorumluluk
+            üstleniyor. 5651 sayılı Kanun'un getirdiği yükümlülükler, artan
+            siber tehditler ve müşterilerin veri güvenliğine dair beklentileri
+            bir araya geldiğinde, güvenlik artık teknik bir detay değil,
+            kurumsal itibarın temel taşı haline geliyor.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9.9 4.6-1.2 8-4.9 8-9.9V5l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Yasal Sorumluluk</h3>
+            <p>
+              5651 sayılı Kanun kapsamındaki loglama yükümlülüklerini yerine
+              getirmemek; idari para cezalarına ve denetimlerde ciddi
+              risklere yol açabilir. Uyumluluk, isteğe bağlı bir seçenek
+              değildir.
+            </p>
+          </article>
+
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>İtibar ve Güven</h3>
+            <p>
+              Bir veri ihlali, yıllar içinde inşa edilen müşteri güvenini
+              günler içinde yok edebilir. Kurumsal itibar, artık güvenlik
+              altyapınızın doğrudan bir yansımasıdır.
+            </p>
+          </article>
+
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Operasyonel Süreklilik</h3>
+            <p>
+              Yetersiz yedekleme ve erişim kontrolü, tek bir kesintiyle
+              operasyonlarınızı durma noktasına getirebilir. Güvenlik, iş
+              sürekliliğinin ön koşuludur.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Law -->
+    <section class="section" id="kanun">
+      <div class="section__inner">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Mevzuat</p>
+          <h2 class="section__title">5651 Sayılı Kanun, işletmenizi nasıl etkiliyor?</h2>
+          <p class="section__lead">
+            2007 yılından bu yana yürürlükte olan 5651 sayılı Kanun, internet
+            erişim ve trafik kayıtlarının belirli sürelerle, değiştirilemez
+            şekilde saklanmasını zorunlu kılar. KareCode, bu yükümlülüğü sizin
+            adınıza otomatikleştirir.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 21h10M5 7l3.5-2L12 7l3.5-2L19 7M5 7l-2 5a3 3 0 0 0 6 0L7 7M19 7l-2 5a3 3 0 0 0 6 0l-2-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Kanun Ne Diyor?</h3>
+            <p>
+              İçerik, yer, erişim ve toplu kullanım sağlayıcılarının internet
+              trafiğini zaman damgalı ve değiştirilemez şekilde kayıt altına
+              almasını, talep halinde yetkili mercilere sunmasını öngörür.
+            </p>
+          </article>
+
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4 21.5 20H2.5L12 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2v.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Neden Önemli?</h3>
+            <p>
+              Yükümlülüklerin yerine getirilmemesi idari para cezalarına yol
+              açabilir; denetimlerde eksik kayıtlar kurumsal itibarınızı
+              doğrudan riske atar.
+            </p>
+          </article>
+
+          <article class="story-card glass">
+            <div class="story-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9.9 4.6-1.2 8-4.9 8-9.9V5l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>KareCode Nasıl Çözüyor?</h3>
+            <p>
+              KcLogger, kayıtlarınızı otomatik olarak zaman damgalar,
+              değiştirilemez şekilde saklar ve denetime her an hazır tutar —
+              ek bir operasyonel yük oluşturmadan.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section section--products" id="cozumler">
+      <div class="section__inner">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Çözümlerimiz</p>
+          <h2 class="section__title">Uçtan uca güvenlik, tek bir teknoloji ortağından.</h2>
+          <p class="section__lead">
+            Üç ürün, tek bir amaç: kurumunuzun dijital varlıklarını korumak ve
+            uyumluluk yükünüzü ortadan kaldırmak.
+          </p>
+        </div>
+
+        <article class="product" id="kclogger">
+          <div class="product__copy">
+            <p class="product__eyebrow">01 · KcLogger</p>
+            <h3 class="product__title">5651 Uyumlu Loglama</h3>
+            <p class="product__desc">
+              KcLogger, erişim ve trafik kayıtlarınızı zaman damgasıyla
+              imzalar, değiştirilemez şekilde saklar ve her an denetime hazır
+              tutar. Kurulumdan sonra ekibinizin tek işi paneli açmak.
+            </p>
+            <ul class="product__points">
+              <li><span>Zaman damgalı, değiştirilemez kayıt</span></li>
+              <li><span>Tek panelden çoklu sunucu izleme</span></li>
+              <li><span>Denetime hazır otomatik raporlama</span></li>
+            </ul>
+            <a class="link-arrow" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KcLogger'ı keşfedin<i>→</i></a>
+          </div>
+          <div class="product__visual glass">
+            <div class="pv-head">
+              <span class="pv-tag">Canlı Akış</span>
+              <span class="pv-tag pv-tag--muted">kclogger.internal</span>
+            </div>
+            <div class="pv-log">
+              <div class="pv-log__row"><span class="pv-log__time">14:02:11</span><span class="pv-log__sig">✓</span><span>Erişim kaydı imzalandı — sunucu-04</span></div>
+              <div class="pv-log__row"><span class="pv-log__time">14:02:38</span><span class="pv-log__sig">✓</span><span>Trafik verisi arşivlendi — 5651/md5</span></div>
+              <div class="pv-log__row"><span class="pv-log__time">14:03:02</span><span class="pv-log__sig">✓</span><span>Bütünlük doğrulaması tamamlandı</span></div>
+              <div class="pv-log__row pv-log__row--active"><span class="pv-log__time">14:03:19</span><span class="pv-log__sig">✓</span><span>Yeni kayıt zaman damgasıyla işleniyor…</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product product--reverse" id="2fa">
+          <div class="product__copy">
+            <p class="product__eyebrow">02 · KareCode 2FA</p>
+            <h3 class="product__title">İki Faktörlü Kimlik Doğrulama</h3>
+            <p class="product__desc">
+              Erişimi tek bir şifreye bırakmayın. KareCode 2FA, kurumsal
+              hesaplarınızı anlık onay, biyometrik destek ve akıllı risk
+              analiziyle katmanlı biçimde korur.
+            </p>
+            <ul class="product__points">
+              <li><span>Saniyeler içinde push onayı</span></li>
+              <li><span>Mevcut SSO ve dizin servisleriyle entegrasyon</span></li>
+              <li><span>Şüpheli girişlerde otomatik uyarı</span></li>
+            </ul>
+          </div>
+          <div class="product__visual glass">
+            <div class="pv-2fa">
+              <div class="pv-2fa__ring">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,.1)" stroke-width="6" fill="none"/>
+                  <circle class="pv-2fa__arc" cx="60" cy="60" r="52" stroke="var(--accent)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                </svg>
+                <div class="pv-2fa__code">482 917</div>
+              </div>
+              <div class="pv-2fa__meta">
+                <p class="pv-2fa__label">Onay bekleniyor</p>
+                <p class="pv-2fa__device">Finans Müdürü · iPhone 15 Pro</p>
+                <div class="pv-2fa__actions">
+                  <span class="pv-pill pv-pill--ok">Onayla</span>
+                  <span class="pv-pill pv-pill--muted">Reddet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" id="cloud-backup">
+          <div class="product__copy">
+            <p class="product__eyebrow">03 · Cloud Backup</p>
+            <h3 class="product__title">Bulut Yedekleme</h3>
+            <p class="product__desc">
+              Verileriniz, uçtan uca şifrelenerek otomatik olarak yedeklenir.
+              Felaket kurtarma senaryolarına hazır altyapımızla, en kritik
+              anda dahi kesintisiz erişim sağlarsınız.
+            </p>
+            <ul class="product__points">
+              <li><span>Uçtan uca şifreli, otomatik yedekleme</span></li>
+              <li><span>Esnek saklama ve geri yükleme politikaları</span></li>
+              <li><span>Felaket kurtarma için hazır altyapı</span></li>
+            </ul>
+          </div>
+          <div class="product__visual glass">
+            <div class="pv-backup">
+              <div class="pv-backup__ring">
+                <svg class="pv-backup__ring-svg" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,.1)" stroke-width="8" fill="none"/>
+                  <circle class="pv-backup__prog" cx="60" cy="60" r="50" stroke="var(--accent)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                </svg>
+                <svg class="pv-backup__icon" viewBox="0 0 24 24" fill="none"><path
+  d="M6.5 19a4.5 4.5 0 0 1-.4-8.98 6 6 0 0 1 11.6-2.1A5 5 0 0 1 17.4 19H6.5Z"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linejoin="round"
+/></svg>
+              </div>
+              <p class="pv-backup__status">Yedekleme tamamlandı</p>
+              <p class="pv-backup__meta">2.4 TB şifreli veri · 3 bölgede kopyalandı</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section" id="degerler">
+      <div class="section__inner">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Değerlerimiz</p>
+          <h2 class="section__title">Her kararımızı yönlendiren üç ilke.</h2>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card glass">
+            <span class="value-card__index">01</span>
+            <h3>Güven</h3>
+            <p>
+              Müşterilerimizle kurduğumuz ilişki, şeffaflık ve tutarlılık
+              üzerine inşa edilir. Verdiğimiz her söz, ölçülebilir bir
+              taahhüttür.
+            </p>
+          </article>
+          <article class="value-card glass">
+            <span class="value-card__index">02</span>
+            <h3>Uyumluluk</h3>
+            <p>
+              Türkiye'nin mevzuat gereksinimlerini yakından takip eder,
+              çözümlerimizi her zaman güncel yasal çerçeveye göre
+              tasarlarız.
+            </p>
+          </article>
+          <article class="value-card glass">
+            <span class="value-card__index">03</span>
+            <h3>Güvenilirlik</h3>
+            <p>
+              Kritik altyapınız bizimle çalışırken kesintiye yer yoktur.
+              %99.9 çalışma süresi taahhüdümüz, mühendislik disiplinimizin
+              bir sonucudur.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="iletisim">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/karecode-logo.png" alt="KareCode" class="footer__logo" />
+          <p class="footer__desc">
+            Bornova, İzmir merkezli; Türk işletmelerine siber güvenlik ve
+            mevzuat uyumluluğu alanında hizmet veren yazılım şirketi.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="" width="18" height="18" /></a>
+            <a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="" width="18" height="18" /></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/instagram-icon.png" alt="" width="18" height="18" /></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__title">Çözümler</p>
+          <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KcLogger</a>
+          <a href="#2fa">İki Faktörlü Doğrulama</a>
+          <a href="#cloud-backup">Cloud Backup</a>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__title">Şirket</p>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="#hikaye">Neden KareCode</a>
+          <a href="#degerler">Değerlerimiz</a>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__title"><a href="iletisim.html">İletişim</a></p>
+          <a href="mailto:info@karecode.com.tr">info@karecode.com.tr</a>
+          <a href="tel:+902323322284">0232 332 22 84</a>
+          <span>Bornova, İzmir</span>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 KareCode. Tüm hakları saklıdır.</span>
+        <span class="footer__bottom-mono">İzmir, Türkiye</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4" defer></script>
+</body>
+</html>
