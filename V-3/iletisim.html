@@ -26,7 +26,7 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=20" />
 </head>
 <body>
   <div class="bg-scene" aria-hidden="true">
@@ -66,9 +66,11 @@
       </a>
 
       <nav class="nav__links" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="index.html#hikaye">Neden KareCode</a>
         <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+        <a href="index.html#sss">SSS</a>
         <a class="is-active" href="iletisim.html">İletişim</a>
       </nav>
 
@@ -78,9 +80,11 @@
     </div>
 
     <nav class="nav__mobile" id="navMobile" aria-label="Mobil menü">
+      <a href="index.html">Ana Sayfa</a>
       <a href="hakkimizda.html">Hakkımızda</a>
       <a href="index.html#hikaye">Neden KareCode</a>
       <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+      <a href="index.html#sss">SSS</a>
       <a class="is-active" href="iletisim.html">İletişim</a>
     </nav>
   </header>
@@ -143,7 +147,7 @@
               <div class="form-field">
                 <label for="cf-email">E-posta</label>
                 <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="ornek@sirket.com" required />
-                <span class="form-field__error" data-error-for="cf-email"></span>
+                <span class="form-field__error" data-error-for="cf-email" maxlength="75"></span>
               </div>
             </div>
 
@@ -158,7 +162,6 @@
                 <select id="cf-subject" name="subject">
                   <option value="Genel Bilgi">Genel Bilgi</option>
                   <option value="KcLogger">KcLogger</option>
-                  <option value="İki Faktörlü Doğrulama">İki Faktörlü Doğrulama</option>
                   <option value="Cloud Backup">Cloud Backup</option>
                   <option value="Diğer">Diğer</option>
                 </select>
@@ -200,8 +203,7 @@
         <div class="footer__col">
           <p class="footer__title">Çözümler</p>
           <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KcLogger</a>
-          <a href="index.html#2fa">İki Faktörlü Doğrulama</a>
-          <a href="index.html#cloud-backup">Cloud Backup</a>
+          <a href="index.html#sss">SSS</a>
         </div>
 
         <div class="footer__col">
@@ -226,6 +228,10 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=4" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı çık">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/main.js?v=20" defer></script>
 </body>
 </html>

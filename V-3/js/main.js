@@ -45,6 +45,22 @@
 
   var nav = document.getElementById("nav");
 
+  var backToTop = document.getElementById("backToTop");
+
+  if (backToTop) {
+    window.addEventListener(
+      "scroll",
+      function () {
+        backToTop.classList.toggle("is-visible", window.scrollY > 400);
+      },
+      { passive: true }
+    );
+
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   var revealEls = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window && revealEls.length) {

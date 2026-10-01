@@ -26,7 +26,7 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=20" />
 </head>
 <body>
   <div class="bg-scene" aria-hidden="true">
@@ -66,9 +66,11 @@
       </a>
 
       <nav class="nav__links" aria-label="Ana menü">
+        <a href="#top">Ana Sayfa</a>
         <a href="hakkimizda.html">Hakkımızda</a>
         <a href="#hikaye">Neden KareCode</a>
         <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+        <a href="#sss">SSS</a>
         <a href="iletisim.html">İletişim</a>
       </nav>
 
@@ -78,9 +80,11 @@
     </div>
 
     <nav class="nav__mobile" id="navMobile" aria-label="Mobil menü">
+      <a href="#top">Ana Sayfa</a>
       <a href="hakkimizda.html">Hakkımızda</a>
       <a href="#hikaye">Neden KareCode</a>
       <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">Kclogger</a>
+      <a href="#sss">SSS</a>
       <a href="iletisim.html">İletişim</a>
     </nav>
   </header>
@@ -101,7 +105,7 @@
             üstlenen bir Türk yazılım ve siber güvenlik şirketidir.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--ghost btn--lg" href="#iletisim">Ekibimizle Görüşün</a>
+            <a class="btn btn--ghost btn--lg" href="iletisim.html">Ekibimizle Görüşün</a>
           </div>
         </div>
 
@@ -116,10 +120,6 @@
             <div class="hp-row">
               <span class="hp-label">5651 Loglama</span>
               <span class="hp-pill hp-pill--ok">Aktif · Uyumlu</span>
-            </div>
-            <div class="hp-row">
-              <span class="hp-label">İki Faktörlü Doğrulama</span>
-              <span class="hp-pill hp-pill--ok">Tüm hesaplarda etkin</span>
             </div>
             <div class="hp-row">
               <span class="hp-label">Bulut Yedekleme</span>
@@ -293,7 +293,7 @@
           <p class="eyebrow"><span class="eyebrow__dot"></span>Çözümlerimiz</p>
           <h2 class="section__title">Uçtan uca güvenlik, tek bir teknoloji ortağından.</h2>
           <p class="section__lead">
-            Üç ürün, tek bir amaç: kurumunuzun dijital varlıklarını korumak ve
+            İki ürün, tek bir amaç: kurumunuzun dijital varlıklarını korumak ve
             uyumluluk yükünüzü ortadan kaldırmak.
           </p>
         </div>
@@ -328,76 +328,40 @@
           </div>
         </article>
 
-        <article class="product product--reverse" id="2fa">
-          <div class="product__copy">
-            <p class="product__eyebrow">02 · KareCode 2FA</p>
-            <h3 class="product__title">İki Faktörlü Kimlik Doğrulama</h3>
-            <p class="product__desc">
-              Erişimi tek bir şifreye bırakmayın. KareCode 2FA, kurumsal
-              hesaplarınızı anlık onay, biyometrik destek ve akıllı risk
-              analiziyle katmanlı biçimde korur.
-            </p>
-            <ul class="product__points">
-              <li><span>Saniyeler içinde push onayı</span></li>
-              <li><span>Mevcut SSO ve dizin servisleriyle entegrasyon</span></li>
-              <li><span>Şüpheli girişlerde otomatik uyarı</span></li>
-            </ul>
-          </div>
-          <div class="product__visual glass">
-            <div class="pv-2fa">
-              <div class="pv-2fa__ring">
-                <svg viewBox="0 0 120 120">
-                  <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,.1)" stroke-width="6" fill="none"/>
-                  <circle class="pv-2fa__arc" cx="60" cy="60" r="52" stroke="var(--accent)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                </svg>
-                <div class="pv-2fa__code">482 917</div>
-              </div>
-              <div class="pv-2fa__meta">
-                <p class="pv-2fa__label">Onay bekleniyor</p>
-                <p class="pv-2fa__device">Finans Müdürü · iPhone 15 Pro</p>
-                <div class="pv-2fa__actions">
-                  <span class="pv-pill pv-pill--ok">Onayla</span>
-                  <span class="pv-pill pv-pill--muted">Reddet</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+    <!-- FAQ -->
+    <section class="section" id="sss">
+      <div class="section__inner">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>SSS</p>
+          <h2 class="section__title">Sıkça Sorulan Sorular</h2>
+        </div>
 
-        <article class="product" id="cloud-backup">
-          <div class="product__copy">
-            <p class="product__eyebrow">03 · Cloud Backup</p>
-            <h3 class="product__title">Bulut Yedekleme</h3>
-            <p class="product__desc">
-              Verileriniz, uçtan uca şifrelenerek otomatik olarak yedeklenir.
-              Felaket kurtarma senaryolarına hazır altyapımızla, en kritik
-              anda dahi kesintisiz erişim sağlarsınız.
-            </p>
-            <ul class="product__points">
-              <li><span>Uçtan uca şifreli, otomatik yedekleme</span></li>
-              <li><span>Esnek saklama ve geri yükleme politikaları</span></li>
-              <li><span>Felaket kurtarma için hazır altyapı</span></li>
-            </ul>
-          </div>
-          <div class="product__visual glass">
-            <div class="pv-backup">
-              <div class="pv-backup__ring">
-                <svg class="pv-backup__ring-svg" viewBox="0 0 120 120">
-                  <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,.1)" stroke-width="8" fill="none"/>
-                  <circle class="pv-backup__prog" cx="60" cy="60" r="50" stroke="var(--accent)" stroke-width="8" fill="none" stroke-linecap="round"/>
-                </svg>
-                <svg class="pv-backup__icon" viewBox="0 0 24 24" fill="none"><path
-  d="M6.5 19a4.5 4.5 0 0 1-.4-8.98 6 6 0 0 1 11.6-2.1A5 5 0 0 1 17.4 19H6.5Z"
-  stroke="currentColor"
-  stroke-width="1.5"
-  stroke-linejoin="round"
-/></svg>
-              </div>
-              <p class="pv-backup__status">Yedekleme tamamlandı</p>
-              <p class="pv-backup__meta">2.4 TB şifreli veri · 3 bölgede kopyalandı</p>
-            </div>
-          </div>
-        </article>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-item__question">Bakım anlaşması olmadan da hizmet alabilir miyim?</summary>
+            <p class="faq-item__answer">Evet. Tek seferlik kurulum, denetim veya sorun giderme işleri için proje bazlı çalışıyoruz. Ancak sürekli çalışma gereken altyapılarda bakım anlaşması hem maliyeti hem de kesinti riskini düşürür.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Uzaktan mı yoksa yerinde mi destek veriyorsunuz?</summary>
+            <p class="faq-item__answer">İkisi de. Yapılandırma değişiklikleri ve çoğu arıza uzaktan çözülür. Donanım arızası, kablolama veya kapsama sorunlarında sahaya geliriz.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Altyapının yönetimini ileride devralabilir miyim?</summary>
+            <p class="faq-item__answer">Evet. Yapılandırma, dokümantasyon ve erişim bilgileri baştan itibaren sizindir. Anlaşma sona erdiğinde her şey eksiksiz devredilir; kilitleme uygulamıyoruz.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Mevcut cihazlarımı değiştirmem gerekiyor mu?</summary>
+            <p class="faq-item__answer">Çoğu durumda hayır. Önce mevcut donanımı inceler, kapasitesi yeterliyse yeniden yapılandırarak kullanırız. Değişim önerdiğimizde bunun teknik gerekçesini yazılı olarak paylaşırız.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Kurulum işletmemi ne kadar aksatır?</summary>
+            <p class="faq-item__answer">Geçiş planını birlikte belirleriz. Kritik geçişleri genellikle mesai dışında veya düşük yoğunluklu saatlerde yaparız; kesinti süresi çoğu projede dakikalarla sınırlıdır.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Misafir Wi-Fi için hangi doğrulama yöntemlerini kurabiliyorsunuz?</summary>
+            <p class="faq-item__answer">SMS ile tek kullanımlık şifre, e-Devlet üzerinden kimlik doğrulama, oda numarası ve soyadı eşleşmesi, kupon/voucher kodu ve sosyal medya girişi seçeneklerini kurabiliyoruz. Tercih, işletmenizin türüne ve misafir profiline göre belirlenir.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -462,8 +426,7 @@
         <div class="footer__col">
           <p class="footer__title">Çözümler</p>
           <a href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KcLogger</a>
-          <a href="#2fa">İki Faktörlü Doğrulama</a>
-          <a href="#cloud-backup">Cloud Backup</a>
+          <a href="#sss">SSS</a>
         </div>
 
         <div class="footer__col">
@@ -488,6 +451,10 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=4" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı çık">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/main.js?v=20" defer></script>
 </body>
 </html>
