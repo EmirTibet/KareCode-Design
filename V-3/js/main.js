@@ -186,3 +186,9 @@
     });
   });
 })();
+  var root = document.documentElement;
+root.classList.add("theme-switching");
+root.setAttribute("data-theme", next);
+setTimeout(function () {
+  root.classList.remove("theme-switching");
+}, 100);  
