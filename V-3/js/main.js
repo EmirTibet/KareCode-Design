@@ -28,6 +28,12 @@
   var mobileNav = document.getElementById("navMobile");
 
   if (burger && mobileNav) {
+    function closeMobileNav() {
+      mobileNav.classList.remove("is-open");
+      burger.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+    }
+
     burger.addEventListener("click", function () {
       var isOpen = mobileNav.classList.toggle("is-open");
       burger.classList.toggle("is-open", isOpen);
@@ -35,11 +41,11 @@
     });
 
     mobileNav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        mobileNav.classList.remove("is-open");
-        burger.classList.remove("is-open");
-        burger.setAttribute("aria-expanded", "false");
-      });
+      link.addEventListener("click", closeMobileNav);
+    });
+
+    window.matchMedia("(min-width: 1025px)").addEventListener("change", function (e) {
+      if (e.matches) closeMobileNav();
     });
   }
 
