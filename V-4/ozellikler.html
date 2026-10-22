@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Özellikler — KcLogger · KareCode</title>
+  <meta name="description" content="KcLogger: 5651 uyumlu imzalı loglama, DNS/URL filtreleme, merkezi ve mobil yönetim, giriş ekranında pazarlama. Cloud veya On-Premise." />
+  <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0a0e1c" media="(prefers-color-scheme: dark)" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("karecode-theme");
+        if (saved === "dark" || saved === "light") document.documentElement.setAttribute("data-theme", saved);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&amp;icon_names=add,arrow_forward,arrow_outward,arrow_upward,call,campaign,check,chevron_right,close,dark_mode,dashboard,error,filter_alt,fingerprint,insights,layers,light_mode,location_on,mail,menu,smartphone,wifi&amp;display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">İçeriğe geç</a>
+
+<div class="ambient" aria-hidden="true">
+  <span class="ambient__orb ambient__orb--1"></span>
+  <span class="ambient__orb ambient__orb--2"></span>
+  <span class="ambient__orb ambient__orb--3"></span>
+  <span class="ambient__grain"></span>
+</div>
+
+<header class="nav">
+  <div class="topbar">
+    <div class="topbar__contact">
+      <a href="mailto:info@karecode.com.tr" aria-label="E-posta: info@karecode.com.tr"><span class="icon" aria-hidden="true">mail</span><span>info@karecode.com.tr</span></a>
+      <a href="tel:+902323322284" aria-label="Telefon: 0232 332 22 84"><span class="icon" aria-hidden="true">call</span><span>0232 332 22 84</span></a>
+    </div>
+    <div class="topbar__social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><img src="assets/linkedin-icon.png" alt="" width="15" height="15" /></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><img src="assets/facebook-icon.png" alt="" width="15" height="15" /></a><a href="#" aria-label="KareCode Instagram"><img src="assets/instagram-icon.png" alt="" width="15" height="15" /></a></div>
+  </div>
+  <div class="nav__bar glass" data-glow>
+    <a class="nav__brand" href="index.html" aria-label="KareCode ana sayfa">
+      <img class="logo--light" src="assets/karecode-logo-light.png" alt="KareCode" width="250" height="45" />
+      <img class="logo--dark" src="assets/karecode-logo.png" alt="KareCode" width="250" height="45" />
+    </a>
+    <nav class="nav__links" aria-label="Ana menü">
+        <a class="nav__link" href="index.html">Ana Sayfa</a>
+        <a class="nav__link" href="ozellikler.html" aria-current="page">Özellikler</a>
+        <a class="nav__link nav__link--ext" href="https://kclogger.com/" target="_blank" rel="noopener">KcLogger<span class="sr-only"> (yeni sekmede açılır)</span></a>
+        <a class="nav__link" href="hakkimizda.html">Hakkımızda</a>
+        <a class="nav__link" href="sss.html">SSS</a>
+        <a class="nav__link" href="iletisim.html">İletişim</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Koyu temaya geç">
+        <span class="icon icon-moon" aria-hidden="true">dark_mode</span>
+        <span class="icon icon-sun" aria-hidden="true">light_mode</span>
+      </button>
+      <button class="icon-btn nav__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç">
+        <span class="icon icon-menu" aria-hidden="true">menu</span>
+        <span class="icon icon-close" aria-hidden="true">close</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu glass glass--solid" id="mobile-menu" aria-label="Mobil menü">
+  <ul>
+      <li><a href="index.html">Ana Sayfa<span class="icon" aria-hidden="true">arrow_forward</span></a></li>
+      <li><a href="ozellikler.html" aria-current="page">Özellikler<span class="icon" aria-hidden="true">arrow_forward</span></a></li>
+      <li><a href="https://kclogger.com/" target="_blank" rel="noopener">KcLogger<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+      <li><a href="hakkimizda.html">Hakkımızda<span class="icon" aria-hidden="true">arrow_forward</span></a></li>
+      <li><a href="sss.html">SSS<span class="icon" aria-hidden="true">arrow_forward</span></a></li>
+      <li><a href="iletisim.html">İletişim<span class="icon" aria-hidden="true">arrow_forward</span></a></li>
+  </ul>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb reveal" aria-label="Sayfa konumu"><a href="index.html">Ana Sayfa</a><span class="icon" aria-hidden="true">chevron_right</span><span aria-current="page">Özellikler</span></nav>
+      <div class="page-hero__grid">
+        <div>
+          <h1 class="display reveal" style="--i:1"><span class="line">KcLogger bir</span> <span class="line">Hotspot'tan <em>fazlası.</em></span></h1>
+          <div class="product-hero__ctas mt-6 reveal" style="--i:2">
+            <a class="btn btn--primary" href="iletisim.html?konu=kclogger">Teklif isteyin<span class="icon icon-arrow" aria-hidden="true">arrow_forward</span></a>
+            <a class="btn btn--primary" href="sss.html">Sıkça sorulan sorular</a>
+          </div>
+        </div>
+        <div class="reveal" style="--i:2">
+          <p class="lead">5651 sayılı Kanun'a uygun imzalı loglama, kategori bazlı filtreleme ve giriş ekranında pazarlama. Tüm lokasyonlarınız tek panelde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ozellikler-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="eyebrow">Özellikler</span>
+          <h2 class="h2" id="ozellikler-title" style="margin-top:24px">Uyumluluk, <em>KcLogger'la</em> buluştu.</h2>
+        </div>
+        <p class="lead">Yasal yükümlülüğü yerine getiren, aynı zamanda işinize değer katan sekiz yetenek — tek platformda.</p>
+      </div>
+      <div class="fx" data-fx>
+        <ul class="fx-list" role="tablist" aria-orientation="vertical" aria-label="KcLogger özellikleri">
+          <li class="fx-list__indicator" role="presentation" aria-hidden="true"></li>
+          <li role="presentation" style="--i:0">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-0" aria-controls="fx-panel-0" aria-selected="true" tabindex="0">
+              <span class="fx-tab__num">01</span><span class="icon" aria-hidden="true">fingerprint</span><span class="fx-tab__title">5651 imzalı loglama</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:1">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-1" aria-controls="fx-panel-1" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">02</span><span class="icon" aria-hidden="true">filter_alt</span><span class="fx-tab__title">DNS / URL filtreleme</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:2">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-2" aria-controls="fx-panel-2" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">03</span><span class="icon" aria-hidden="true">layers</span><span class="fx-tab__title">Merkezi yönetim</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:3">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-3" aria-controls="fx-panel-3" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">04</span><span class="icon" aria-hidden="true">smartphone</span><span class="fx-tab__title">Mobil yönetim</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:4">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-4" aria-controls="fx-panel-4" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">05</span><span class="icon" aria-hidden="true">insights</span><span class="fx-tab__title">Gelişmiş anket sistemi</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:5">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-5" aria-controls="fx-panel-5" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">06</span><span class="icon" aria-hidden="true">wifi</span><span class="fx-tab__title">Marka bağımsız erişim</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:6">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-6" aria-controls="fx-panel-6" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">07</span><span class="icon" aria-hidden="true">campaign</span><span class="fx-tab__title">Giriş ekranında pazarlama</span>
+            </button>
+          </li>
+          <li role="presentation" style="--i:7">
+            <button class="fx-tab" type="button" role="tab" id="fx-tab-7" aria-controls="fx-panel-7" aria-selected="false" tabindex="-1">
+              <span class="fx-tab__num">08</span><span class="icon" aria-hidden="true">dashboard</span><span class="fx-tab__title">Kişiselleştirilmiş dashboard</span>
+            </button>
+          </li>
+        </ul>
+        <div class="fx-stage glass" data-glow>
+          <div class="fx-panel is-active" role="tabpanel" id="fx-panel-0" aria-labelledby="fx-tab-0" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">fingerprint</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">fingerprint</span></span>
+            <p class="fx-panel__count">01 / 08</p>
+            <h3 class="fx-panel__title"><span class="num">5651</span> imzalı loglama</h3>
+            <p class="fx-panel__desc">Loglarınız imzalı olarak Cloud veya On-Premise ortamlarda; müşteri veri merkezinde ya da KareCode sunucularında saklanır.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-1" aria-labelledby="fx-tab-1" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">filter_alt</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">filter_alt</span></span>
+            <p class="fx-panel__count">02 / 08</p>
+            <h3 class="fx-panel__title">DNS / URL filtreleme</h3>
+            <p class="fx-panel__desc">Kategori bazlı filtreleme ile istenmeyen sitelere erişimi engelleyin.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-2" aria-labelledby="fx-tab-2" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">layers</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">layers</span></span>
+            <p class="fx-panel__count">03 / 08</p>
+            <h3 class="fx-panel__title">Merkezi yönetim</h3>
+            <p class="fx-panel__desc">Tüm lokasyonlarınızı tek bir panelden yönetin.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-3" aria-labelledby="fx-tab-3" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">smartphone</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">smartphone</span></span>
+            <p class="fx-panel__count">04 / 08</p>
+            <h3 class="fx-panel__title">Mobil yönetim</h3>
+            <p class="fx-panel__desc">Mobil uygulama ile yönetim panelinize her yerden erişin.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-4" aria-labelledby="fx-tab-4" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">insights</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">insights</span></span>
+            <p class="fx-panel__count">05 / 08</p>
+            <h3 class="fx-panel__title">Gelişmiş anket sistemi</h3>
+            <p class="fx-panel__desc">Müşterilerinize belirlediğiniz tarih aralığında ulaşın, geri bildirimleri ölçün ve deneyimi sürekli iyileştirin.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-5" aria-labelledby="fx-tab-5" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">wifi</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">wifi</span></span>
+            <p class="fx-panel__count">06 / 08</p>
+            <h3 class="fx-panel__title">Marka bağımsız erişim</h3>
+            <p class="fx-panel__desc">Erişim noktalarınız tek bir markaya bağlı kalmaz.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-6" aria-labelledby="fx-tab-6" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">campaign</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">campaign</span></span>
+            <p class="fx-panel__count">07 / 08</p>
+            <h3 class="fx-panel__title">Giriş ekranında pazarlama</h3>
+            <p class="fx-panel__desc">Hotspot giriş sayfasını kampanya, duyuru ve etkinlikleriniz için zarif bir vitrine dönüştürün.</p>
+          </div>
+          <div class="fx-panel" role="tabpanel" id="fx-panel-7" aria-labelledby="fx-tab-7" tabindex="0">
+            <span class="icon fx-panel__mark" aria-hidden="true">dashboard</span>
+            <span class="fx-panel__badge"><span class="icon" aria-hidden="true">dashboard</span></span>
+            <p class="fx-panel__count">08 / 08</p>
+            <h3 class="fx-panel__title">Kişiselleştirilmiş dashboard</h3>
+            <p class="fx-panel__desc">Her kullanıcı kendi panelini, kendi önceliklerine göre düzenler.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="adimlar-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Nasıl çalışır</span>
+        <h2 class="h2" id="adimlar-title">Üç adımda <em>denetime hazır.</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="step glass reveal" data-glow><span class="numeral">I</span><h3>Bağlayın</h3><p>Mevcut erişim noktalarınızı marka bağımsız olarak KcLogger'a bağlayın; altyapınızı baştan kurmanıza gerek yok.</p></li>
+        <li class="step glass reveal" style="--i:1" data-glow><span class="numeral">II</span><h3>İmzalayın</h3><p>Her erişim kaydı zaman damgasıyla imzalanır; bulutta ya da kendi veri merkezinizde saklanır.</p></li>
+        <li class="step glass reveal" style="--i:2" data-glow><span class="numeral">III</span><h3>Yönetin</h3><p>Tüm lokasyonlarınızı tek panelden ya da mobil uygulamadan yönetin; denetime her an hazır olun.</p></li>
+      </ol>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__card glass" data-glow>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img class="logo--light" src="assets/karecode-logo-light.png" alt="KareCode" width="250" height="45" loading="lazy" />
+          <img class="logo--dark" src="assets/karecode-logo.png" alt="KareCode" width="250" height="45" loading="lazy" />
+          <p>Bornova, İzmir merkezli; Türk işletmelerine siber güvenlik ve mevzuat uyumluluğu alanında hizmet veren yazılım şirketi.</p>
+          <div class="footer__social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><img src="assets/linkedin-icon.png" alt="" width="18" height="18" /></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><img src="assets/facebook-icon.png" alt="" width="18" height="18" /></a><a href="#" aria-label="KareCode Instagram"><img src="assets/instagram-icon.png" alt="" width="18" height="18" /></a></div>
+        </div>
+        <div>
+          <h2>Çözümler</h2>
+          <ul>
+            <li><a href="https://kclogger.com/" target="_blank" rel="noopener">KcLogger<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+            <li><a href="ozellikler.html">Özellikler</a></li>
+            <li><a href="iletisim.html?konu=2fa">İki Faktörlü Doğrulama</a></li>
+            <li><a href="iletisim.html?konu=backup">Bulut Yedekleme</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Şirket</h2>
+          <ul>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hakkimizda.html#degerler">Değerlerimiz</a></li>
+            <li><a href="sss.html">SSS</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>İletişim</h2>
+          <ul>
+            <li><a href="mailto:info@karecode.com.tr">info@karecode.com.tr</a></li>
+            <li><a href="tel:+902323322284">0232 332 22 84</a></li>
+            <li><a href="iletisim.html#ofisler">Bornova, İzmir</a></li>
+            <li><a href="iletisim.html#ofisler">Gebze, Kocaeli</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> KareCode Dijital Servisler ve Yazılım Hizmetleri A.Ş.</span>
+        <span>İzmir · Kocaeli, Türkiye</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top glass" type="button" aria-label="Sayfanın başına dön"><span class="icon" aria-hidden="true">arrow_upward</span></button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
