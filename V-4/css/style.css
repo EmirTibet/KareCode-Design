@@ -59,7 +59,7 @@
   --s-8: 64px;
   --s-9: 96px;
   --s-10: 128px;
-  --section: clamp(88px, 12vw, 160px);
+  --section: clamp(56px, 7vw, 104px);
 
   /* Radii */
   --r-sm: 12px;
@@ -415,7 +415,7 @@ ol {
   display: grid;
   gap: var(--s-5);
   max-width: 760px;
-  margin-bottom: clamp(48px, 7vw, 88px);
+  margin-bottom: clamp(32px, 4vw, 56px);
 }
 
 .section-head--center {
@@ -944,17 +944,19 @@ ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 56px;
+  min-height: 52px;
   padding: 0 16px;
   border-radius: var(--r-sm);
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink-2);
 }
 
 .mobile-menu a:not(.btn):hover,
 .mobile-menu a[aria-current="page"] {
   background: var(--hairline);
+  color: var(--ink);
 }
 
 .mobile-menu .btn {
@@ -2308,7 +2310,7 @@ select.input {
 
 /* ---------- Footer ---------- */
 .footer {
-  padding-top: var(--s-9);
+  padding-top: var(--s-7);
   padding-bottom: var(--s-6);
 }
 
