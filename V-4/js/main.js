@@ -172,6 +172,44 @@
     });
   }
 
+  /* ---------- Stat counters: count up from 0 when the strip comes into view ---------- */
+  var counters = document.querySelectorAll("[data-count-to]");
+
+  function runCounter(el) {
+    var target = parseInt(el.getAttribute("data-count-to"), 10);
+    var prefix = el.getAttribute("data-prefix") || "";
+    var suffix = el.getAttribute("data-suffix") || "";
+    var duration = 1400;
+    var start = null;
+
+    function frame(now) {
+      if (start === null) start = now;
+      var t = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 3); // fast start, gentle landing
+      el.textContent = prefix + Math.round(target * eased) + suffix;
+      if (t < 1) window.requestAnimationFrame(frame);
+    }
+    window.requestAnimationFrame(frame);
+  }
+
+  if (counters.length && "IntersectionObserver" in window && !reduceMotion.matches) {
+    var counterIO = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          counterIO.unobserve(entry.target);
+          runCounter(entry.target);
+        });
+      },
+      { threshold: 0.6 }
+    );
+    counters.forEach(function (el) {
+      el.setAttribute("aria-label", el.textContent.trim());
+      el.textContent = (el.getAttribute("data-prefix") || "") + "0" + (el.getAttribute("data-suffix") || "");
+      counterIO.observe(el);
+    });
+  }
+
   /* ---------- Feature explorer: hover/focus a feature, details fill the right ---------- */
   document.querySelectorAll("[data-fx]").forEach(function (fx) {
     var tabs = Array.prototype.slice.call(fx.querySelectorAll('[role="tab"]'));

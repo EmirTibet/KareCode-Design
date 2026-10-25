@@ -47,6 +47,7 @@
   /* Type */
   --font-display: "Playfair Display", "Inter", system-ui, sans-serif;
   --font-text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --tracking-label: 0.12em; /* every small uppercase label */
 
   /* Spacing */
   --s-1: 4px;
@@ -196,7 +197,7 @@ h4 {
   font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.08;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   text-wrap: balance;
 }
 
@@ -424,6 +425,14 @@ ol {
   justify-items: center;
 }
 
+/* eyebrow + heading block: spacing via gap, so h2 needs no margin */
+.section-head > div,
+.editorial > div:first-child {
+  display: grid;
+  gap: var(--s-5);
+  justify-items: start;
+}
+
 .section-head--split {
   max-width: none;
   grid-template-columns: 1fr;
@@ -445,7 +454,7 @@ ol {
   font-family: var(--font-text);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -467,7 +476,7 @@ ol {
 .display {
   font-size: clamp(2.75rem, 7.4vw, 6.25rem);
   line-height: 1.02;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .display--hero {
@@ -501,7 +510,7 @@ ol {
   font-family: var(--font-text);
   font-style: normal;
   font-variant-numeric: lining-nums tabular-nums;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .lead {
@@ -520,7 +529,7 @@ ol {
   font-style: italic;
   color: var(--accent);
   font-size: 1rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 /* ---------- Buttons ---------- */
@@ -536,7 +545,7 @@ ol {
   border-radius: var(--r-pill);
   font-size: 0.9375rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   white-space: nowrap;
   cursor: pointer;
   transition:
@@ -587,6 +596,22 @@ ol {
 :root[data-theme="dark"] .btn--primary:hover {
   --glass-hi: rgba(60, 70, 112, 0.7);
   --glass-lo: rgba(30, 37, 66, 0.55);
+}
+
+/* Phones: every button fills its column, so all buttons share one size */
+@media (max-width: 639px) {
+  .btn {
+    width: 100%;
+  }
+
+  .hero__ctas,
+  .product-hero__ctas,
+  .form-actions {
+    width: 100%;
+    justify-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .btn--sm {
@@ -686,7 +711,6 @@ ol {
   max-width: var(--container);
   height: var(--topbar-h);
   margin: 0 auto 8px;
-  padding-inline: 22px 8px;
   font-size: 0.8125rem;
   color: var(--ink-3);
   transition: opacity var(--t-med) var(--ease-out);
@@ -1046,8 +1070,11 @@ ol {
 }
 
 .meta-strip dt {
-  font-family: var(--font-display);
+  font-family: var(--font-text);
+  font-weight: 600;
   font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
   line-height: 1;
   color: var(--ink);
 }
@@ -1143,6 +1170,8 @@ ol {
 }
 
 .story__aside {
+  display: grid;
+  gap: var(--s-5);
   align-self: start;
 }
 
@@ -1155,7 +1184,7 @@ ol {
 
 .story__index {
   display: none;
-  margin-top: var(--s-7);
+  margin-top: var(--s-4);
   gap: 4px;
 }
 
@@ -1195,7 +1224,6 @@ ol {
 .story__progress {
   position: relative;
   height: 2px;
-  margin-top: var(--s-5);
   border-radius: 2px;
   background: var(--hairline);
   overflow: hidden;
@@ -1235,7 +1263,7 @@ ol {
 .chapter__num span:last-child {
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -1319,12 +1347,16 @@ ol {
 .sectors {
   display: grid;
   gap: var(--s-4);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 640px) {
   .sectors {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sector {
+    aspect-ratio: 3 / 4;
   }
 }
 
@@ -1339,7 +1371,7 @@ ol {
   margin: 0;
   overflow: hidden;
   border-radius: var(--r-lg);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 16 / 10;
   background: var(--bg-3);
   box-shadow: var(--shadow-md);
 }
@@ -1718,6 +1750,12 @@ ol {
   color: var(--btn-fg);
 }
 
+:root[data-theme="dark"] .fx-panel__badge {
+  background: var(--glass-solid);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm), inset 0 1px 0 var(--glass-inset);
+}
+
 .fx-panel__badge .icon {
   font-size: 30px;
 }
@@ -1726,7 +1764,7 @@ ol {
   margin-top: var(--s-7);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: var(--tracking-label);
   color: var(--accent);
 }
 
@@ -1878,15 +1916,6 @@ ol {
   margin-top: var(--s-5);
 }
 
-.dropcap::first-letter {
-  float: left;
-  margin: 6px 12px 0 0;
-  font-family: var(--font-display);
-  font-size: 4.5rem;
-  line-height: 0.8;
-  color: var(--ink);
-}
-
 .quotes {
   display: grid;
   gap: var(--s-4);
@@ -1920,7 +1949,7 @@ ol {
   margin-top: auto;
   font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -1978,7 +2007,7 @@ ol {
 .office__tag {
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -2053,6 +2082,7 @@ ol {
 
 .contact__info {
   display: grid;
+  grid-auto-rows: 1fr;
   gap: var(--s-3);
 }
 
@@ -2068,6 +2098,7 @@ ol {
 
 
 .contact-card .icon-badge {
+  flex: none;
   background: var(--glass-solid);
   box-shadow: var(--shadow-sm), inset 0 1px 0 var(--glass-inset);
 }
@@ -2080,7 +2111,7 @@ ol {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -2105,9 +2136,12 @@ ol {
   border-radius: var(--r-xl);
 }
 
+.form-card h2 + p {
+  margin-top: var(--s-3);
+}
+
 .form-card h2 {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
-  margin-bottom: var(--s-3);
 }
 
 .form-grid {
@@ -2386,10 +2420,13 @@ select.input {
   font-family: var(--font-text);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ink-3);
-  margin-bottom: var(--s-4);
+}
+
+.footer h2 + ul {
+  margin-top: var(--s-4);
 }
 
 .footer ul {
