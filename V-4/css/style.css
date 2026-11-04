@@ -1361,8 +1361,33 @@ ol {
 }
 
 @media (min-width: 1024px) {
+
   .sectors {
+    --sectors-w: min(1880px, 100vw - var(--gutter) * 2);
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--s-5);
+    width: var(--sectors-w);
+    margin-inline: calc((100% - var(--sectors-w)) / 2);
+  }
+
+  .sector {
+    aspect-ratio: 3 / 5;
+  }
+
+  .sector__cap {
+    left: 12px;
+    right: auto;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    padding: 7px 14px;
+    border-radius: 999px;
+  }
+
+  .sector__cap strong {
+    font-size: 0.9375rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
