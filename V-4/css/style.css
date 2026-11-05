@@ -1350,49 +1350,9 @@ ol {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 640px) {
-  .sectors {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .sector {
-    aspect-ratio: 3 / 4;
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .sectors {
-    --sectors-w: min(1880px, 100vw - var(--gutter) * 2);
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: var(--s-5);
-    width: var(--sectors-w);
-    margin-inline: calc((100% - var(--sectors-w)) / 2);
-  }
-
-  .sector {
-    aspect-ratio: 3 / 5;
-  }
-
-  .sector__cap {
-    left: 12px;
-    right: auto;
-    bottom: 12px;
-    max-width: calc(100% - 24px);
-    padding: 7px 14px;
-    border-radius: 999px;
-  }
-
-  .sector__cap strong {
-    font-size: 0.9375rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
 .sector {
   position: relative;
+  container-type: inline-size;
   margin: 0;
   overflow: hidden;
   border-radius: var(--r-lg);
@@ -1448,8 +1408,33 @@ ol {
 .sector__cap strong {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.0625rem;
+  font-size: clamp(0.8125rem, 7.2cqi, 1.0625rem);
   line-height: 1.2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+/* Breakpoint'ler temel .sector kurallarından sonra gelmeli, yoksa ezilirler. */
+@media (min-width: 640px) {
+  .sectors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sector {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectors {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--s-5);
+  }
+
+  .sector {
+    aspect-ratio: 4 / 5;
+  }
 }
 
 /* ---------- Values ---------- */
