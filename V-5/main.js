@@ -99,38 +99,65 @@
   window.addEventListener("scroll", syncToTop, { passive: true });
   window.addEventListener("resize", syncToTop);
 
-  /* ---------- Feature tabs ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  /* ---------- Feature bulge ---------- */
+  var bulgeItems = Array.prototype.slice.call(document.querySelectorAll(".bulge__item"));
+  var bulgeList = document.querySelector("[data-bulge]");
+  var bulgeWeights = [1, 0.42, 0.16];
+  var bulgeActive = -1;
 
-  function selectTab(tab, focus) {
-    tabs.forEach(function (item) {
-      var active = item === tab;
-      item.setAttribute("aria-selected", String(active));
-      item.tabIndex = active ? 0 : -1;
-      document.getElementById(item.getAttribute("aria-controls")).hidden = !active;
+  function measureBulge() {
+    var tallest = 0;
+    bulgeItems.forEach(function (item) {
+      var height = item.querySelector(".bulge__copy").scrollHeight;
+      item.style.setProperty("--body", height + "px");
+      tallest = Math.max(tallest, height);
     });
-    if (focus) tab.focus();
+    bulgeList.style.setProperty("--count", bulgeItems.length);
+    bulgeList.style.setProperty("--tallest", tallest + "px");
   }
 
-  tabs.forEach(function (tab, index) {
-    tab.addEventListener("click", function () {
-      selectTab(tab, false);
+  function setBulge(activeIndex) {
+    if (activeIndex === bulgeActive) return;
+    bulgeActive = activeIndex;
+    bulgeItems.forEach(function (item, index) {
+      var offset = index - activeIndex;
+      var distance = Math.abs(offset);
+      item.style.setProperty("--b", bulgeWeights[distance] || 0);
+      item.style.setProperty("--t", Math.max(-3, Math.min(3, offset)));
+      item.style.setProperty("--open", distance === 0 ? 1 : 0);
+      item.classList.toggle("is-active", distance === 0);
+      item.querySelector(".bulge__btn").setAttribute("aria-expanded", String(distance === 0));
     });
-    tab.addEventListener("mouseenter", function () {
-      selectTab(tab, false);
-    });
-    tab.addEventListener("keydown", function (e) {
-      var target = null;
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") target = tabs[(index + 1) % tabs.length];
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") target = tabs[(index - 1 + tabs.length) % tabs.length];
-      if (e.key === "Home") target = tabs[0];
-      if (e.key === "End") target = tabs[tabs.length - 1];
-      if (target) {
-        e.preventDefault();
-        selectTab(target, true);
-      }
+  }
+
+  bulgeItems.forEach(function (item, index) {
+    var button = item.querySelector(".bulge__btn");
+    function activate() {
+      setBulge(index);
+    }
+    button.addEventListener("focus", activate);
+    button.addEventListener("click", activate);
+    button.addEventListener("keydown", function (e) {
+      var step = e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0;
+      if (!step) return;
+      e.preventDefault();
+      bulgeItems[(index + step + bulgeItems.length) % bulgeItems.length].querySelector(".bulge__btn").focus();
     });
   });
+
+ 
+  if (bulgeList) {
+    measureBulge();
+    setBulge(0);
+    window.addEventListener("resize", measureBulge);
+    if (document.fonts) document.fonts.ready.then(measureBulge);
+    bulgeList.addEventListener("pointermove", function (e) {
+      if (e.pointerType !== "mouse") return;
+      var box = bulgeList.getBoundingClientRect();
+      var zone = Math.floor((e.clientY - box.top) / box.height * bulgeItems.length);
+      setBulge(Math.max(0, Math.min(bulgeItems.length - 1, zone)));
+    });
+  }
 
   /* ---------- Contact form ---------- */
   var form = document.querySelector("[data-contact-form]");

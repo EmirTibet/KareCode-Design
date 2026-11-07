@@ -11,10 +11,9 @@ Tüm değerler `style.css` içinde token olarak tanımlıdır.
 | Token | Değer | Rol |
 |---|---|---|
 | `--primary` | `#ff6b35` | Seçili sekme, adım numarası, kolon çizgisi |
-| `--primary-dark` | `#e55a2b` | Buton hover |
 | `--secondary` | `#8b4513` | Etiket noktası, zaman çizgisi |
-| `--cta` | `#ff6b35` | Seçili menü, özellik rozeti |
-| `--cta-glass` | `rgba(255,107,53,.78)` | Cam buton zemini |
+| `--cta` | `#ff6b35` | Buton zemini, seçili menü, özellik rozeti |
+| `--cta-glass` | `rgba(255,107,53,.78)` | Buton hover |
 | `--on-cta` | `#fff` | Turuncu zemin üzerindeki yazı ve ikon |
 | `--bg` | `#fffaf0` | Sayfa zemini |
 | `--bg-warm` | `#fff5e6` | Vurgu paneli, hover |
@@ -44,7 +43,7 @@ Tam genişlik hero görselleri dışında köşeli yüzey yoktur. `--r-sm` 12px,
 
 ## Butonlar
 
-Temel buton türü `.btn`'dir. Tüm butonlar sol header ile aynı cam özelliklerini (blur, kenarlık, gölge) taşır, turuncu cam zeminde beyaz yazılıdır, her ekranda 52px yüksekliğinde ve 244px genişliğindedir. Tek istisna `.to-top`: aynı cam özelliklerini taşıyan 52px yuvarlak ikon butonu.
+Temel buton türü `.btn`'dir. Tüm butonlar sol header ile aynı cam özelliklerini (blur, kenarlık, gölge) taşır, seçili menüyle aynı düz turuncu (`--cta`) zeminde beyaz yazılıdır, hover'da `--cta-glass` ile solar, her ekranda 52px yüksekliğinde ve 244px genişliğindedir. Tek istisna `.to-top`: aynı cam özelliklerini taşıyan 52px yuvarlak ikon butonu.
 
 ## Bölüm düzenleri
 
@@ -57,8 +56,9 @@ Her bölüm kendi düzenini kullanır, aynı kalıp tekrar edilmez.
 | 5651 | Başlık solda, zaman çizgisi sağda |
 | Captive portal | Üst çizgili üç kolon |
 | Dijital ayak izi | İkiye bölünmüş karşılaştırma paneli |
-| Özellikler | V-4'teki gibi sekmeli özellik birimi, sekme üstüne gelince değişir |
+| Özellikler | Bombeli dikey slider (`.bulge`), aşağıdaki bölüme bakın |
 | Kullanım alanları | Yan yana beş eşit görsel, adı her zaman altında görünür |
+| Network Tools | Tek kenarlıklı panelde eşit yükseklikte numaralı satırlar: numara, ikon, başlık, açıklama |
 | Nasıl çalışır | Numaralı yatay adımlar |
 | Biz kimiz | Başlık solda, metin sağda |
 | İş ortakları | Başlık solda, ortası KareCode logosuyla aynı hizada; dönen çember sağda |
@@ -71,6 +71,14 @@ Her bölüm kendi düzenini kullanır, aynı kalıp tekrar edilmez.
 - Sürekli döner, hover ve klavye odağında durmaz. Ortada KareCode logosu vardır.
 - `prefers-reduced-motion` açıksa dönmez.
 
+## Bombeli slider
+
+- Dokuz özellik dikey bir sütunda dizilir. Sütun yüksekliği `main.js` içindeki `measureBulge` ile en uzun açıklamaya göre hesaplanır ve sabit kalır, satır açılırken sayfa zıplamaz. 768px ve üzerinde komşu satırların büyüme payı (`--bulge-swell`) ekran yüksekliğine göre daralır, böylece liste dizüstü ekranlara sığar. Liste sola yaslıdır, en fazla 820px genişliğindedir ve satırlar sağa doğru büyür.
+- Fare her ekran genişliğinde üzerine gelince, dokunmatik ekran ise dokununca satırı açar. Ayrım ekran genişliğine değil giriş türüne (`pointerType`) göre yapılır. Açılan satır (klavye odağında da) tam genişliğe büyür, turuncu olur ve açıklamasını gösterir. Yakınlık ağırlıkları `main.js` içindeki `bulgeWeights` dizisindedir (1, 0.42, 0.16): komşular da hafifçe büyür ve renk alır.
+- Bombe etkisi üç şeyden gelir: satır genişliklerinin oluşturduğu mercek silueti, satırların aktif satırdan uzaklaştıkça `rotateX` ile geriye yatması ve aktif satırın iç gölgesi.
+- Satırlar imlecin altında boyut değiştirdiği için hover, satır kutularına değil listenin sabit eşit dikey bölgelerine göre hesaplanır; böylece sabit duran imleç satır değiştirmez.
+- Fare ayrılınca son satır açık kalır. Yukarı ve aşağı ok tuşları satır değiştirir. JavaScript yoksa tüm açıklamalar düz liste olarak görünür.
+
 ## Başlık animasyonu
 
 Yalnızca büyük başlıklar (`main` içindeki `.display` ve `.h2`) ekrana girince 32px aşağıdan yukarı, 700ms içinde bir kez yükselerek belirir. Kart, kolon ve sekme başlıkları animasyonsuzdur. JavaScript yoksa veya `prefers-reduced-motion` açıksa başlıklar animasyonsuz görünür.
@@ -81,16 +89,16 @@ Sol header, mobil üst çubuk, butonlar ve iletişim kartlarında kullanılır. 
 
 ## Bileşenler
 
-- **Sol header:** Sabittir. Sıra: logo, menü, alt blok. Alt blokta LinkedIn, Facebook ve Instagram vardır. Instagram adresi `main.js` içindeki `instagramUrl` değişkeninden tek yerden verilir, boşken ikon tıklanamaz. Footer görünür alana girince alt blok kapanır.
+- **Sol header:** Sabittir. Sıra: logo, menü, alt blok. Alt blokta ortalanmış LinkedIn, Facebook ve Instagram vardır. Instagram adresi `main.js` içindeki `instagramUrl` değişkeninden tek yerden verilir, boşken ikon tıklanamaz. Footer görünür alana girince alt blok kapanır.
 - **Mobil menü:** 1024px altında üstte logo ve hamburger bulunur, menü soldan açılır.
-- **İletişim kartları:** Dört kart eşit yüksekliktedir.
+- **İletişim kartları:** Dört kart eşit yüksekliktedir. Kartlar ve form 1280px ve üzerinde yan yana, altında alt alta durur.
 - **Form:** Ad soyad rakamsız en fazla 50 karakter, e-posta @ zorunlu, telefon yalnızca rakam ve tam 11 hane, kurum en fazla 50 karakter, mesaj en fazla 750 karakter. Mesaj kutusu sabit boyuttadır.
 - **Başa dön butonu:** Sağ altta sabittir, Heroicons `arrow-up` ikonunu kullanır. Sayfa ekran yüksekliğinin %75'i kadar kaydırılınca görünür, tıklanınca yumuşak kayar (`prefers-reduced-motion` açıksa anında gider).
 - **Odak:** 3px `--bg-dark` halka.
 
 ## Görsel ve ikon
 
-Heroicons outline, inline SVG. İletişim kartlarında V-4'teki Material Symbols işaretleri (`mail`, `call`, `location_on`, `arrow_outward`) ve rozet yapısı kullanılır. Logo, sosyal ikonlar, sektör ve iş ortağı görselleri V-4 `assets` klasöründen alınır.
+Heroicons outline, inline SVG. LinkedIn, Facebook ve Instagram ikonları `assets` klasöründeki PNG dosyalarıdır. İletişim kartlarında V-4'teki Material Symbols işaretleri (`mail`, `call`, `location_on`, `arrow_outward`) ve rozet yapısı kullanılır. Logo, sektör ve iş ortağı görselleri V-4 `assets` klasöründen alınır.
 
 ## Teknik kurallar
 
