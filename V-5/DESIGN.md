@@ -2,7 +2,7 @@
 
 Kapsam: KareCode / KcLogger kurumsal sitesi. Konu 5651 uyumlu loglama, dil Türkçe, ton kurumsal. Sayfalar: Ana Sayfa (`index.html`), Özellikler (`ozellikler.html`), Hakkımızda (`hakkimizda.html`), İletişim (`iletisim.html`).
 
-Yön: Sıcak krem zeminli, sade ve tamamen yuvarlak köşeli kurumsal site. Yalnızca açık tema vardır. Turuncu eylem ve seçili durumda (buton, seçili menü, açık slider satırı) ve küçük vurgu öğelerinde (ikon rozetleri, kolon çizgisi, adım numarası) kullanılır; geniş zemin olarak kullanılmaz.
+Yön: Sıcak krem zeminli, sade ve tamamen yuvarlak köşeli kurumsal site. Yalnızca açık tema vardır. Turuncu eylem ve seçili durumda (buton, seçili menü, açık slider satırı) ve küçük vurgu öğelerinde (ikon rozetleri, adım numarası) kullanılır; geniş zemin olarak kullanılmaz.
 
 Renk, yazı, aralık, köşe ve süre değerleri `style.css` başındaki `:root` bloğunda token olarak tanımlıdır. Bu dosyadaki değerler oradaki token'larla aynı olmalıdır; değer değişirse önce token, sonra bu dosya güncellenir. Bileşene özel ölçüler (52px buton, 44px dokunma alanı, 160px mesaj kutusu gibi) ilgili kuralda doğrudan yazılıdır.
 
@@ -10,13 +10,13 @@ Renk, yazı, aralık, köşe ve süre değerleri `style.css` başındaki `:root`
 
 | Token | Değer | Rol |
 |---|---|---|
-| `--primary` | `#ff6b35` | Kolon üst çizgisi, adım numarası zemini |
-| `--cta` | `#ff6b35` | Buton zemini, seçili menü, açık slider satırı, slider ve Network Tools ikon rozetleri, "İçeriğe geç" butonu |
+| `--primary` | `#ff6b35` | Adım numarası zemini |
+| `--cta` | `#ff6b35` | Buton zemini, seçili menü, açık slider satırı, slider ve Network Tools ikon rozetleri, açık Captive portal satırının ikon rozeti ve kapalı satırların ikon rengi, "İçeriğe geç" butonu |
 | `--cta-glass` | `rgba(255,107,53,.78)` | Buton hover |
 | `--on-cta` | `#fff` | Turuncu zemin üzerindeki yazı ve ikon |
 | `--secondary` | `#8b4513` | Etiket noktası, zaman çizgisi noktaları |
 | `--bg` | `#fffaf0` | Sayfa zemini, hero, footer, Tanışalım paneli |
-| `--bg-warm` | `#fff5e6` | Karşılaştırma panelinin ikinci yarısı, kapalı slider satırı, Network Tools paneli, iletişim kartı hover |
+| `--bg-warm` | `#fff5e6` | Karşılaştırma panelinin ikinci yarısı, kapalı slider satırı, Network Tools paneli, açık Captive portal satırı ve kapalı satırların ikon rozeti, iletişim kartı hover |
 | `--bg-dark` | `#2c1810` | Yalnızca klavye odak halkası |
 | `--text` | `#2c1810` | Başlık ve gövde metni |
 | `--text-muted` | `#6b5344` | Açıklama metni, etiket yazısı |
@@ -46,7 +46,8 @@ Başlıklarda harf aralığı `-0.02em` ve `text-wrap: balance` kullanılır.
 
 ## Yerleşim
 
-- Tüm bölümler aynı `.container` içindedir: içerik en fazla 1080px (`--content`), yan boşluk `--gutter` (`clamp(16px, 4vw, 48px)`).
+- Tüm bölümler aynı `.container` içindedir, yan boşluk `--gutter` (`clamp(16px, 4vw, 48px)`).
+- 1024px altında içerik en fazla 1080px (`--content`) ve ortalıdır. 1024px ve üzerinde (geniş, 4K ve kavisli ekranlar dahil) içerik ortalanmaz: sol header'a yaslanır (aradaki boşluk yalnızca `--gutter`) ve sağa doğru ekranın tamamını doldurur. Metin blokları kendi ölçüleriyle sınırlı kalır (`.display` 20ch, `.lead` 68ch, bölüm başlığı 760px).
 - Bölüm dikey boşluğu `--section`: `clamp(56px, 7vw, 96px)`.
 - Aralık ölçeği (`--s-1` … `--s-8`): 4, 8, 12, 16, 24, 32, 48, 64.
 - Kırılımlar: 480, 640, 768, 1024, 1280px.
@@ -60,7 +61,7 @@ Köşeli yüzey yoktur; tek istisna tam genişlik hero görselleridir.
 |---|---|---|
 | `--r-sm` | 12px | Menü bağlantısı, ikon butonu, input, ikon rozeti |
 | `--r-md` | 16px | İletişim kartı, çember logoları |
-| `--r-lg` | 24px | Kart, panel, header, slider satırı, sektör görseli |
+| `--r-lg` | 24px | Kart, panel, header, slider satırı, Captive portal satırı, sektör görseli |
 | `--r-xl` | 32px | Tanışalım paneli |
 | `--r-pill` | 999px | Buton, etiket, nokta ve çizgiler |
 
@@ -73,7 +74,7 @@ Köşeli yüzey yoktur; tek istisna tam genişlik hero görselleridir.
 - Tek kütüphane: **Bootstrap Icons** 1.11.3 (ikon fontu). Her sayfanın `<head>` bölümünde `style.css`'ten önce yüklenir:
   `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />`
 - Kullanım: `<i class="bi bi-<ad> icon" aria-hidden="true"></i>`. İkon `currentColor` ile boyanır, boyutu `font-size` ile verilir. `.icon` ikonu 1em kutuda ortalar ve kütüphanenin dikey kaydırmasını (`vertical-align`) sıfırlar.
-- Boyutlar: `.icon` 24px, `.icon--sm` 20px (buton içi, slider ve Network Tools rozetleri, form hatası, sosyal medya). İletişim kartlarındaki ikonlar 24px'tir.
+- Boyutlar: `.icon` 24px, `.icon--sm` 20px (buton içi, slider, Network Tools ve Captive portal rozetleri, Captive portal aç/kapa işareti, form hatası, sosyal medya). İletişim kartlarındaki ikonlar 24px'tir.
 - Inline SVG, PNG ikon veya başka ikon kütüphanesi kullanılmaz.
 - İkonlar bulundukları başlığın anlamına göre seçilir; aynı sayfada iki farklı başlık aynı ikonu paylaşmaz.
 - Tüm ikonlar aynı çizgi (outline) stilindedir; içi dolu (`-fill`) ikon kullanılmaz.
@@ -85,6 +86,7 @@ Köşeli yüzey yoktur; tek istisna tam genişlik hero görselleridir.
 | Buton oku | `arrow-right` |
 | Başa dön | `arrow-up` |
 | Ürünler (KcLogger, İki Faktörlü Doğrulama, Bulut Yedekleme) | `shield-check`, `key`, `cloud-arrow-up` |
+| Captive portal (Ne işe yarar?, Neden kullanılmalı?, İşletmenize katkısı) | `person-check`, `wifi`, `megaphone`; aç/kapa işareti `plus-lg` |
 | Dijital ayak izi (kişi, kurum) | `person`, `building` |
 | Dokuz özellik (Dashboard, Captive Portal, Sistem Ayarları, Kullanıcı Yönetimi, Kullanıcı Grupları, Profil Yönetimi, Güvenlik, Raporlar, Giriş Güvenliği) | `speedometer2`, `window`, `gear`, `person-gear`, `people`, `person-vcard`, `shield-check`, `file-earmark-bar-graph`, `shield-lock` |
 | Network Tools (Ping, Traceroute, IP Scan, Telnet, System Reboot) | `broadcast`, `signpost-split`, `radar`, `terminal`, `arrow-clockwise` |
@@ -113,20 +115,20 @@ Her bölüm kendi düzenini kullanır, aynı kalıp tekrar edilmez. Bölüm baş
 |---|---|---|
 | Ana Sayfa | Ne sunuyoruz | Eşit genişlik ve yükseklikte üç kenarlıklı ürün kartı (768px ve üzeri yan yana), buton kartların altında |
 | Ana Sayfa | 5651 | Başlık solda, zaman çizgisi sağda (1024px ve üzeri) |
-| Ana Sayfa | Captive portal | Turuncu üst çizgili üç kolon |
+| Ana Sayfa | Captive portal | Açılır soru listesi (akordeon, aşağıya bakın). 1024px ve üzerinde başlık solda, liste sağda; altında başlık üstte, liste tam genişlikte |
 | Ana Sayfa | Dijital ayak izi | İkiye bölünmüş karşılaştırma paneli, ikinci yarı `--bg-warm` |
 | Özellikler | Dokuz temel özellik | Bombeli dikey slider (`.bulge`), aşağıya bakın |
 | Özellikler | Kullanım alanları | 768px ve üzeri yan yana beş eşit görsel (3:4), altında iki kolon ve son görsel ortada; ad her zaman görselin altında |
-| Özellikler | Network Tools | Tek kenarlıklı `--bg-warm` panelde eşit yükseklikte numaralı satırlar: numara, ikon rozeti, başlık, açıklama |
+| Özellikler | Network Tools | Tek kenarlıklı `--bg-warm` panelde numaralı satırlar: numara, ikon rozeti, başlık, açıklama. 768px ve üzerinde satırlar eşit yüksekliktedir; altında her satır kendi içeriği kadar uzar, böylece kısa açıklamalı satırlar (IP Scan) diğerleriyle aynı hizada üstten başlar |
 | Özellikler | Nasıl çalışır | Numaralı üç adım; 768px ve üzerinde yan yana, adımlar arasında çizgi |
-| Hakkımızda | Biz kimiz | Başlık solda, metin sağda |
+| Hakkımızda | Biz kimiz | Başlık ("Yirmi yılı aşan birikimle kurumlara güvenilir yazılım çözümleri sunuyoruz") solda, metin sağda |
 | Hakkımızda | İş ortakları | Başlık solda ve dikeyde KareCode logosuyla aynı hizada, dönen çember sağda |
 | Hakkımızda | Tanışalım | Sayfa renginde kenarlıklı panel; buton 768px ve üzerinde sağda, altında metnin altında |
 | İletişim | Kartlar ve form | Dört iletişim kartı ve form; 1280px ve üzerinde yan yana, altında alt alta |
 
 ## Bombeli slider (Dokuz temel özellik)
 
-- Dokuz özellik dikey bir sütunda dizilir. Liste container'ın tüm genişliğini kaplar (en fazla 1080px), sola yaslıdır ve satırlar sağa doğru büyür.
+- Dokuz özellik dikey bir sütunda dizilir. Liste container'ın tüm genişliğini kaplar (1024px ve üzerinde ekranın sağına kadar), sola yaslıdır ve satırlar sağa doğru büyür.
 - Kapalı satırlar liste genişliğinin 768px altında %86'sı, 768px ve üzerinde %68'idir. Açık satır tam genişliğe (%100) büyür.
 - Satır yüksekliği 44px, 1024px ve üzerinde 40px. Satır numarası (`01`–`09`) 768px ve üzerinde görünür.
 - Sütun yüksekliği `main.js` içindeki `measureBulge` ile en uzun açıklamaya göre hesaplanır ve sabit kalır; satır açılırken sayfa zıplamaz. Komşu satırların büyüme payı (`--bulge-swell`) 768px altında 120px'tir; 768px ve üzerinde ekran yüksekliğine göre 24–150px arasında daralır, böylece liste dizüstü ekranlara sığar.
@@ -134,6 +136,14 @@ Her bölüm kendi düzenini kullanır, aynı kalıp tekrar edilmez. Bölüm baş
 - Bombe etkisi üç şeyden gelir: satır genişliklerinin oluşturduğu mercek silueti, satırların aktif satırdan uzaklaştıkça `rotateX` ile geriye yatması ve aktif satırın iç gölgesi.
 - Hover, satır kutularına değil listenin sabit eşit dikey bölgelerine göre hesaplanır; sabit duran imleç satır değiştirmez.
 - Sayfa ilk satır açık olarak yüklenir. Fare ayrılınca son satır açık kalır. Yukarı ve aşağı ok tuşları satır değiştirir; listenin sonundan başına (ve tersi) döner. JavaScript yoksa tüm açıklamalar düz liste olarak görünür.
+
+## Açılır soru listesi (Captive portal)
+
+- Üç soru ayrı satırlardır: "Ne işe yarar?", "Neden kullanılmalı?", "İşletmenize katkısı". Yerel `<details>` / `<summary>` ile yapılır; JavaScript gerektirmez, klavye ve ekran okuyucu desteği tarayıcıdan gelir.
+- Satırlar aynı `name` değerini paylaşır: aynı anda yalnızca bir satır açık kalır. Sayfa ilk satır açık olarak yüklenir.
+- Kapalı satır: 1px `--border` kenarlık, `--r-lg` köşe, sayfa zemini. Solda 40px `--r-sm` rozet (`--bg-warm` zemin, `--cta` ikon), ortada `.h4` soru, sağda `plus-lg` işareti. Satır en az 72px yüksekliktedir.
+- Açık satır: kenarlık kaybolur, zemin `--bg-warm` olur, rozet dolu turuncuya (`--cta` zemin, beyaz ikon) döner, `+` işareti 45° dönerek × olur. Açıklama sorunun hizasından başlar.
+- Geçişler `--t-med` sürer; `prefers-reduced-motion` açıksa kapanır.
 
 ## Dönen çember (İş ortakları)
 
