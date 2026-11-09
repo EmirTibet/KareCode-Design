@@ -161,14 +161,21 @@ main:focus {
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  width: 1em;
+  height: 1em;
   flex: none;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.icon::before {
+  vertical-align: 0;
 }
 
 .icon--sm {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
 }
 
 .skip-link {
@@ -533,6 +540,8 @@ main:focus {
   width: 44px;
   height: 44px;
   border-radius: var(--r-sm);
+  color: var(--text);
+  text-decoration: none;
   transition: background-color var(--t-fast) var(--ease);
 }
 
@@ -544,11 +553,11 @@ main:focus {
   justify-content: center;
 }
 
-.social img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  filter: brightness(0);
+/* Bootstrap Icons'ta LinkedIn ve Facebook logoları dolu gelir; Instagram ve diğer ikonlar gibi
+   içi boş çizgi görünmeleri için dış hatları kontur olarak çizilir. */
+.social :is(.bi-linkedin, .bi-facebook) {
+  color: transparent;
+  -webkit-text-stroke: 0.07em var(--text);
 }
 
 /* ---------- Offer ---------- */
@@ -655,14 +664,12 @@ main:focus {
 .bulge {
   --bulge-row: 44px;
   --bulge-rest: 86%;
-  --bulge-max: none;
   --bulge-pad: var(--s-3);
   --bulge-indent: 0px;
   --bulge-swell: 120px;
   container-type: inline-size;
   display: grid;
   gap: var(--s-1);
-  max-width: var(--bulge-max);
 }
 
 .js .bulge {
@@ -1299,7 +1306,6 @@ textarea.input {
 
   .bulge {
     --bulge-rest: 68%;
-    --bulge-max: 820px;
     --bulge-pad: var(--s-4);
     --bulge-indent: 86px;
     --bulge-swell: clamp(24px, 100vh - 112px - var(--bulge-fit), 150px);

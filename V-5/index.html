@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KareCode | 5651 uyumlu KcLogger</title>
+  <title>KareCode</title>
   <script>document.documentElement.classList.add("js");</script>
   <meta name="description" content="KareCode, KcLogger ile 5651 sayılı Kanun'a uygun imzalı loglama ve captive portal çözümü sunar." />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon.png?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,7 +19,7 @@
 
 <div class="topbar glass">
   <a href="index.html" aria-label="KareCode ana sayfa"><img class="logo" src="assets/karecode-logo-light.png" alt="KareCode" width="250" height="45" /></a>
-  <button class="icon-btn" type="button" data-menu-open aria-expanded="false" aria-controls="sidebar" aria-label="Menüyü aç"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+  <button class="icon-btn" type="button" data-menu-open aria-expanded="false" aria-controls="sidebar" aria-label="Menüyü aç"><i class="bi bi-list icon" aria-hidden="true"></i></button>
 </div>
 
 <div class="scrim" hidden></div>
@@ -26,7 +27,7 @@
 <header class="sidebar glass" id="sidebar">
   <div class="sidebar__head">
     <a href="index.html" aria-label="KareCode ana sayfa"><img class="logo" src="assets/karecode-logo-light.png" alt="KareCode" width="250" height="45" /></a>
-    <button class="icon-btn" type="button" data-menu-close aria-label="Menüyü kapat"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg></button>
+    <button class="icon-btn" type="button" data-menu-close aria-label="Menüyü kapat"><i class="bi bi-x-lg icon" aria-hidden="true"></i></button>
   </div>
   <nav aria-label="Ana menü">
     <a class="sidebar__link" href="index.html" aria-current="page">Ana Sayfa</a>
@@ -36,7 +37,7 @@
     <a class="sidebar__link" href="iletisim.html">İletişim</a>
   </nav>
   <div class="sidebar__foot">
-    <div class="social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><img src="assets/linkedin-icon.png" alt="" width="18" height="18" /></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><img src="assets/facebook-icon.png" alt="" width="18" height="18" /></a><a data-instagram target="_blank" rel="noopener" aria-label="KareCode Instagram (yeni sekmede açılır)"><img src="assets/instagram-icon.png" alt="" width="18" height="18" /></a></div>
+    <div class="social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><i class="bi bi-linkedin icon icon--sm" aria-hidden="true"></i></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><i class="bi bi-facebook icon icon--sm" aria-hidden="true"></i></a><a data-instagram target="_blank" rel="noopener" aria-label="KareCode Instagram (yeni sekmede açılır)"><i class="bi bi-instagram icon icon--sm" aria-hidden="true"></i></a></div>
   </div>
 </header>
 
@@ -48,7 +49,7 @@
         <span class="label">KcLogger · 5651 uyumlu loglama</span>
         <h1 class="display" id="hero-title">5651 kayıtlarınız imzalı ve denetime hazır.</h1>
         <p class="lead">KareCode, misafirlerine internet sunan kurumlar için KcLogger'ı geliştirir. Erişimi captive portal ile yönetir, kayıtları imzalar, bulutta ya da kendi veri merkezinizde saklar.</p>
-        <div class="actions"><a class="btn" href="iletisim.html?konu=kclogger">Teklif isteyin<svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a><a class="btn" href="ozellikler.html">Özellikleri inceleyin<svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a></div>
+        <div class="actions"><a class="btn" href="iletisim.html?konu=kclogger">Teklif isteyin<i class="bi bi-arrow-right icon icon--sm" aria-hidden="true"></i></a><a class="btn" href="ozellikler.html">Özellikleri inceleyin<i class="bi bi-arrow-right icon icon--sm" aria-hidden="true"></i></a></div>
       </div>
     </div>
   </section>
@@ -58,22 +59,22 @@
       <div class="sec-head"><span class="label">01 · Ne sunuyoruz</span><h2 class="h2" id="urun-title">Kurumunuzun dijital güvenliği için üç ürün</h2></div>
       <div class="offer">
         <article class="offer__item">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+          <i class="bi bi-shield-check icon" aria-hidden="true"></i>
           <h3 class="h4">KcLogger</h3>
           <p class="muted">5651 uyumlu imzalı loglama, DNS / URL filtreleme ve giriş ekranında pazarlama tek platformda. Tüm lokasyonlarınızı tek panelden ya da mobil uygulamadan yönetirsiniz.</p>
         </article>
         <article class="offer__item">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+          <i class="bi bi-key icon" aria-hidden="true"></i>
           <h3 class="h4">İki Faktörlü Doğrulama</h3>
           <p class="muted">Hesap girişlerine parolanın yanında ikinci bir doğrulama adımı ekler.</p>
         </article>
         <article class="offer__item">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"/></svg>
+          <i class="bi bi-cloud-arrow-up icon" aria-hidden="true"></i>
           <h3 class="h4">Bulut Yedekleme</h3>
           <p class="muted">Kurumsal verilerinizin yedeğini bulutta saklar.</p>
         </article>
       </div>
-      <div class="actions"><a class="btn" href="https://kclogger.com/" target="_blank" rel="noopener" aria-label="KcLogger özellikleri (yeni sekmede açılır)">KcLogger özellikleri<svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a></div>
+      <div class="actions"><a class="btn" href="https://kclogger.com/" target="_blank" rel="noopener" aria-label="KcLogger özellikleri (yeni sekmede açılır)">KcLogger özellikleri<i class="bi bi-arrow-right icon icon--sm" aria-hidden="true"></i></a></div>
     </div>
   </section>
 
@@ -103,10 +104,10 @@
     <div class="container">
       <div class="sec-head"><span class="label">04 · Dijital ayak izi</span><h2 class="h2" id="iz-title">Dijital ayak izi nedir?</h2><p class="lead">İnternette yapılan işlemlerin geride bıraktığı kayıtların bütünüdür.</p></div>
       <div class="compare">
-        <div class="compare__side"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg><h3 class="h4">Kişi için</h3><p class="muted">Bir kişi ağa bağlandığında, bu bağlantının ne zaman ve hangi cihazdan yapıldığı iz bırakır.</p></div>
-        <div class="compare__side"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg><h3 class="h4">Kurum için</h3><p class="muted">Ağınız üzerinden gerçekleşen erişimlerin kaydı düzenli tutulmazsa, bir incelemede yükümlülüğünüzü yerine getirdiğinizi göstermeniz zorlaşır.</p></div>
+        <div class="compare__side"><i class="bi bi-person icon" aria-hidden="true"></i><h3 class="h4">Kişi için</h3><p class="muted">Bir kişi ağa bağlandığında, bu bağlantının ne zaman ve hangi cihazdan yapıldığı iz bırakır.</p></div>
+        <div class="compare__side"><i class="bi bi-building icon" aria-hidden="true"></i><h3 class="h4">Kurum için</h3><p class="muted">Ağınız üzerinden gerçekleşen erişimlerin kaydı düzenli tutulmazsa, bir incelemede yükümlülüğünüzü yerine getirdiğinizi göstermeniz zorlaşır.</p></div>
       </div>
-      <div class="actions"><a class="btn" href="iletisim.html?konu=kclogger">Teklif isteyin<svg class="icon icon--sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a></div>
+      <div class="actions"><a class="btn" href="iletisim.html?konu=kclogger">Teklif isteyin<i class="bi bi-arrow-right icon icon--sm" aria-hidden="true"></i></a></div>
     </div>
   </section>
 
@@ -118,7 +119,7 @@
       <div class="footer__brand">
         <img class="logo" src="assets/karecode-logo-light.png" alt="KareCode" width="250" height="45" />
         <p>Bornova, İzmir merkezli siber güvenlik ve yazılım şirketi.</p>
-        <div class="social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><img src="assets/linkedin-icon.png" alt="" width="18" height="18" /></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><img src="assets/facebook-icon.png" alt="" width="18" height="18" /></a><a data-instagram target="_blank" rel="noopener" aria-label="KareCode Instagram (yeni sekmede açılır)"><img src="assets/instagram-icon.png" alt="" width="18" height="18" /></a></div>
+        <div class="social"><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><i class="bi bi-linkedin icon icon--sm" aria-hidden="true"></i></a><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener" aria-label="KareCode Facebook (yeni sekmede açılır)"><i class="bi bi-facebook icon icon--sm" aria-hidden="true"></i></a><a data-instagram target="_blank" rel="noopener" aria-label="KareCode Instagram (yeni sekmede açılır)"><i class="bi bi-instagram icon icon--sm" aria-hidden="true"></i></a></div>
       </div>
       <div>
         <h2>Çözümler</h2>
@@ -150,7 +151,7 @@
   </div>
 </footer>
 
-<button class="btn to-top" type="button" aria-label="Sayfanın başına dön" data-to-top><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/></svg></button>
+<button class="btn to-top" type="button" aria-label="Sayfanın başına dön" data-to-top><i class="bi bi-arrow-up icon" aria-hidden="true"></i></button>
 
 <script src="main.js" defer></script>
 </body>
