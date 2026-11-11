@@ -16,7 +16,8 @@ Renk, yazı, aralık, köşe ve süre değerleri `style.css` başındaki `:root`
 | `--on-cta` | `#fff` | Turuncu zemin üzerindeki yazı ve ikon |
 | `--secondary` | `#8b4513` | Etiket noktası, zaman çizgisi noktaları |
 | `--bg` | `#fffaf0` | Sayfa zemini, hero, footer, Tanışalım paneli |
-| `--bg-warm` | `#fff5e6` | Karşılaştırma panelinin ikinci yarısı, kapalı slider satırı, Network Tools paneli, açık Captive portal satırı ve kapalı satırların ikon rozeti, iletişim kartı hover |
+| `--bg-warm` | `#fff5e6` | Karşılaştırma panelinin ikinci yarısı, kapalı slider satırı, Network Tools paneli, kapalı Captive portal satırlarının ikon rozeti, iletişim kartı hover |
+| `--bg-warm-deep` | `#fff0dc` | Açık Captive portal satırının zemini (`--bg-warm`'dan bir tık koyu) |
 | `--bg-dark` | `#2c1810` | Yalnızca klavye odak halkası |
 | `--text` | `#2c1810` | Başlık ve gövde metni |
 | `--text-muted` | `#6b5344` | Açıklama metni, etiket yazısı |
@@ -142,7 +143,7 @@ Her bölüm kendi düzenini kullanır, aynı kalıp tekrar edilmez. Bölüm baş
 - Üç soru ayrı satırlardır: "Ne işe yarar?", "Neden kullanılmalı?", "İşletmenize katkısı". Yerel `<details>` / `<summary>` ile yapılır; JavaScript gerektirmez, klavye ve ekran okuyucu desteği tarayıcıdan gelir.
 - Satırlar aynı `name` değerini paylaşır: aynı anda yalnızca bir satır açık kalır. Sayfa ilk satır açık olarak yüklenir.
 - Kapalı satır: 1px `--border` kenarlık, `--r-lg` köşe, sayfa zemini. Solda 40px `--r-sm` rozet (`--bg-warm` zemin, `--cta` ikon), ortada `.h4` soru, sağda `plus-lg` işareti. Satır en az 72px yüksekliktedir.
-- Açık satır: kenarlık kaybolur, zemin `--bg-warm` olur, rozet dolu turuncuya (`--cta` zemin, beyaz ikon) döner, `+` işareti 45° dönerek × olur. Açıklama sorunun hizasından başlar.
+- Açık satır: 1px `--border` kenarlık korunur, zemin `--bg-warm-deep` olur, rozet dolu turuncuya (`--cta` zemin, beyaz ikon) döner, `+` işareti 45° dönerek × olur. Açıklama sorunun hizasından başlar.
 - Geçişler `--t-med` sürer; `prefers-reduced-motion` açıksa kapanır.
 
 ## Dönen çember (İş ortakları)

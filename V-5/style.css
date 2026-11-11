@@ -7,6 +7,7 @@
   --on-cta: #fff;
   --bg: #fffaf0;
   --bg-warm: #fff5e6;
+  --bg-warm-deep: #fff0dc;
   --bg-dark: #2c1810;
   --text: #2c1810;
   --text-muted: #6b5344;
@@ -634,8 +635,7 @@ main:focus {
 }
 
 .faq__item[open] {
-  border-color: transparent;
-  background: var(--bg-warm);
+  background: var(--bg-warm-deep);
 }
 
 .faq__head {
