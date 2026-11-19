@@ -555,6 +555,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .partnerler li { display: grid; place-items: center; aspect-ratio: 5 / 2; padding: 20px 28px; }
 .partnerler img { width: min(80%, 200px); height: 52px; object-fit: contain; object-position: center; }
 @media (max-width: 599px) { .partnerler li { padding: 12px 14px; } .partnerler img { width: 88%; height: 40px; } }
+/* Türk Telekom: alt yazısı ince olduğu için optik olarak büyütülür */
+.partnerler img[src*="turktelekom"] { width: min(96%, 250px); height: 68px; }
+@media (max-width: 599px) { .partnerler img[src*="turktelekom"] { width: 100%; height: 52px; } }
 
 /* İletişim */
 .form { padding: clamp(28px, 4vw, 48px); display: grid; gap: 20px; }
