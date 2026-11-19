@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KareCode | Bağlandığınız her ağda güvende kalın</title>
+  <meta name="description" content="KareCode; captive portal, dijital ayak izi ve 5651 uyumlu erişim kaydı konularını sade bir dille anlatır ve kurumlar için KCLogger'ı geliştirir.">
+  <meta name="theme-color" content="#07090d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <!--UST-->
+  <header class="ust" data-ust>
+    <div class="kap ust__ic">
+      <a class="marka" href="./index.html" aria-label="KareCode anasayfa">
+        <img class="marka__gece" src="./assets/karecode-logo-dark.png" alt="" width="250" height="45">
+        <img class="marka__acik" src="./assets/karecode-logo-light.png" alt="" width="250" height="45">
+      </a>
+      <button class="menu-ac" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç" data-menu-ac>
+        <i class="ti ti-menu-2" aria-hidden="true"></i><i class="ti ti-x" aria-hidden="true"></i>
+      </button>
+      <nav class="menu" id="menu" aria-label="Ana menü">
+        <ul class="menu__liste">
+          <li><a class="menu__link" href="./index.html" data-sayfa="index" aria-current="page">Anasayfa</a></li>
+          <li><a class="menu__link" href="./ozellikler.html" data-sayfa="ozellikler">Özellikler</a></li>
+          <li><a class="menu__link" href="./hakkimizda.html" data-sayfa="hakkimizda">Hakkımızda</a></li>
+          <li><a class="menu__link" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+          <li><a class="menu__link" href="./iletisim.html" data-sayfa="iletisim">İletişim</a></li>
+        </ul>
+        <ul class="sosyal sosyal--ust" aria-label="Sosyal medya">
+          <li><a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener noreferrer" aria-label="Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--/UST-->
+
+  <main id="icerik" tabindex="-1">
+    <!-- HERO -->
+    <section class="sahne gece" aria-labelledby="hero-baslik">
+      <div class="sahne__izgara" aria-hidden="true"></div>
+      <div class="sahne__huzme" aria-hidden="true"></div>
+      <div class="sahne__ufuk" aria-hidden="true"></div>
+
+      <div class="kap">
+        <h1 class="dev sahne__baslik" id="hero-baslik" data-giris style="--d:180ms">Bağlandığınız her ağda <em>güvende</em> kalın.</h1>
+        <p class="sahne__aciklama" data-giris style="--d:320ms">Halka açık Wi-Fi'ın giriş sayfasından internette bıraktığınız izlere kadar güvenli bağlantıyı sade bir dille anlatıyoruz.</p>
+        <div class="sahne__eylem" data-giris style="--d:440ms">
+          <a class="dugme" href="./ozellikler.html">Özellikleri keşfet<span class="dugme__ok"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
+        </div>
+
+        <!-- 3D kalkan -->
+        <div class="kalkan-sahne" aria-hidden="true" data-giris style="--d:560ms">
+          <svg width="0" height="0" style="position:absolute">
+            <defs>
+              <path id="ky" d="M100 6 L186 36 V110 C186 168 150 208 100 234 C50 208 14 168 14 110 V36 Z"/>
+              <path id="ky-ic" d="M100 30 L164 52 V110 C164 154 138 186 100 207 C62 186 36 154 36 110 V52 Z"/>
+              <linearGradient id="kg-kenar" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3a414d"/><stop offset="1" stop-color="#090b0f"/>
+              </linearGradient>
+              <linearGradient id="kg-yuz" x1="0.1" y1="0" x2="0.9" y2="1">
+                <stop offset="0" stop-color="#2c333f"/><stop offset=".55" stop-color="#141820"/><stop offset="1" stop-color="#0a0c10"/>
+              </linearGradient>
+              <linearGradient id="kg-kenar-isik" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffb08a"/><stop offset=".35" stop-color="rgba(255,255,255,.55)"/><stop offset=".7" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,107,53,.5)"/>
+              </linearGradient>
+              <linearGradient id="kg-cam" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="rgba(255,255,255,.14)"/><stop offset="1" stop-color="rgba(255,255,255,.02)"/>
+              </linearGradient>
+              <linearGradient id="kg-kilit" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffa07a"/><stop offset="1" stop-color="#e8501c"/>
+              </linearGradient>
+              <radialGradient id="kg-oz" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="rgba(255,107,53,.55)"/><stop offset="1" stop-color="rgba(255,107,53,0)"/>
+              </radialGradient>
+              <clipPath id="kc-ust"><rect x="0" y="0" width="200" height="96"/></clipPath>
+            </defs>
+          </svg>
+          <div class="kalkan-suzul">
+            <div class="kalkan" data-kalkan>
+              <div class="kalkan__golge"></div>
+              <div class="kalkan__kat" style="transform:translateZ(-36px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="#07080b"/></svg></div>
+              <div class="kalkan__kat" style="transform:translateZ(-30px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="url(#kg-kenar)"/></svg></div>
+              <div class="kalkan__kat" style="transform:translateZ(-24px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="url(#kg-kenar)"/></svg></div>
+              <div class="kalkan__kat" style="transform:translateZ(-18px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="url(#kg-kenar)"/></svg></div>
+              <div class="kalkan__kat" style="transform:translateZ(-12px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="url(#kg-kenar)"/></svg></div>
+              <div class="kalkan__kat" style="transform:translateZ(-6px)"><svg viewBox="0 0 200 240"><use href="#ky" fill="url(#kg-kenar)" stroke="rgba(255,255,255,.08)"/></svg></div>
+              <!-- ön yüz -->
+              <div class="kalkan__kat"><svg viewBox="0 0 200 240">
+                <use href="#ky" fill="url(#kg-yuz)" stroke="url(#kg-kenar-isik)" stroke-width="1.6"/>
+                <use href="#ky" fill="rgba(255,255,255,.07)" clip-path="url(#kc-ust)"/>
+                <use href="#ky-ic" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
+                <ellipse cx="100" cy="128" rx="70" ry="70" fill="url(#kg-oz)"/>
+              </svg></div>
+              <!-- cam iç levha -->
+              <div class="kalkan__kat" style="transform:translateZ(22px)"><svg viewBox="0 0 200 240">
+                <use href="#ky-ic" fill="url(#kg-cam)" stroke="rgba(255,255,255,.28)" stroke-width=".8"/>
+                <path d="M100 30 L164 52 V70 C130 60 70 60 36 74 V52 Z" fill="rgba(255,255,255,.10)"/>
+              </svg></div>
+              <!-- kilit -->
+              <div class="kalkan__kat" style="transform:translateZ(46px)"><svg viewBox="0 0 200 240">
+                <path d="M83 116 V100 a17 17 0 0 1 34 0 V116" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="7" stroke-linecap="round"/>
+                <rect x="70" y="112" width="60" height="50" rx="12" fill="url(#kg-kilit)"/>
+                <rect x="70.5" y="112.5" width="59" height="49" rx="11.5" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1"/>
+                <circle cx="100" cy="131" r="6" fill="#3a1407"/>
+                <rect x="97.5" y="134" width="5" height="13" rx="2.5" fill="#3a1407"/>
+              </svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="dev-yazi" aria-hidden="true">KareCode</p>
+    </section>
+    <div class="gecis" aria-hidden="true"></div>
+
+    <!-- KONULAR -->
+    <section class="bolum" aria-labelledby="konular-baslik" style="padding-top:clamp(48px,6vw,80px)">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">Üç konu</p>
+            <h2 class="baslik" id="konular-baslik" style="margin-top:20px">Tek amaç: <em>bilinçli</em> bağlantı.</h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">Her gün karşılaştığımız ama çoğu zaman üzerinde durmadığımız üç başlık.</p>
+        </div>
+        <div class="konular">
+          <a class="kart kart--hover konu" href="./ozellikler.html#captive-portal" data-belir style="--i:0">
+            <span class="konu__no">01</span>
+            <span class="konu__ikon"><i class="ti ti-wifi" aria-hidden="true"></i></span>
+            <h3>Captive Portal</h3>
+            <p>Misafir Wi-Fi'da internete çıkmadan önce açılan giriş sayfası. Nasıl çalıştığını ve sahtesini nasıl ayırt edeceğinizi öğrenin.</p>
+            <span class="metin-link">Nasıl çalışır<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="kart kart--hover konu" href="./ozellikler.html#dijital-ayak-izi" data-belir style="--i:1">
+            <span class="konu__no">02</span>
+            <span class="konu__ikon"><i class="ti ti-fingerprint" aria-hidden="true"></i></span>
+            <h3>Dijital Ayak İzi</h3>
+            <p>Paylaştıklarınız ve farkında olmadan bıraktıklarınız. Aktif ve pasif izlerin nereden oluştuğunu görün.</p>
+            <span class="metin-link">İzlerinizi tanıyın<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="kart kart--hover konu" href="./ozellikler.html#kclogger" data-belir style="--i:2">
+            <span class="konu__no">03</span>
+            <span class="konu__ikon"><i class="ti ti-file-certificate" aria-hidden="true"></i></span>
+            <h3>KCLogger</h3>
+            <p>Misafirlerine internet sunan kurumlar için imzalı, 5651 uyumlu erişim kaydı ve captive portal yönetimi.</p>
+            <span class="metin-link">Ürünü inceleyin<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAYILAR -->
+    <section class="bolum" aria-labelledby="sayi-baslik" style="padding-top:0">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">Rakamlarla</p>
+            <h2 class="baslik" id="sayi-baslik" style="margin-top:20px">Sözün arkasındaki <em>rakamlar.</em></h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">Yasal çerçeve, ürün ve ekip; hepsi doğrulanabilir bilgiler.</p>
+        </div>
+        <div class="sayilar">
+          <div class="kart sayi" data-belir style="--i:0"><span class="sayi__deger" data-say="5651">5651</span><span class="sayi__etiket">sayılı Kanun</span><span class="sayi__not">Erişim sağlayanlara kayıt tutma yükümlülüğü getirir.</span></div>
+          <div class="kart sayi" data-belir style="--i:1"><span class="sayi__deger" data-say="2007">2007</span><span class="sayi__etiket">Yürürlük yılı</span><span class="sayi__not">Yükümlülük o yıldan bu yana geçerli.</span></div>
+          <div class="kart sayi" data-belir style="--i:2"><span class="sayi__deger" data-say="9">9</span><span class="sayi__etiket">Temel modül</span><span class="sayi__not">Dashboard'dan giriş güvenliğine KCLogger paneli.</span></div>
+          <div class="kart sayi" data-belir style="--i:3"><span class="sayi__deger" data-say="2">2</span><span class="sayi__etiket">Ofis</span><span class="sayi__not">Bornova, İzmir ve Gebze, Kocaeli.</span></div>
+          <div class="kart sayi sayi--buyuk" data-belir style="--i:2">
+            <div>
+              <p class="etiket">KCLogger</p>
+              <h3 style="margin-top:18px">Denetime hazır olmak bu kadar sade.</h3>
+              <p>Her erişim kaydı zaman damgasıyla imzalanır; tüm lokasyonlar tek panelde.</p>
+            </div>
+            <div class="katman-yigin" aria-hidden="true">
+              <span style="--k:0"></span><span style="--k:1"></span><span style="--k:2"><i class="ti ti-shield-check"></i></span>
+            </div>
+            <div><a class="dugme" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger'ı inceleyin<span class="dugme__ok"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span><span class="sr-only"> (yeni sekmede açılır)</span></a></div>
+          </div>
+        </div>
+        <p class="kaynak" data-belir>Kaynak: 5651 sayılı Kanun ve KareCode'un yayımladığı KCLogger ürün bilgileri.</p>
+      </div>
+    </section>
+
+    <!-- ORBIT: DİJİTAL AYAK İZİ -->
+    <section aria-labelledby="iz-baslik">
+      <div class="kap bolum-bas bolum-bas--orta" style="margin-bottom:0">
+        <p class="etiket" data-belir>Dijital ayak izi</p>
+        <h2 class="baslik" id="iz-baslik" data-belir style="--i:1">Her adım bir <em>iz</em> bırakır.</h2>
+        <p class="orbit-ipucu" data-belir style="--i:2">Kaydırdıkça izler sırayla belirir; bir düğüme dokunarak da seçebilirsiniz.</p>
+      </div>
+      <div class="orbit-bolum" data-orbit>
+        <div class="orbit-yapis">
+          <div class="orbit">
+            <div class="orbit__parilti" aria-hidden="true"></div>
+            <div class="orbit__cember" aria-hidden="true"></div>
+            <div class="orbit__cember orbit__cember--ic" aria-hidden="true"></div>
+            <div class="orbit__isik" aria-hidden="true"></div>
+            <div class="orbit__merkez">
+              <p class="orbit__cumle">İzlerinizin çoğu, siz fark etmeden oluşur.</p>
+              <p class="orbit__detay" data-orbit-detay aria-live="polite"></p>
+            </div>
+            <button class="orbit__dugum" type="button" data-baslik="Sosyal medya" data-metin="Paylaşımlar, beğeniler ve etiketlendiğiniz fotoğraflar sandığınızdan geniş bir kitleye açıktır."><i class="ti ti-share" aria-hidden="true"></i><span>Sosyal medya</span></button>
+            <button class="orbit__dugum" type="button" data-baslik="Çerezler" data-metin="Üçüncü taraf çerezler sizi farklı siteler arasında takip edebilir."><i class="ti ti-cookie" aria-hidden="true"></i><span>Çerezler</span></button>
+            <button class="orbit__dugum" type="button" data-baslik="IP ve konum" data-metin="Bağlandığınız her sunucu IP adresinizi görür; yaklaşık konumunuz buradan çıkarılabilir."><i class="ti ti-map-pin" aria-hidden="true"></i><span>IP ve konum</span></button>
+            <button class="orbit__dugum" type="button" data-baslik="Cihaz parmak izi" data-metin="Ekran, yazı tipi ve tarayıcı ayrıntıları çerez olmadan da cihazınızı ayırt edebilir."><i class="ti ti-device-mobile" aria-hidden="true"></i><span>Cihaz parmak izi</span></button>
+            <button class="orbit__dugum" type="button" data-baslik="Uygulama izinleri" data-metin="Konum, rehber ya da mikrofon isteyen uygulamalar ihtiyaç duymadıklarını da toplayabilir."><i class="ti ti-apps" aria-hidden="true"></i><span>Uygulama izinleri</span></button>
+            <button class="orbit__dugum" type="button" data-baslik="Bağlandığınız ağlar" data-metin="Misafir Wi-Fi ağları, bağlantı zamanınızı ve cihazınızı yasal gereklilikle kaydeder."><i class="ti ti-wifi" aria-hidden="true"></i><span>Bağlandığınız ağlar</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOKTALI KALKAN: KCLOGGER -->
+    <section class="bolum" aria-labelledby="kcl-baslik">
+      <div class="kap kcl">
+        <div>
+          <p class="etiket" data-belir>KCLogger</p>
+          <h2 class="baslik" id="kcl-baslik" data-belir style="--i:1;margin-top:20px">Her bağlantı, <em>imzalı</em> bir kayıt.</h2>
+          <p class="metin-l" data-belir style="--i:2;margin-top:24px">Misafirlerine internet sunan kurumlar için erişimi yöneten ve kayıtları güvenle saklayan platform.</p>
+          <ol class="adimlar">
+            <li class="adim" data-belir style="--i:0"><span class="adim__no">01</span><h3>Bağlayın</h3><p>Mevcut erişim noktalarınız marka bağımsız olarak bağlanır.</p></li>
+            <li class="adim" data-belir style="--i:1"><span class="adim__no">02</span><h3>İmzalayın</h3><p>Her kayıt zaman damgasıyla imzalanır, bulutta ya da kendi veri merkezinizde saklanır.</p></li>
+            <li class="adim" data-belir style="--i:2"><span class="adim__no">03</span><h3>Yönetin</h3><p>Tüm lokasyonlar tek panelden ya da mobil uygulamadan.</p></li>
+          </ol>
+        </div>
+        <div class="nokta-tuval" data-noktalar data-belir style="--i:1">
+          <canvas aria-hidden="true"></canvas>
+          <span class="nokta-tuval__ipucu" aria-hidden="true">İmleci yaklaştırın</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- KAPANIŞ -->
+    <section class="bolum" aria-labelledby="kapanis-baslik" style="padding-top:0">
+      <div class="kap">
+        <div class="kapanis" data-belir>
+          <p class="etiket">Tanışalım</p>
+          <h2 class="baslik" id="kapanis-baslik">Ağınız için doğru adımı <em>birlikte</em> atalım.</h2>
+          <p>Captive portal, erişim kayıtları ya da KCLogger hakkında sorunuz varsa yazın.</p>
+          <div class="kapanis__eylem">
+            <a class="dugme" href="./iletisim.html">İletişime geçin<span class="dugme__ok"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--ALT-->
+  <footer class="alt">
+    <div class="kap">
+      <div class="alt__izgara">
+        <div class="alt__marka">
+          <a href="./index.html" aria-label="KareCode anasayfa"><img src="./assets/karecode-logo-light.png" alt="KareCode" width="250" height="45"></a>
+          <p>Bornova, İzmir merkezli yazılım ve siber güvenlik şirketi. Güvenli bağlantıyı herkes için anlaşılır kılıyoruz.</p>
+          <ul class="sosyal" aria-label="Sosyal medya">
+            <li><a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener noreferrer" aria-label="Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Sayfalar</p>
+          <ul class="alt__liste">
+            <li><a href="./index.html">Anasayfa</a></li>
+            <li><a href="./ozellikler.html">Özellikler</a></li>
+            <li><a href="./hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="./iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Konular</p>
+          <ul class="alt__liste">
+            <li><a href="./ozellikler.html#captive-portal">Captive Portal</a></li>
+            <li><a href="./ozellikler.html#dijital-ayak-izi">Dijital Ayak İzi</a></li>
+            <li><a href="./ozellikler.html#kclogger">KCLogger</a></li>
+            <li><a href="./ozellikler.html#arac-takimi">Araç Takımı</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">İletişim</p>
+          <ul class="alt__liste">
+            <li><a href="mailto:info@karecode.com.tr"><i class="ti ti-mail" aria-hidden="true"></i>info@karecode.com.tr</a></li>
+            <li><a href="tel:+902323322284"><i class="ti ti-phone" aria-hidden="true"></i>0232 332 22 84</a></li>
+            <li><a href="./iletisim.html#adresler"><i class="ti ti-map-pin" aria-hidden="true"></i>Bornova · Gebze</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="alt__dip">
+        <p>© <span data-yil>2026</span> KareCode Dijital Servisler ve Yazılım Hizmetleri A.Ş.</p>
+        <p>Bilgilendirme ve farkındalık amaçlıdır.</p>
+      </div>
+    </div>
+  </footer>
+  <!--/ALT-->
+</body>
+</html>

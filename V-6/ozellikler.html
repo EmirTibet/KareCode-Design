@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KareCode | Özellikler</title>
+  <meta name="description" content="Captive portal, dijital ayak izi, KCLogger, ağ araçları ve erişim kaydı tutulan mekânlar.">
+  <meta name="theme-color" content="#07090d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <!--UST-->
+  <header class="ust" data-ust>
+    <div class="kap ust__ic">
+      <a class="marka" href="./index.html" aria-label="KareCode anasayfa">
+        <img class="marka__gece" src="./assets/karecode-logo-dark.png" alt="" width="250" height="45">
+        <img class="marka__acik" src="./assets/karecode-logo-light.png" alt="" width="250" height="45">
+      </a>
+      <button class="menu-ac" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç" data-menu-ac>
+        <i class="ti ti-menu-2" aria-hidden="true"></i><i class="ti ti-x" aria-hidden="true"></i>
+      </button>
+      <nav class="menu" id="menu" aria-label="Ana menü">
+        <ul class="menu__liste">
+          <li><a class="menu__link" href="./index.html" data-sayfa="index">Anasayfa</a></li>
+          <li><a class="menu__link" href="./ozellikler.html" data-sayfa="ozellikler" aria-current="page">Özellikler</a></li>
+          <li><a class="menu__link" href="./hakkimizda.html" data-sayfa="hakkimizda">Hakkımızda</a></li>
+          <li><a class="menu__link" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+          <li><a class="menu__link" href="./iletisim.html" data-sayfa="iletisim">İletişim</a></li>
+        </ul>
+        <ul class="sosyal sosyal--ust" aria-label="Sosyal medya">
+          <li><a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener noreferrer" aria-label="Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--/UST-->
+
+  <main id="icerik" tabindex="-1">
+    <section class="sahne sahne--alt gece" aria-labelledby="sayfa-baslik">
+      <div class="sahne__izgara" aria-hidden="true"></div>
+      <div class="sahne__huzme" aria-hidden="true"></div>
+      <div class="kap">
+        <h1 class="dev sahne__baslik" id="sayfa-baslik" data-giris style="--d:180ms">Bağlantının her <em>katmanı.</em></h1>
+        <p class="sahne__aciklama" data-giris style="--d:320ms">Giriş sayfasından internetteki izlerinize, KCLogger'ın ağ araçlarından erişim kaydı tutulan mekânlara kadar.</p>
+      </div>
+      <p class="dev-yazi" aria-hidden="true">Özellikler</p>
+    </section>
+    <div class="gecis" aria-hidden="true"></div>
+
+
+    <!-- CAPTIVE PORTAL -->
+    <section class="bolum" id="captive-portal" aria-labelledby="cp-baslik" style="scroll-margin-top:var(--ust)">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">01 · Captive Portal</p>
+            <h2 class="baslik" id="cp-baslik" style="margin-top:20px">İnternetten önceki <em>kapı.</em></h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">Otel, havalimanı, kafe ya da hastanenin misafir Wi-Fi'ına bağlandığınızda, internete çıkmadan önce açılan giriş sayfasıdır. Kurum sizi burada tanır ve erişimi başlatır.</p>
+        </div>
+
+        <div class="ikili ikili--ust">
+          <ol class="akis">
+            <li data-belir style="--i:0"><h3>Ağa bağlanırsınız</h3><p>Cihazınız "Otel_Misafir" gibi açık bir ağa bağlanır; henüz internete çıkamazsınız.</p></li>
+            <li data-belir style="--i:1"><h3>Giriş sayfasına yönlendirilirsiniz</h3><p>Ağ ilk web isteğinizi yakalar ve sizi kurumun giriş sayfasına gönderir.</p></li>
+            <li data-belir style="--i:2"><h3>Kimliğinizi doğrularsınız</h3><p>SMS kodu, oda numarası ya da misafir bilgisiyle kendinizi tanıtır, koşulları onaylarsınız.</p></li>
+            <li data-belir style="--i:3"><h3>Erişim açılır</h3><p>Doğrulama tamamlanınca internete çıkarsınız; süre ya da kota sınırı olabilir.</p></li>
+            <li data-belir style="--i:4"><h3>Bağlantı kayıt altına alınır</h3><p>Kurum, yasal yükümlülüğü gereği bağlantının ne zaman ve hangi cihazdan yapıldığını kaydeder.</p></li>
+          </ol>
+          <div class="kart maket" data-belir style="--i:1" role="img" aria-label="Temsili otel Wi-Fi giriş sayfası: oda numarası, soyadı alanları, koşul onayı ve Bağlan düğmesi">
+            <div class="maket__cubuk"><span class="maket__noktalar"><span></span><span></span><span></span></span><i class="ti ti-lock" aria-hidden="true"></i>https://wifi.otel-ornek.example/giris</div>
+            <div class="maket__govde" aria-hidden="true">
+              <h3>Misafir Wi-Fi'a hoş geldiniz</h3>
+              <p>İnternete bağlanmak için oda numaranızı ve soyadınızı girin.</p>
+              <div class="maket__alan">Oda numarası<span></span></div>
+              <div class="maket__alan">Soyadı<span></span></div>
+              <div class="maket__onay"><i class="ti ti-square-check-filled"></i>Kullanım koşullarını okudum, kabul ediyorum.</div>
+              <div class="maket__dugme">Bağlan</div>
+            </div>
+            <p class="maket__not">Temsili görünüm. Etkileşimsizdir, hiçbir veri toplamaz.</p>
+          </div>
+        </div>
+
+        <h3 class="ara-baslik" data-belir>Sahte portal riskleri</h3>
+        <div class="izgara-3 izgara-3--uc">
+          <article class="kart oz" data-belir style="--i:0"><span class="konu__ikon"><i class="ti ti-copy" aria-hidden="true"></i></span><h3>Kötü ikiz (evil twin)</h3><p>Saldırgan gerçek ağla aynı ya da çok benzer isimde bir erişim noktası açar; bağlananlar trafiğini ona teslim eder.</p></article>
+          <article class="kart oz" data-belir style="--i:1"><span class="konu__ikon"><i class="ti ti-key" aria-hidden="true"></i></span><h3>Kimlik bilgisi toplama</h3><p>Sahte sayfa "internet için e-posta şifrenizi girin" gibi gereksiz bilgiler ister. Girilen her bilgi saldırgana geçer.</p></article>
+          <article class="kart oz" data-belir style="--i:2"><span class="konu__ikon"><i class="ti ti-lock-open" aria-hidden="true"></i></span><h3>HTTPS'siz giriş</h3><p>Adres çubuğunda kilit yoksa ya da sertifika uyarısı varsa, yazdıklarınız ağdaki başkalarınca okunabilir.</p></article>
+        </div>
+
+        <h3 class="ara-baslik" data-belir>Korunma önerileri</h3>
+        <ul class="tavsiye">
+          <li data-belir style="--i:0"><i class="ti ti-check" aria-hidden="true"></i><span><b>Ağ adını doğrulatın.</b> Benzer isimli iki ağ varsa hangisinin gerçek olduğunu görevliye sorun.</span></li>
+          <li data-belir style="--i:1"><i class="ti ti-check" aria-hidden="true"></i><span><b>Adres çubuğuna bakın.</b> Sayfa HTTPS ile açılmalı, alan adı kurumla uyumlu olmalı.</span></li>
+          <li data-belir style="--i:2"><i class="ti ti-check" aria-hidden="true"></i><span><b>Fazla bilgi vermeyin.</b> Wi-Fi için e-posta, banka ya da sosyal medya şifresi istenmez.</span></li>
+          <li data-belir style="--i:3"><i class="ti ti-check" aria-hidden="true"></i><span><b>Hassas işlemleri erteleyin.</b> Bankacılık için mobil veriyi ya da güvendiğiniz ağı kullanın.</span></li>
+          <li data-belir style="--i:4"><i class="ti ti-check" aria-hidden="true"></i><span><b>Otomatik bağlanmayı kapatın.</b> İşiniz bitince ağı unutun.</span></li>
+          <li data-belir style="--i:5"><i class="ti ti-check" aria-hidden="true"></i><span><b>Güncel kalın.</b> Sistem ve tarayıcı güncellemeleri bilinen açıkları kapatır.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DİJİTAL AYAK İZİ -->
+    <section class="bolum" id="dijital-ayak-izi" aria-labelledby="iz-baslik" style="scroll-margin-top:var(--ust);padding-top:0">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">02 · Dijital Ayak İzi</p>
+            <h2 class="baslik" id="iz-baslik" style="margin-top:20px">Geride kalan her şey.</h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">İnternette yaptığınız her işlemin bıraktığı kayıtların bütünü. Bir kısmını bilerek paylaşırsınız, bir kısmı siz fark etmeden oluşur.</p>
+        </div>
+        <div class="izgara-2">
+          <article class="kart iz-tip" data-belir style="--i:0"><p class="etiket">Bilerek</p><h3>Aktif ayak izi</h3><p>Paylaşımlar, yorumlar, doldurduğunuz formlar, üye olduğunuz siteler.</p><p class="oz__ornek">ör. bir fotoğrafa konum etiketi eklemek</p></article>
+          <article class="kart iz-tip" data-belir style="--i:1"><p class="etiket">Farkında olmadan</p><h3>Pasif ayak izi</h3><p>Çerezler, IP adresiniz, cihaz bilgileriniz, uygulamaların arka planda eriştiği veriler.</p><p class="oz__ornek">ör. bir sitenin ziyaret sürenizi kaydetmesi</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KCLOGGER -->
+    <section class="bolum" id="kclogger" aria-labelledby="kcl-baslik" style="scroll-margin-top:var(--ust)">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">03 · KCLogger</p>
+            <h2 class="baslik" id="kcl-baslik" style="margin-top:20px">Kayıt tutmanın <em>sade</em> hâli.</h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">KareCode'un misafirlerine internet sunan kurumlar için geliştirdiği platform. Erişimi captive portal ile yönetir, her kaydı 5651 sayılı Kanun'a uygun biçimde zaman damgasıyla imzalar.</p>
+        </div>
+        <h3 class="ara-baslik" data-belir style="margin-top:0">Paneldeki başlıca modüller</h3>
+        <div class="izgara-3">
+          <article class="kart kart--hover oz" data-belir style="--i:0"><span class="konu__ikon"><i class="ti ti-layout-dashboard" aria-hidden="true"></i></span><h3>Gelişmiş dashboard</h3><p>Cihaz ve kullanıcı sayıları, online durum, trafik ve lokasyonlar tek ekranda.</p></article>
+          <article class="kart kart--hover oz" data-belir style="--i:1"><span class="konu__ikon"><i class="ti ti-app-window" aria-hidden="true"></i></span><h3>Captive portal tasarımı</h3><p>Giriş sayfasını panelden düzenleme; mobil, tablet ve masaüstü önizleme.</p></article>
+          <article class="kart kart--hover oz" data-belir style="--i:2"><span class="konu__ikon"><i class="ti ti-filter" aria-hidden="true"></i></span><h3>Erişim güvenliği</h3><p>Belirli siteleri engelleme ya da yalnızca izin verilen sitelere erişim.</p></article>
+          <article class="kart kart--hover oz" data-belir style="--i:0"><span class="konu__ikon"><i class="ti ti-user-check" aria-hidden="true"></i></span><h3>Giriş güvenliği</h3><p>Telefon numarası ve MAC adresi bazlı kısıtlamayla yetkisiz girişe kapalı.</p></article>
+          <article class="kart kart--hover oz" data-belir style="--i:1"><span class="konu__ikon"><i class="ti ti-report-analytics" aria-hidden="true"></i></span><h3>Raporlar</h3><p>Tarih aralığı ve filtrelere göre ayrıntılı kullanım raporları.</p></article>
+          <article class="kart kart--hover oz" data-belir style="--i:2"><span class="konu__ikon"><i class="ti ti-router" aria-hidden="true"></i></span><h3>Ağ araçları</h3><p>Ping, Traceroute, IP Scan ve Telnet; anında ya da gecikmeli yeniden başlatma.</p></article>
+        </div>
+
+        <h3 class="ara-baslik" data-belir>Bir erişim kaydı nasıl görünür?</h3>
+        <div class="ikili ikili--ust">
+          <div class="terminal" data-belir>
+            <div class="terminal__ust"><span class="maket__noktalar"><span></span><span></span><span></span></span>erisim-kaydi.log</div>
+<pre><span class="z">[2026-11-18 09:42:07]</span> <span class="v">OTURUM</span>
+  lokasyon     : Lobi-AP-02
+  kullanıcı    : +90 5•• ••• •• 41  <span class="z">sms doğrulandı</span>
+  cihaz mac    : 3C:••:••:••:7E:9A
+  iç ip        : 10.20.4.118
+  dış ip:port  : 203.0.113.24:51022
+  süre         : 01:12:45   ↓ 412 MB  ↑ 38 MB
+  imza         : <span class="y">✓ zaman damgası  ✓ bütünlük</span>
+<span class="z">[2026-11-18 09:42:08]</span> <span class="v">ARŞİV</span>  kayıt saklandı · denetime hazır</pre>
+          </div>
+          <div class="yazi" data-belir style="--i:1">
+            <p>Temsili örnektir; gerçek kullanıcı verisi içermez. Alan adları ve biçim üründeki görünümden farklı olabilir.</p>
+            <div class="uyari"><i class="ti ti-shield-exclamation" aria-hidden="true"></i><p><strong>Yalnızca yetkili kullanım içindir.</strong> KCLogger, ağın sahibi ya da yetkili yöneticisi tarafından 5651 sayılı Kanun ve KVKK çerçevesinde kullanılmak üzere tasarlanmıştır. Size ait olmayan ağlarda izinsiz kayıt toplamak yasalara aykırıdır.</p></div>
+            <a class="dugme" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger sitesine gidin<span class="dugme__ok"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span><span class="sr-only"> (yeni sekmede açılır)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARAÇ TAKIMI -->
+    <section class="bolum" id="arac-takimi" aria-labelledby="arac-baslik" style="scroll-margin-top:var(--ust);padding-top:0">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">04 · Araç takımı</p>
+            <h2 class="baslik" id="arac-baslik" style="margin-top:20px">Network Tools <em>(Araç Takımı)</em></h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">Bağlantı sorunlarını panelden çıkmadan teşhis edin. Bir araç seçin, ne yaptığını ve örnek çıktısını görün.</p>
+        </div>
+        <div class="konsol" data-konsol data-belir>
+          <div class="konsol__gezinti">
+          <button class="konsol__ok" type="button" data-konsol-onceki aria-label="Önceki araç"><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
+          <div class="konsol__liste" role="tablist" aria-label="Ağ araçları">
+            <button class="konsol__sekme" type="button" role="tab" id="arac-1" aria-controls="konsol-panel" aria-selected="true" data-komut="ping 203.0.113.10" data-cikti="yanıt  seq=1  süre=11.4 ms|yanıt  seq=2  süre=10.9 ms|yanıt  seq=3  süre=11.1 ms|3 gönderildi · 3 alındı · %0 kayıp" data-aciklama="Ping aracı, belirli bir IP adresine veya alan adına (hostname) erişilebilirliği test etmek için kullanılır. Bu test sayesinde hedef cihazın ağa erişip erişmediğini ve yanıt süresini (latency) kolaylıkla ölçebilirsiniz."><span>01</span><i class="ti ti-antenna-bars-5" aria-hidden="true"></i>Ping</button>
+            <button class="konsol__sekme" type="button" role="tab" id="arac-2" aria-controls="konsol-panel" aria-selected="false" tabindex="-1" data-komut="traceroute 203.0.113.10" data-cikti=" 1  10.20.0.1        0.8 ms| 2  192.0.2.1        3.2 ms| 3  198.51.100.14    7.9 ms| 4  203.0.113.10    11.2 ms|rota tamamlandı · 4 atlama" data-aciklama="Traceroute aracı, hedef bir IP adresine veya alan adına giden ağ yolunu adım adım analiz eder. Bu sayede veri paketlerinin hangi noktalardan geçtiğini görüntüleyebilir, olası bağlantı problemlerinin hangi aşamada oluştuğunu tespit edebilirsiniz."><span>02</span><i class="ti ti-route" aria-hidden="true"></i>Traceroute</button>
+            <button class="konsol__sekme" type="button" role="tab" id="arac-3" aria-controls="konsol-panel" aria-selected="false" tabindex="-1" data-komut="ipscan 10.20.4.0/24" data-cikti="10.20.4.1    ağ geçidi|10.20.4.12   erişim noktası|10.20.4.37   erişim noktası|10.20.4.118  istemci|4 aktif cihaz bulundu" data-aciklama="IP Scan aracı, belirli bir ağ aralığında aktif cihazları tespit etmek için kullanılır."><span>03</span><i class="ti ti-radar-2" aria-hidden="true"></i>IP Scan (Ağ Tarama)</button>
+            <button class="konsol__sekme" type="button" role="tab" id="arac-4" aria-controls="konsol-panel" aria-selected="false" tabindex="-1" data-komut="telnet 203.0.113.10 443" data-cikti="bağlanılıyor...|bağlandı · port 443 açık|bağlantı kapatıldı" data-aciklama="Telnet aracı, belirli bir IP adresi veya hostname üzerinden seçilen porta bağlantı testi yapmak için kullanılır. Hedef IP adresini veya hostname bilgisini ve port numarasını girerek ilgili servisin açık olup olmadığını ve erişilebilirliğini kontrol edebilirsiniz."><span>04</span><i class="ti ti-plug-connected" aria-hidden="true"></i>Telnet</button>
+            <button class="konsol__sekme" type="button" role="tab" id="arac-5" aria-controls="konsol-panel" aria-selected="false" tabindex="-1" data-komut="reboot --gecikme 02:00" data-cikti="yeniden başlatma planlandı|seçenek: anında · gecikmeli|cihaz 02:00&#39;de yeniden başlar" data-aciklama="Cihazın yeniden başlatılması için kullanılır. İki seçenek sunulur: anında yeniden başlatma ve gecikmeli yeniden başlatma. Gecikmeli seçenek sayesinde planlı işlemler sonrasında cihazın otomatik olarak yeniden başlatılmasını sağlayabilirsiniz."><span>05</span><i class="ti ti-refresh" aria-hidden="true"></i>System Reboot</button>
+          </div>
+          <button class="konsol__ok" type="button" data-konsol-sonraki aria-label="Sonraki araç"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+          </div>
+          <div class="konsol__panel" id="konsol-panel" role="tabpanel" aria-labelledby="arac-1">
+            <div class="konsol__ekran">
+              <div class="terminal__ust"><span class="maket__noktalar"><span></span><span></span><span></span></span>kclogger · ağ araçları</div>
+              <pre class="konsol__cikti" data-konsol-cikti><span class="v">$</span> ping 203.0.113.10
+yanıt  seq=1  süre=11.4 ms
+yanıt  seq=2  süre=10.9 ms
+yanıt  seq=3  süre=11.1 ms
+3 gönderildi · 3 alındı · %0 kayıp</pre>
+            </div>
+            <p class="konsol__aciklama" data-konsol-aciklama>Ping aracı, belirli bir IP adresine veya alan adına (hostname) erişilebilirliği test etmek için kullanılır. Bu test sayesinde hedef cihazın ağa erişip erişmediğini ve yanıt süresini (latency) kolaylıkla ölçebilirsiniz.</p>
+            <p class="konsol__not">Temsili çıktı; belgeleme amaçlı IP adresleri kullanılmıştır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KULLANIM ALANLARI -->
+    <section class="bolum" id="kullanim-alanlari" aria-labelledby="yer-baslik" style="scroll-margin-top:var(--ust);padding-top:0">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--yan">
+          <div data-belir>
+            <p class="etiket">05 · Kullanım alanları</p>
+            <h2 class="baslik" id="yer-baslik" style="margin-top:20px">Erişim kaydı tutulan <em>her yer.</em></h2>
+          </div>
+          <p class="metin-l" data-belir style="--i:1">Misafirlerine internet sunan ve kayıt tutma zorunluluğu olan her işletmede KCLogger devreye girer.</p>
+        </div>
+        <ul class="yerler">
+          <li class="yer" data-belir style="--i:0"><img src="./assets/sectors/cafe.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-coffee" aria-hidden="true"></i><span class="yer__no">01</span><h3>Kafe ve restoranlar</h3></li>
+          <li class="yer" data-belir style="--i:1"><img src="./assets/sectors/hotel.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-bed" aria-hidden="true"></i><span class="yer__no">02</span><h3>Oteller</h3></li>
+          <li class="yer" data-belir style="--i:2"><img src="./assets/sectors/toplu-tasima.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-bus" aria-hidden="true"></i><span class="yer__no">03</span><h3>Toplu taşıma</h3></li>
+          <li class="yer" data-belir style="--i:3"><img src="./assets/sectors/yurt.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-building-community" aria-hidden="true"></i><span class="yer__no">04</span><h3>Öğrenci yurtları</h3></li>
+          <li class="yer" data-belir style="--i:4"><img src="./assets/sectors/hastane.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-building-hospital" aria-hidden="true"></i><span class="yer__no">05</span><h3>Hastaneler</h3></li>
+          <li class="yer" data-belir style="--i:5"><img src="./assets/sectors/okul.jpg" alt="" loading="lazy" onerror="this.remove()"><i class="ti ti-school" aria-hidden="true"></i><span class="yer__no">06</span><h3>Okullar</h3></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!--ALT-->
+  <footer class="alt">
+    <div class="kap">
+      <div class="alt__izgara">
+        <div class="alt__marka">
+          <a href="./index.html" aria-label="KareCode anasayfa"><img src="./assets/karecode-logo-light.png" alt="KareCode" width="250" height="45"></a>
+          <p>Bornova, İzmir merkezli yazılım ve siber güvenlik şirketi. Güvenli bağlantıyı herkes için anlaşılır kılıyoruz.</p>
+          <ul class="sosyal" aria-label="Sosyal medya">
+            <li><a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/karecode" target="_blank" rel="noopener noreferrer" aria-label="Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Sayfalar</p>
+          <ul class="alt__liste">
+            <li><a href="./index.html">Anasayfa</a></li>
+            <li><a href="./ozellikler.html">Özellikler</a></li>
+            <li><a href="./hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="./iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Konular</p>
+          <ul class="alt__liste">
+            <li><a href="./ozellikler.html#captive-portal">Captive Portal</a></li>
+            <li><a href="./ozellikler.html#dijital-ayak-izi">Dijital Ayak İzi</a></li>
+            <li><a href="./ozellikler.html#kclogger">KCLogger</a></li>
+            <li><a href="./ozellikler.html#arac-takimi">Araç Takımı</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">İletişim</p>
+          <ul class="alt__liste">
+            <li><a href="mailto:info@karecode.com.tr"><i class="ti ti-mail" aria-hidden="true"></i>info@karecode.com.tr</a></li>
+            <li><a href="tel:+902323322284"><i class="ti ti-phone" aria-hidden="true"></i>0232 332 22 84</a></li>
+            <li><a href="./iletisim.html#adresler"><i class="ti ti-map-pin" aria-hidden="true"></i>Bornova · Gebze</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="alt__dip">
+        <p>© <span data-yil>2026</span> KareCode Dijital Servisler ve Yazılım Hizmetleri A.Ş.</p>
+        <p>Bilgilendirme ve farkındalık amaçlıdır.</p>
+      </div>
+    </div>
+  </footer>
+  <!--/ALT-->
+</body>
+</html>
