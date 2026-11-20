@@ -11,7 +11,7 @@ Her sayfa koyu bir hero sahnesiyle açılır ve yumuşak bir gradyanla (`.gecis`
 3. **Tek CTA stili.** Bütün butonlar aynıdır: turuncu zemin, koyu metin, beyaz daire içinde siyah ok. İkincil/çerçeveli buton yoktur.
 4. **İnce ve büyük tipografi.** Başlıklar Inter Tight 200–300, sıkı harf aralığı; kısa başlık, az metin.
 5. **1px çizgi, cömert boşluk, yumuşak gölge.** Açık zeminde "parıltı" = gölge + cam (blur) + ince turuncu hale.
-6. **Sinematik ama saygılı hareket.** Bölümler bulanıktan netleşerek, kartlar sırayla belirir. `prefers-reduced-motion` açıkken tüm hareket kapanır.
+6. **Sade hareket.** Yalnızca başlıklar ve bileşenler (kart, panel, liste) kısa ve yumuşak biçimde belirir (14px kayma, 0.7s, 60ms sıra gecikmesi, bulanıklık yok); açıklama metinleri animasyonsuz görünür. `prefers-reduced-motion` açıkken tüm hareket kapanır.
 7. **Hero'da bilgi baloncuğu yok.** Hero yalnızca başlık, tek cümle açıklama ve (anasayfada) tek buton içerir.
 
 ---
@@ -96,7 +96,7 @@ Tüm ızgara kolonları `minmax(0, 1fr)` ile yazılır; içerik (logo, uzun keli
 | **3D kalkan** (`[data-kalkan]`) | SVG katmanları `translateZ` ile dizilmiş kalkan + turuncu kilit. Fareyle eğilir, yavaşça süzülür. |
 | **Konu kartları** (`.konular`) | 3 kart: Captive Portal, Dijital Ayak İzi, KCLogger. |
 | **Sayı kartları** (`.sayilar`) | 5651 · 2007 · 9 modül · 2 ofis + büyük KCLogger kartı (CTA'lı). Masaüstünde büyük kart sağda iki satır boyunca; **tablette (640–999px) tam genişlikte yatay**; mobilde alt alta. |
-| **Orbit** (`[data-orbit]`) | Dijital ayak izi: ortada cümle + seçili düğümün açıklaması, çemberde 6 düğüm. Scroll'da döner, aktif düğüm tepeye gelir; düğüme tıklanarak da seçilir. Boyut: `min(620px, 100vw − 230px, 100vh − header − 130px)`. Düğümler **container query** ile çember boyutuna göre ayarlanır: > 620px tam, 501–620px küçük etiket, ≤ 500px yalnızca ikon. |
+| **Orbit** (`[data-orbit]`) | Dijital ayak izi: ortada cümle + seçili düğümün açıklaması, çemberde 6 düğüm. Scroll'da döner, aktif düğüm tepeye gelir; düğüme tıklanarak da seçilir. Boyut: `min(clamp(620px, 44vw, 1400px), 100vw − 230px, 100vh − header − 96px)` (1440px → ~630px, 1920px → ~845px, 2560px → ~1125px, 4K → 1400px). Çember başlığın hemen altında, header’ın 32px altında sabitlenir. Düğümler **container query** ile çember boyutuna göre ayarlanır: > 620px tam, 501–620px küçük etiket, ≤ 500px yalnızca ikon. |
 | **Noktalı kalkan** (`[data-noktalar]`) | Canvas nokta ızgarasından kalkan + turuncu anahtar deliği; imleç yaklaşınca dağılır, geri toplanır. |
 
 ### Özellikler
