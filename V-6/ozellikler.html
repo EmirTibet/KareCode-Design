@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="preload" href="./assets/fonts/tabler-ikon.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
   <link rel="icon" type="image/png" href="./assets/icon.png">
   <link rel="stylesheet" href="./style.css">
   <script>document.documentElement.classList.add("js");</script>
@@ -165,7 +166,7 @@
           <div class="yazi">
             <p>Temsili örnektir; gerçek kullanıcı verisi içermez. Alan adları ve biçim üründeki görünümden farklı olabilir.</p>
             <div class="uyari"><i class="ti ti-shield-exclamation" aria-hidden="true"></i><p><strong>Yalnızca yetkili kullanım içindir.</strong> KCLogger, ağın sahibi ya da yetkili yöneticisi tarafından 5651 sayılı Kanun ve KVKK çerçevesinde kullanılmak üzere tasarlanmıştır. Size ait olmayan ağlarda izinsiz kayıt toplamak yasalara aykırıdır.</p></div>
-            <a class="dugme" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger sitesine gidin<span class="dugme__ok"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span><span class="sr-only"> (yeni sekmede açılır)</span></a>
+            <a class="button button--tam" href="https://kclogger.com/" target="_blank" rel="noopener noreferrer">KCLogger sitesine gidin<span class="button__ok"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span><span class="sr-only"> (yeni sekmede açılır)</span></a>
           </div>
         </div>
       </div>
@@ -278,5 +279,6 @@ yanıt  seq=3  süre=11.1 ms
     </div>
   </footer>
   <!--/ALT-->
+  <button class="taptotop" type="button" aria-label="Sayfanın başına dön" data-taptotop><span class="button__ok"><i class="ti ti-arrow-up" aria-hidden="true"></i></span></button>
 </body>
 </html>

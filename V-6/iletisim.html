@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="preload" href="./assets/fonts/tabler-ikon.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
   <link rel="icon" type="image/png" href="./assets/icon.png">
   <link rel="stylesheet" href="./style.css">
   <script>document.documentElement.classList.add("js");</script>
@@ -81,7 +82,7 @@
           <div class="alan"><label for="mesaj">Mesajınız</label><textarea id="mesaj" name="mesaj" maxlength="750" required aria-describedby="mesaj-ipucu mesaj-hata"></textarea><div class="alan__alt"><p class="alan__ipucu" id="mesaj-ipucu">En az 20, en fazla 750 karakter.</p><span class="alan__sayac" data-sayac aria-hidden="true">0 / 750</span></div><p class="alan__hata" id="mesaj-hata"></p></div>
           <div class="form__durum" data-form-durum tabindex="-1" role="status"><i class="ti ti-circle-check" aria-hidden="true"></i><span><strong>Mesajınız e-posta uygulamanızda hazır.</strong> Göndermek için uygulamada gönder demeniz yeterli. Uygulama açılmadıysa <a href="mailto:info@karecode.com.tr" data-mailto-yedek>bu bağlantıyı kullanın</a>.</span></div>
           <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
-            <button class="dugme" type="submit">Mesajı hazırla<span class="dugme__ok"><i class="ti ti-send" aria-hidden="true"></i></span></button>
+            <button class="button" type="submit">Mesajı hazırla<span class="button__ok"><i class="ti ti-send" aria-hidden="true"></i></span></button>
             <p class="form__not">ya da doğrudan <a class="metin-link" href="mailto:info@karecode.com.tr">info@karecode.com.tr</a></p>
           </div>
         </form>
@@ -159,5 +160,6 @@
     </div>
   </footer>
   <!--/ALT-->
+  <button class="taptotop" type="button" aria-label="Sayfanın başına dön" data-taptotop><span class="button__ok"><i class="ti ti-arrow-up" aria-hidden="true"></i></span></button>
 </body>
 </html>

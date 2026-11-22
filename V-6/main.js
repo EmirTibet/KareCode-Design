@@ -20,6 +20,18 @@
   window.addEventListener("scroll", ustGuncelle, { passive: true });
   window.addEventListener("resize", ustGuncelle);
 
+  const taptotop = $("[data-taptotop]");
+  if (taptotop) {
+    const yGuncelle = () => taptotop.classList.toggle("is-gorunur", window.scrollY > 600);
+    yGuncelle();
+    window.addEventListener("scroll", yGuncelle, { passive: true });
+    taptotop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+      const icerik = $("#icerik");
+      if (icerik) icerik.focus({ preventScroll: true });
+    });
+  }
+
   /* ---------- Mobil menü ---------- */
   const menuAc = $("[data-menu-ac]");
   const menu = $("#menu");

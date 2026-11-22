@@ -84,11 +84,12 @@ Tüm ızgara kolonları `minmax(0, 1fr)` ile yazılır; içerik (logo, uzun keli
 |---|---|
 | **Header** (`.ust`) | Sabit. Hero üzerindeyken şeffaf ve koyu logolu; hero geçilince açık zemin + açık logo (`.is-dolu`). Masaüstünde menü linkleri ve sosyal ikonlar (Instagram, Facebook, LinkedIn) **tek kapsül** içinde, aralarında ince dikey çizgi. KCLogger linki ok ikonu taşımaz, yeni sekmede açılır. |
 | **Mobil menü** (< 900px) | Tam ekran koyu panel; büyük linkler, altında sosyal ikonlar. Logo ve kapatma butonu her zaman görünür; mobilde header'da `backdrop-filter` kullanılmaz (sabit menüyü hapsetmesin diye). |
-| **Buton** (`.dugme`) | Hap biçimli, turuncu zemin, koyu metin; sağda beyaz daire içinde siyah ok (`.dugme__ok`). Hover'da ok -45° döner. |
+| **Buton** (`.button`) | Hap biçimli, turuncu zemin, koyu metin; sağda beyaz daire içinde siyah ok (`.button__ok`). Hover'da ok -45° döner. |
 | **Kart** (`.kart`) | Beyaz cam gradyan, `--cizgi` kenar, `--r-lg` köşe. `.kart--hover` hover'da yükselir. |
 | **Hero** (`.sahne`) | Nokta ızgarası, dikey ışık hüzmesi, (anasayfada) ufuk yayı, dev silik yazı (`.dev-yazi`: marka adı / sayfa adı). Altında `.gecis` ile kâğıt zemine geçiş. |
 | **Tanışalım** (`.kapanis`) | Açık cam panel, ince nokta dokusu, ortalı başlık ve tek buton. Dekoratif yay yoktur. |
 | **Footer** (`.alt`) | 4 sütun (≥ 760px): marka + sosyal, Sayfalar, Konular, İletişim. |
+| **Taptotop** (`.taptotop`) | Sağ altta sabit, 56px turuncu daire; içinde butonlarla aynı beyaz daire + siyah `ti-arrow-up`. 600px kaydırınca belirir; tıklanınca başa yumuşakça kayar ve odağı `#icerik`'e taşır. Mobil menü açıkken gizlenir. |
 
 ### Anasayfa
 | Bileşen | Açıklama |
@@ -179,8 +180,9 @@ V-6/
     ├── karecode-logo-dark.png   Koyu zemin logosu (hero üzerinde header)
     ├── karecode-logo-light.png  Açık zemin logosu (header dolu, footer)
     ├── icon.png                 Favicon
+    ├── fonts/tabler-ikon.woff2  İkon fontu (alt küme)
     ├── partners/                9 partner logosu
     └── sectors/                 Kullanım alanı görselleri (cafe, hotel, toplu-tasima, yurt, hastane, okul)
 ```
 
-Header ve footer dört sayfada aynıdır; değişiklik yaparken dört dosyayı da güncelleyin. İkonlar: Tabler Icons webfont 3.19.0.
+Header ve footer dört sayfada aynıdır; değişiklik yaparken dört dosyayı da güncelleyin. İkonlar: Tabler Icons 3.19.0 — yalnızca kullanılan ~52 ikonu içeren yerel alt küme `assets/fonts/tabler-ikon.woff2` (11 KB; CDN yok). Yeni ikon eklenirse alt küme yeniden üretilmelidir. Sayfalar arası geçişte `@view-transition` ve hover ile ön-yükleme (speculation rules) kullanılır.

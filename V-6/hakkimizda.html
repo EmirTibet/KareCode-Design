@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="preload" href="./assets/fonts/tabler-ikon.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
   <link rel="icon" type="image/png" href="./assets/icon.png">
   <link rel="stylesheet" href="./style.css">
   <script>document.documentElement.classList.add("js");</script>
@@ -145,7 +146,7 @@
           <h2 class="baslik" id="kapanis-baslik">Kurumunuz için neler yapabileceğimizi <em>konuşalım.</em></h2>
           <p>İhtiyacınızı dinleyelim, en uygun çözümü birlikte belirleyelim.</p>
           <div class="kapanis__eylem">
-            <a class="dugme" href="./iletisim.html">İletişime geçin<span class="dugme__ok"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
+            <a class="button" href="./iletisim.html">İletişime geçin<span class="button__ok"><i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </div>
@@ -199,5 +200,6 @@
     </div>
   </footer>
   <!--/ALT-->
+  <button class="taptotop" type="button" aria-label="Sayfanın başına dön" data-taptotop><span class="button__ok"><i class="ti ti-arrow-up" aria-hidden="true"></i></span></button>
 </body>
 </html>
