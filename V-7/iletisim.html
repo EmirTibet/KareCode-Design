@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İletişim | KareCode</title>
+  <meta name="description" content="KareCode ile iletişime geçin: mesaj formu, e-posta, telefon, adres ve sık sorulan sorular.">
+  <link rel="icon" type="image/png" href="./assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap&subset=latin-ext">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <a class="icerige-gec" href="#icerik">İçeriğe geç</a>
+
+  <header class="ust" data-ust>
+    <div class="kap ust__ic">
+      <a class="marka" href="./index.html" aria-label="KareCode anasayfa">
+        <img src="./assets/karecode-logo-light.png" alt="" width="250" height="45">
+      </a>
+      <button class="menu-ac" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç" data-menu-ac>
+        <i class="ti ti-menu-2 menu-ac__ac" aria-hidden="true"></i>
+        <i class="ti ti-x menu-ac__kapat" aria-hidden="true"></i>
+      </button>
+      <nav class="menu" id="menu" aria-label="Ana menü">
+        <ul class="menu__liste">
+          <li><a class="menu__link" href="./index.html" data-sayfa="index">Anasayfa</a></li>
+          <li><a class="menu__link" href="./hakkimizda.html" data-sayfa="hakkimizda">Hakkımızda</a></li>
+          <li><a class="menu__link" href="./ozellikler.html" data-sayfa="ozellikler">Özellikler</a></li>
+          <li><a class="menu__link" href="https://kclogger.com" target="_blank" rel="noopener noreferrer">KCLogger<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+          <li><a class="menu__link" href="./iletisim.html" data-sayfa="iletisim" aria-current="page">İletişim</a></li>
+        </ul>
+        <ul class="ust-sosyal" aria-label="Sosyal medya">
+          <li><a class="ust-sosyal__bag" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="KareCode Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+          <li><a class="ust-sosyal__bag" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="KareCode Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+          <li><a class="ust-sosyal__bag" href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik" tabindex="-1">
+    <section class="hero hero--sayfa" data-hero aria-labelledby="sayfa-baslik">
+      <div class="kap hero__ic">
+        <p class="pill hero__gir" style="--g: 60ms"><b>İletişim</b>E-posta, telefon, adres</p>
+        <h1 class="dev" id="sayfa-baslik" data-kelimeler>Sorunuzu <span class="gecisli">bize yazın.</span></h1>
+        <p class="hero__aciklama hero__gir" style="--g: 620ms">KCLogger, misafir ağları ya da bu sitedeki içerikler hakkında her türlü soru için formu doldurabilir veya bilgileri tek dokunuşla kopyalayabilirsiniz.</p>
+      </div>
+      <div class="hero__dalgalar" aria-hidden="true">
+        <svg viewBox="0 0 1440 360" preserveAspectRatio="none" focusable="false">
+          <path class="hero__dalga" d="M-40 250 C 260 120, 520 330, 820 200 S 1260 90, 1480 190"></path>
+          <path class="hero__dalga hero__dalga--2" d="M-40 300 C 300 190, 560 360, 880 250 S 1280 150, 1480 260"></path>
+          <path class="hero__dalga hero__dalga--3" d="M-40 200 C 220 60, 500 270, 780 150 S 1240 40, 1480 120"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="bolum bolum--sik" aria-labelledby="form-baslik">
+      <div class="kap form-bolum">
+        <div class="form-kart" data-belir>
+          <div>
+            <h2 class="form-kart__baslik" id="form-baslik">Mesaj formu</h2>
+            <p class="form-kart__aciklama" id="form-bilgi">Kurum adı dışındaki tüm alanlar zorunludur. Bu site mesajları kendisi iletmez: "Mesajı hazırla" düğmesine bastığınızda mesajınız e-posta uygulamanızda taslak olarak açılır, siz gönderdiğinizde bize ulaşır.</p>
+          </div>
+          <form class="form" data-form data-eposta="info@karecode.com.tr" action="mailto:info@karecode.com.tr" method="post" enctype="text/plain" novalidate aria-describedby="form-bilgi">
+            <div class="form-satir">
+              <div class="alan">
+                <label for="ad">Ad Soyad</label>
+                <input id="ad" name="ad" type="text" autocomplete="name" required aria-describedby="ad-hata">
+                <p class="alan__hata" id="ad-hata" aria-live="polite"></p>
+              </div>
+              <div class="alan">
+                <label for="kurum">Kurum adı <span class="alan__ek">(isteğe bağlı)</span></label>
+                <input id="kurum" name="kurum" type="text" autocomplete="organization" maxlength="120">
+              </div>
+            </div>
+            <div class="form-satir">
+              <div class="alan">
+                <label for="eposta">E-posta</label>
+                <input id="eposta" name="eposta" type="email" inputmode="email" autocomplete="email" required aria-describedby="eposta-hata" placeholder="ad@alanadi.com">
+                <p class="alan__hata" id="eposta-hata" aria-live="polite"></p>
+              </div>
+              <div class="alan">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" pattern="[0-9]{11}" required aria-describedby="telefon-hata telefon-ipucu" placeholder="05XXXXXXXXX" data-telefon-alani>
+                <p class="alan__ipucu" id="telefon-ipucu">11 haneli, yalnızca rakam.</p>
+                <p class="alan__hata" id="telefon-hata" aria-live="polite"></p>
+              </div>
+            </div>
+            <fieldset class="alan" aria-describedby="konu-hata">
+              <legend>Konu</legend>
+              <div class="konu-secenek" data-konu>
+                <label><input type="radio" name="konu" value="Genel bilgi" required><span><i class="ti ti-info-circle" aria-hidden="true"></i>Genel bilgi</span></label>
+                <label><input type="radio" name="konu" value="KCLogger"><span><i class="ti ti-file-analytics" aria-hidden="true"></i>KCLogger</span></label>
+                <label><input type="radio" name="konu" value="Captive Portal"><span><i class="ti ti-wifi" aria-hidden="true"></i>Captive Portal</span></label>
+                <label><input type="radio" name="konu" value="Dijital ayak izi"><span><i class="ti ti-fingerprint" aria-hidden="true"></i>Dijital ayak izi</span></label>
+                <label><input type="radio" name="konu" value="İş birliği"><span><i class="ti ti-users" aria-hidden="true"></i>İş birliği</span></label>
+                <label><input type="radio" name="konu" value="Diğer"><span><i class="ti ti-dots" aria-hidden="true"></i>Diğer</span></label>
+              </div>
+              <p class="alan__hata" id="konu-hata" aria-live="polite"></p>
+            </fieldset>
+            <div class="alan">
+              <label for="mesaj">Mesajınız</label>
+              <textarea id="mesaj" name="mesaj" rows="6" maxlength="750" required aria-describedby="mesaj-hata mesaj-sayac"></textarea>
+              <p class="alan__ipucu alan__sayac" id="mesaj-sayac" data-mesaj-sayac>0 / 750</p>
+              <p class="alan__hata" id="mesaj-hata" aria-live="polite"></p>
+            </div>
+            <div class="form-alt">
+              <p>Alternatif olarak doğrudan <a href="mailto:info@karecode.com.tr">info@karecode.com.tr</a> adresine yazabilirsiniz.</p>
+              <button class="dugme" type="submit"><i class="ti ti-send" aria-hidden="true"></i>Mesajı hazırla</button>
+            </div>
+          </form>
+          <div class="form-durum" data-form-durum role="status" tabindex="-1" hidden>
+            <i class="ti ti-mail-forward" aria-hidden="true"></i>
+            <div>
+              <strong data-form-durum-baslik></strong>
+              <p data-form-durum-metin></p>
+              <p class="form-durum__bag"><a class="bag" href="mailto:info@karecode.com.tr" data-form-durum-bag hidden>E-posta taslağını yeniden açın <i class="ti ti-arrow-right" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="kanallar" aria-label="İletişim kanalları">
+          <div class="kanal kanal--mavi" data-belir style="--i: 1">
+            <span class="ikon-yuvarlak ikon-yuvarlak--kucuk" aria-hidden="true"><i class="ti ti-mail"></i></span>
+            <div><small>E-posta</small><a href="mailto:info@karecode.com.tr">info@karecode.com.tr</a></div>
+            <button class="kanal__islem" type="button" data-kopyala="info@karecode.com.tr" data-kopyala-etiket="E-posta adresi" aria-label="E-posta adresini kopyala"><i class="ti ti-copy" aria-hidden="true"></i></button>
+          </div>
+          <div class="kanal" data-belir style="--i: 2">
+            <span class="ikon-yuvarlak ikon-yuvarlak--kucuk" aria-hidden="true"><i class="ti ti-phone"></i></span>
+            <div><small>Telefon</small><a href="tel:+902323322284">+90 (232) 332 22 84</a></div>
+            <button class="kanal__islem" type="button" data-kopyala="+90 232 332 22 84" data-kopyala-etiket="Telefon numarası" aria-label="Telefon numarasını kopyala"><i class="ti ti-copy" aria-hidden="true"></i></button>
+          </div>
+          <div class="kanal" data-belir style="--i: 3">
+            <span class="ikon-yuvarlak ikon-yuvarlak--kucuk" aria-hidden="true"><i class="ti ti-map-pin"></i></span>
+            <div><small>Adres</small><address>Kazımdirik Mah. 372/10 Sk. No: 51, Bornova / İzmir</address></div>
+            <a class="kanal__islem" href="https://www.google.com/maps/search/?api=1&amp;query=Kaz%C4%B1mdirik+Mah.+372%2F10+Sk.+No%3A51+Bornova+%C4%B0zmir" target="_blank" rel="noopener noreferrer" aria-label="Adresi haritada aç (yeni sekmede açılır)"><i class="ti ti-map-2" aria-hidden="true"></i></a>
+          </div>
+          <div class="kanal" data-belir style="--i: 4">
+            <span class="ikon-yuvarlak ikon-yuvarlak--kucuk" aria-hidden="true"><i class="ti ti-brand-linkedin"></i></span>
+            <div><small>LinkedIn</small><a href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer">KareCode LinkedIn sayfası<span class="sr-only"> (yeni sekmede açılır)</span></a></div>
+            <a class="kanal__islem" href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn sayfasını aç (yeni sekmede açılır)"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="kanal" data-belir style="--i: 5">
+            <span class="ikon-yuvarlak ikon-yuvarlak--kucuk" aria-hidden="true"><i class="ti ti-world"></i></span>
+            <div><small>KCLogger</small><a href="https://kclogger.com" target="_blank" rel="noopener noreferrer">KCLogger web sitesi<span class="sr-only"> (yeni sekmede açılır)</span></a></div>
+            <a class="kanal__islem" href="https://kclogger.com" target="_blank" rel="noopener noreferrer" aria-label="KCLogger sitesini aç (yeni sekmede açılır)"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bolum bolum--gri" aria-labelledby="sss-baslik">
+      <div class="kap">
+        <div class="bolum-bas bolum-bas--orta" data-belir>
+          <p class="ust-yazi">SSS</p>
+          <h2 class="baslik" id="sss-baslik">Sık sorulan <span class="gecisli">sorular.</span></h2>
+        </div>
+        <div class="sss-arama" data-belir>
+          <label class="sr-only" for="sss-ara">Sorularda ara</label>
+          <i class="ti ti-search" aria-hidden="true"></i>
+          <input id="sss-ara" type="search" data-sss-ara placeholder="Sorularda ara: ör. Wi-Fi, KCLogger" autocomplete="off">
+        </div>
+        <div class="sss">
+          <div class="sss__oge">
+            <h3><button class="sss__dugme" type="button" id="sss-1-dugme" data-sss aria-expanded="false" aria-controls="sss-1"><span>Form mesajımı nasıl iletiyor?</span><span class="sss__ikon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="sss__panel" id="sss-1" role="region" aria-labelledby="sss-1-dugme" hidden>
+              <p>Bu site statik olarak yayınlanır ve bir sunucuya mesaj göndermez. Form, yazdıklarınızı e-posta uygulamanızda taslak olarak açar; mesaj, siz taslağı gönderdiğinizde info@karecode.com.tr adresine ulaşır.</p>
+            </div>
+          </div>
+          <div class="sss__oge">
+            <h3><button class="sss__dugme" type="button" id="sss-2-dugme" data-sss aria-expanded="false" aria-controls="sss-2"><span>KCLogger hakkında ayrıntılı bilgiyi nereden alırım?</span><span class="sss__ikon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="sss__panel" id="sss-2" role="region" aria-labelledby="sss-2-dugme" hidden>
+              <p>Ürünün güncel özellikleri <a href="https://kclogger.com" target="_blank" rel="noopener noreferrer">KCLogger'ın web sitesinde<span class="sr-only"> (yeni sekmede açılır)</span></a> yer alır. Kurumunuza özel sorular için bize e-posta ya da telefonla ulaşabilirsiniz.</p>
+            </div>
+          </div>
+          <div class="sss__oge">
+            <h3><button class="sss__dugme" type="button" id="sss-3-dugme" data-sss aria-expanded="false" aria-controls="sss-3"><span>Sitedeki örnek kayıtlar ve ekranlar gerçek mi?</span><span class="sss__ikon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="sss__panel" id="sss-3" role="region" aria-labelledby="sss-3-dugme" hidden>
+              <p>Hayır. Telefon simülasyonu, test kartları ve örnek erişim kaydı temsilidir; gerçek kullanıcı verisi içermez ve hiçbir bilgi toplamaz. IP adresleri belgeleme amaçlı ayrılmış aralıklardan seçilmiştir.</p>
+            </div>
+          </div>
+          <div class="sss__oge">
+            <h3><button class="sss__dugme" type="button" id="sss-4-dugme" data-sss aria-expanded="false" aria-controls="sss-4"><span>Halka açık Wi-Fi'da en önemli önlem nedir?</span><span class="sss__ikon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="sss__panel" id="sss-4" role="region" aria-labelledby="sss-4-dugme" hidden>
+              <p>Doğru ağa bağlandığınızdan emin olmak. Ağ adını personelden teyit edin, giriş sayfasının adresini kontrol edin ve hiçbir portalda e-posta ya da banka şifrenizi girmeyin. Ayrıntılar için <a href="./ozellikler.html#captive-portal">Captive Portal</a> bölümüne bakabilirsiniz.</p>
+            </div>
+          </div>
+          <div class="sss__oge">
+            <h3><button class="sss__dugme" type="button" id="sss-5-dugme" data-sss aria-expanded="false" aria-controls="sss-5"><span>İşletmem için erişim kaydı tutmak zorunlu mu?</span><span class="sss__ikon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="sss__panel" id="sss-5" role="region" aria-labelledby="sss-5-dugme" hidden>
+              <p>Misafirlerine internet erişimi sunan işletmeler için 5651 sayılı Kanun kapsamında yükümlülükler bulunabilir. Kapsamı işletmenin türüne göre değişir; kesin değerlendirme için hukuk danışmanınıza başvurmanızı öneririz.</p>
+            </div>
+          </div>
+          <p class="sss__yok" data-sss-yok hidden>Aramanızla eşleşen soru bulunamadı. Sorunuzu formdan bize yazabilirsiniz.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kapanis">
+    <div class="dalgalar" aria-hidden="true">
+      <svg viewBox="0 0 1200 300" preserveAspectRatio="none" focusable="false">
+        <path class="dalga dalga--2" d="M-60 250 C 200 80, 420 320, 700 160 S 1100 40, 1280 180"></path>
+        <path class="dalga" d="M-60 200 C 240 40, 480 300, 760 130 S 1120 20, 1280 120"></path>
+        <path class="dalga dalga--3" d="M-60 290 C 260 150, 520 340, 820 210 S 1140 110, 1280 240"></path>
+      </svg>
+    </div>
+    <div class="kap">
+      <div class="kapanis__alt">
+        <div class="kapanis__marka">
+          <a href="./index.html" aria-label="KareCode anasayfa"><img src="./assets/karecode-logo-dark.png" alt="" width="250" height="45"></a>
+          <p>Bornova, İzmir merkezli yazılım şirketi KareCode'un siber güvenlik farkındalık sitesi.</p>
+          <ul class="alt__sosyal" aria-label="Sosyal medya">
+            <li><a class="ikon-bag" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="KareCode Facebook (yeni sekmede açılır)"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="ikon-bag" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="KareCode Instagram (yeni sekmede açılır)"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></li>
+            <li><a class="ikon-bag" href="https://www.linkedin.com/company/karecode-yazilim/" target="_blank" rel="noopener noreferrer" aria-label="KareCode LinkedIn (yeni sekmede açılır)"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Sayfalar</p>
+          <ul class="alt__liste">
+            <li><a href="./index.html" data-sayfa="index">Anasayfa</a></li>
+            <li><a href="./hakkimizda.html" data-sayfa="hakkimizda">Hakkımızda</a></li>
+            <li><a href="./ozellikler.html" data-sayfa="ozellikler">Özellikler</a></li>
+            <li><a href="./iletisim.html" data-sayfa="iletisim" aria-current="page">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">Konular</p>
+          <ul class="alt__liste">
+            <li><a href="./ozellikler.html#captive-portal">Captive Portal</a></li>
+            <li><a href="./ozellikler.html#dijital-ayak-izi">Dijital Ayak İzi</a></li>
+            <li><a href="./ozellikler.html#kclogger">KCLogger</a></li>
+            <li><a href="https://kclogger.com" target="_blank" rel="noopener noreferrer">KCLogger web sitesi<span class="sr-only"> (yeni sekmede açılır)</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="alt__baslik">İletişim</p>
+          <ul class="alt__liste">
+            <li><a href="mailto:info@karecode.com.tr"><i class="ti ti-mail" aria-hidden="true"></i>info@karecode.com.tr</a></li>
+            <li><a href="tel:+902323322284"><i class="ti ti-phone" aria-hidden="true"></i>+90 (232) 332 22 84</a></li>
+            <li><a href="./iletisim.html"><i class="ti ti-map-pin" aria-hidden="true"></i>Bornova / İzmir</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="alt__dip">
+        <p>© <span data-yil>2026</span> Karecode Dijital Servisler Yazılım ve Teknoloji Hizmetleri A.Ş.</p>
+        <p>İçerikler bilgilendirme ve farkındalık amaçlıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="yukari" type="button" data-yukari aria-label="Sayfanın başına dön"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+</body>
+</html>
